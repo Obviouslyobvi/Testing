@@ -1,0 +1,85 @@
+{
+  "selection_criteria": "Early-window decisions + credit-driven purchases (where both moats compound)",
+  "verticals": [
+    {
+      "id": "big_box_home_improvement",
+      "name": "Big-Box Home Improvement",
+      "rationale": "Existing 38% AOV proof point. Expand from reference customer to direct competitors and adjacent specialty home-improvement retail.",
+      "moats": [
+        "first_contact_advantage",
+        "quality_filter"
+      ],
+      "company_count": 257,
+      "file": "data/verticals/big_box_home_improvement.json",
+      "is_reference_vertical": true
+    },
+    {
+      "id": "home_furnishings_appliances",
+      "name": "Home Furnishings & Appliances",
+      "rationale": "Move triggers furniture, mattress, and appliance purchases; credit-qualified filter aligns with financed AOV.",
+      "moats": [
+        "first_contact_advantage",
+        "quality_filter"
+      ],
+      "company_count": 221,
+      "file": "data/verticals/home_furnishings_appliances.json"
+    },
+    {
+      "id": "home_services_franchises",
+      "name": "Home Services Franchises",
+      "rationale": "New movers are peak buyers for moving, cleaning, lawn, pest, handyman in first 6-8 weeks. Sell at HQ; franchisees consume on top.",
+      "moats": [
+        "first_contact_advantage",
+        "quality_filter"
+      ],
+      "company_count": 232,
+      "file": "data/verticals/home_services_franchises.json",
+      "sales_motion": "HQ enterprise deal with franchisee pull-through"
+    },
+    {
+      "id": "insurance_agency_networks",
+      "name": "Insurance Agency Networks",
+      "rationale": "Movers shop home/auto policies; agency networks capture at HQ and distribute to regional clusters.",
+      "moats": [
+        "first_contact_advantage",
+        "quality_filter"
+      ],
+      "company_count": 213,
+      "file": "data/verticals/insurance_agency_networks.json"
+    },
+    {
+      "id": "mortgage_refi_home_equity",
+      "name": "Mortgage Refi & Home Equity",
+      "rationale": "Homeowner-flagged records compound with credit-qualified filter. Refi/HELOC value early identification.",
+      "moats": [
+        "first_contact_advantage",
+        "quality_filter"
+      ],
+      "company_count": 210,
+      "file": "data/verticals/mortgage_refi_home_equity.json",
+      "record_filter": "homeowner_flagged"
+    },
+    {
+      "id": "security_alarm",
+      "name": "Security / Alarm",
+      "rationale": "Industry explicitly fights for the first-6-weeks window. First-contact moat is the entire pitch.",
+      "moats": [
+        "first_contact_advantage"
+      ],
+      "company_count": 222,
+      "file": "data/verticals/security_alarm.json"
+    },
+    {
+      "id": "solar_hvac_windows",
+      "name": "Solar / HVAC / Window Replacement",
+      "rationale": "Long sales cycles; early identification of credit-qualified homeowners is high-value.",
+      "moats": [
+        "first_contact_advantage",
+        "quality_filter"
+      ],
+      "company_count": 215,
+      "file": "data/verticals/solar_hvac_windows.json"
+    }
+  ],
+  "total_companies": 1570
+}
