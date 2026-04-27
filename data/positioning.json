@@ -1,0 +1,46 @@
+{
+  "value_proposition": "The credit-qualified new mover, 6 weeks before NCOA",
+  "anti_positioning": "Stop selling 'postal new mover list'",
+  "segment_claims": [
+    {
+      "id": "first_contact_advantage",
+      "headline": "85% of new movers buy from the first vendor that contacts them",
+      "claim": "Buyers reach new movers 6-8 weeks earlier than NCOA-based lists",
+      "lead_time_weeks": { "min": 6, "max": 8 },
+      "moat_type": "timing"
+    },
+    {
+      "id": "quality_filter",
+      "headline": "100% credit-qualified vs. ~70% of US population",
+      "claim": "Proven 38% AOV lift in big-box home improvement",
+      "moat_type": "selection",
+      "proof_point": {
+        "vertical": "big_box_home_improvement",
+        "metric": "AOV",
+        "lift_pct": 38,
+        "status": "single anonymized reference",
+        "next_action": "Produce one-page case study (named if possible, anonymized industry-vertical version if not) before any other GTM motion",
+        "priority": "blocker"
+      }
+    }
+  ],
+  "ideal_buyer_profile": {
+    "decision_window": "early (pre-NCOA, 6-8 weeks)",
+    "purchase_driver": "credit-qualified spend",
+    "compounding_moats": ["timing", "selection"]
+  },
+  "exclusions": [
+    {
+      "category": "nonprofit_mailers",
+      "reason": "Want cheap addresses, will not pay for moats"
+    },
+    {
+      "category": "ultra_low_ticket_retail",
+      "reason": "AOV too low to monetize credit-qualified filter"
+    },
+    {
+      "category": "charities",
+      "reason": "Want cheap addresses, will not pay for moats"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "ordering_principle": "Fastest revenue first",
+  "channels": [
+    {
+      "rank": 1,
+      "id": "list_broker_network",
+      "name": "List Broker Network",
+      "thesis": "Highest leverage. Brokers handle the long tail of direct-mail buyers.",
+      "broker_commission_pct": 20,
+      "time_to_inbound_days": { "min": 30, "max": 60 },
+      "historical_pattern": "Most postal data companies grew this way before going direct",
+      "targets": [
+        { "name": "NextMark" },
+        { "name": "Lake Group Media" },
+        { "name": "MeritDirect" },
+        { "name": "ALC" },
+        { "name": "Edith Roman" }
+      ]
+    },
+    {
+      "rank": 2,
+      "id": "new_mover_marketing_programs",
+      "name": "New-Mover Marketing Programs",
+      "thesis": "Most natural buyers - new movers ARE their product. The 6-week head start is a story THEY can resell to their own customers (force multiplier).",
+      "targets": [
+        { "name": "Welcome Wagon", "scale_note": "~1M new movers touched/year" },
+        { "name": "Our Town America" },
+        { "name": "Moving Targets", "focus": "restaurant" },
+        { "name": "Vericast / Valassis Shared Mail" },
+        { "name": "Money Mailer" }
+      ]
+    },
+    {
+      "rank": 3,
+      "id": "direct_franchise_hq",
+      "name": "Direct Outreach to Franchise HQ",
+      "thesis": "Inside-sales motion targeting marketing/data leads at HQ.",
+      "target_account_count": { "min": 100, "max": 200 },
+      "audience": "Franchise HQ marketing and data leaders",
+      "cold_hook": ["case_study", "ROI_calculator"],
+      "acv_usd": { "min": 25000, "max": 75000 },
+      "sales_cycle_days": { "min": 60, "max": 90 }
+    }
+  ]
+}
