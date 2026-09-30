@@ -1,5 +1,5 @@
 // The ONE place the checkout link lives. Paste the Gumroad product link between the quotes.
-var BUY_URL = "";
+var BUY_URL = "https://www.etsy.com/listing/4479488124/the-90-minute-focus-matrix-printable";
 
 (function () {
   var buttons = document.querySelectorAll("[data-buy]");
