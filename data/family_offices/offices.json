@@ -1,6 +1,6 @@
 {
   "dataset": "family_offices",
-  "description": "Family offices actively writing startup checks. Seeded with the eight most active offices named in The Founders Corner's Q3 2026 report, each checked against public sources.",
+  "description": "Family offices actively writing startup checks. Seeded with offices named in The Founders Corner's Q3 2026 report, each checked against public sources.",
   "compiled_on": "2026-10-14",
   "seed_source": {
     "title": "The Investors Who Are Actually Writing Checks In Q3",
@@ -10,23 +10,31 @@
     "url": "https://www.the-founders-corner.com/p/the-1000-investors-most-founders"
   },
   "field_guide": {
-    "type": "single_family_office = one family's own money; multi_family_office = manages money for several families; investment_entity = a principal's personal investing vehicle; unverified = name not confirmed in public sources",
+    "type": "single_family_office = one family's own money; multi_family_office = manages money for several families; family_holding_company = investment arm of a family-controlled business group; investment_entity = a principal's personal investing vehicle; unverified = name not confirmed in public sources",
     "verification": "verified = identity and principal confirmed by two or more independent public sources; partial = identity confirmed but some fields thinly sourced; unverified = could not confirm the entity exists under this name",
-    "q3_2026_deal_count": "Publicly reported Q3 2026 deals as counted by the seed article. A floor, since many offices do not announce deals.",
+    "q3_2026_deal_count": "Publicly reported Q3 2026 deals as counted by the seed article. A floor, since many offices do not announce deals. Null means the article did not give a count for that office.",
     "null values": "A null field means no reliable public source was found. It does not mean the answer is no."
   },
-  "office_count": 8,
+  "office_count": 14,
   "offices": [
     {
       "id": "a16z_perennial",
       "name": "a16z Perennial",
       "type": "multi_family_office",
-      "principals": ["Andreessen Horowitz"],
+      "principals": [
+        "Andreessen Horowitz"
+      ],
       "wealth_source": "Venture capital firm wealth-management arm serving founders and investors already in the a16z network",
       "headquarters": null,
       "founded": 2022,
-      "key_people": ["Scott Kupor (founder of the unit)", "Michel Del Buono (oversees investments)"],
-      "focus": ["wealth management", "private equity access via outside managers"],
+      "key_people": [
+        "Scott Kupor (founder of the unit)",
+        "Michel Del Buono (oversees investments)"
+      ],
+      "focus": [
+        "wealth management",
+        "private equity access via outside managers"
+      ],
       "q3_2026_deal_count": 11,
       "q3_2026_example_deals": [],
       "verification": "verified",
@@ -41,12 +49,21 @@
       "id": "yzi_labs",
       "name": "YZi Labs",
       "type": "single_family_office",
-      "principals": ["Changpeng Zhao", "Yi He"],
+      "principals": [
+        "Changpeng Zhao",
+        "Yi He"
+      ],
       "wealth_source": "Binance cryptocurrency exchange founders",
       "headquarters": null,
       "founded": 2018,
-      "key_people": ["Ella Zhang (head)"],
-      "focus": ["Web3", "artificial intelligence", "biotechnology"],
+      "key_people": [
+        "Ella Zhang (head)"
+      ],
+      "focus": [
+        "Web3",
+        "artificial intelligence",
+        "biotechnology"
+      ],
       "q3_2026_deal_count": 10,
       "q3_2026_deal_count_note": "Seed article counts 10 transactions in August 2026 alone, mostly early stage.",
       "q3_2026_example_deals": [],
@@ -63,12 +80,18 @@
       "id": "bezos_expeditions",
       "name": "Bezos Expeditions",
       "type": "single_family_office",
-      "principals": ["Jeff Bezos"],
+      "principals": [
+        "Jeff Bezos"
+      ],
       "wealth_source": "Amazon founder",
       "headquarters": "Mercer Island, WA, US",
       "founded": 2005,
       "key_people": [],
-      "focus": ["early-stage venture", "late-stage venture", "multi-sector"],
+      "focus": [
+        "early-stage venture",
+        "late-stage venture",
+        "multi-sector"
+      ],
       "q3_2026_deal_count": 5,
       "q3_2026_example_deals": [],
       "verification": "verified",
@@ -83,15 +106,29 @@
       "id": "iconiq",
       "name": "ICONIQ",
       "type": "multi_family_office",
-      "principals": ["Clients reported to include Mark Zuckerberg, Sheryl Sandberg, Jack Dorsey, Reid Hoffman"],
+      "principals": [
+        "Clients reported to include Mark Zuckerberg, Sheryl Sandberg, Jack Dorsey, Reid Hoffman"
+      ],
       "wealth_source": "Technology founders and executives",
       "headquarters": "San Francisco, CA, US",
       "founded": 2011,
-      "key_people": ["Divesh Makan (founder and CEO)", "Michael Anders (partner)", "Will Griffith (partner)"],
-      "focus": ["venture", "growth", "credit"],
+      "key_people": [
+        "Divesh Makan (founder and CEO)",
+        "Michael Anders (partner)",
+        "Will Griffith (partner)"
+      ],
+      "focus": [
+        "venture",
+        "growth",
+        "credit"
+      ],
       "q3_2026_deal_count": 4,
       "q3_2026_example_deals": [
-        {"company": "Helsing", "round_size": "$1.8B", "source": "https://www.the-founders-corner.com/p/the-1000-investors-most-founders"}
+        {
+          "company": "Helsing",
+          "round_size": "$1.8B",
+          "source": "https://www.the-founders-corner.com/p/the-1000-investors-most-founders"
+        }
       ],
       "verification": "verified",
       "founder_note": "Reported AUM ranges from about $54B (Bloomberg, 2021) to $117.5B (SEC Form ADV, per a directory profile). Past bets include Snowflake, Epic Games, and Robinhood.",
@@ -106,15 +143,25 @@
       "id": "duquesne_family_office",
       "name": "Duquesne Family Office",
       "type": "single_family_office",
-      "principals": ["Stanley Druckenmiller"],
+      "principals": [
+        "Stanley Druckenmiller"
+      ],
       "wealth_source": "Hedge fund manager, Duquesne Capital Management",
       "headquarters": null,
       "founded": 2010,
       "key_people": [],
-      "focus": ["biotech", "health care", "technology"],
+      "focus": [
+        "biotech",
+        "health care",
+        "technology"
+      ],
       "q3_2026_deal_count": 4,
       "q3_2026_example_deals": [
-        {"company": "Precision Neuroscience", "round_size": null, "source": "https://www.the-founders-corner.com/p/the-1000-investors-most-founders"}
+        {
+          "company": "Precision Neuroscience",
+          "round_size": null,
+          "source": "https://www.the-founders-corner.com/p/the-1000-investors-most-founders"
+        }
       ],
       "verification": "partial",
       "founder_note": "Set up in 2010 after Druckenmiller closed his hedge fund. Joined the $257M Cellares Series D in January 2026. Venture portfolio is thinly documented in public sources.",
@@ -128,37 +175,62 @@
       "id": "doerr_capital",
       "name": "Doerr Capital",
       "type": "unverified",
-      "principals": ["John Doerr"],
+      "principals": [
+        "John Doerr"
+      ],
       "wealth_source": "Venture capitalist, Kleiner Perkins chairman",
       "headquarters": null,
       "founded": null,
       "key_people": [],
-      "focus": ["climate", "clean energy"],
+      "focus": [
+        "climate",
+        "clean energy"
+      ],
       "q3_2026_deal_count": 4,
       "q3_2026_example_deals": [
-        {"company": "Antora Energy", "round_size": "$550M Series C", "source": "https://www.businesswire.com/news/home/20260730278399/en/Antora-Closes-$550-Million-in-Series-C-Funding-to-Meet-Surging-Energy-Demand-and-Reindustrialize-America"}
+        {
+          "company": "Antora Energy",
+          "round_size": "$550M Series C",
+          "source": "https://www.businesswire.com/news/home/20260730278399/en/Antora-Closes-$550-Million-in-Series-C-Funding-to-Meet-Surging-Energy-Demand-and-Reindustrialize-America"
+        },
+        {
+          "company": "Emerald AI",
+          "round_size": "$150M Series A",
+          "date": "2026-08-25",
+          "source": "https://www.businesswire.com/news/home/20260825127649/en/Emerald-AI-Raises-$150-Million-Series-A-at-$1.05-Billion-Valuation-to-Scale-Power-Flexible-AI-Data-Centers"
+        }
       ],
       "verification": "unverified",
       "founder_note": "The seed article names this office, but no public source confirms an entity called Doerr Capital. The Antora press release lists John Doerr personally as an investor. His confirmed investing vehicle is Foris Ventures, listed separately. This record may be a duplicate of Foris Ventures and should be merged if so.",
       "sources": [
         "https://www.the-founders-corner.com/p/the-1000-investors-most-founders",
         "https://www.businesswire.com/news/home/20260730278399/en/Antora-Closes-$550-Million-in-Series-C-Funding-to-Meet-Surging-Energy-Demand-and-Reindustrialize-America",
-        "https://www.cnbc.com/2026/08/06/family-offices-sustainability-startups-july-dealmaking.html"
+        "https://www.cnbc.com/2026/08/06/family-offices-sustainability-startups-july-dealmaking.html",
+        "https://www.businesswire.com/news/home/20260825127649/en/Emerald-AI-Raises-$150-Million-Series-A-at-$1.05-Billion-Valuation-to-Scale-Power-Flexible-AI-Data-Centers"
       ]
     },
     {
       "id": "thiel_capital",
       "name": "Thiel Capital",
       "type": "single_family_office",
-      "principals": ["Peter Thiel"],
+      "principals": [
+        "Peter Thiel"
+      ],
       "wealth_source": "PayPal co-founder, Palantir co-founder, early Facebook investor",
       "headquarters": "Los Angeles, CA, US",
       "founded": 2011,
       "key_people": [],
-      "focus": ["artificial intelligence", "deep tech"],
+      "focus": [
+        "artificial intelligence",
+        "deep tech"
+      ],
       "q3_2026_deal_count": 3,
       "q3_2026_example_deals": [
-        {"company": "Etched", "round_size": "$700M", "source": "https://www.the-founders-corner.com/p/the-1000-investors-most-founders"}
+        {
+          "company": "Etched",
+          "round_size": "$700M",
+          "source": "https://www.the-founders-corner.com/p/the-1000-investors-most-founders"
+        }
       ],
       "verification": "verified",
       "founder_note": "Opened a Miami office in December 2025. Separate from Founders Fund, which Thiel co-founded. Etched round reports conflict and name Thiel personally, so confirm the investing entity before citing it.",
@@ -172,12 +244,18 @@
       "id": "foris_ventures",
       "name": "Foris Ventures",
       "type": "investment_entity",
-      "principals": ["John Doerr"],
+      "principals": [
+        "John Doerr"
+      ],
       "wealth_source": "Venture capitalist, Kleiner Perkins chairman",
       "headquarters": null,
       "founded": null,
       "key_people": [],
-      "focus": ["clean energy", "climate", "consumer"],
+      "focus": [
+        "clean energy",
+        "climate",
+        "consumer"
+      ],
       "q3_2026_deal_count": 3,
       "q3_2026_example_deals": [],
       "verification": "verified",
@@ -186,6 +264,211 @@
         "https://www.the-founders-corner.com/p/the-1000-investors-most-founders",
         "https://www.cnbc.com/2026/08/06/family-offices-sustainability-startups-july-dealmaking.html",
         "https://www.businesswire.com/news/home/20230213005216/en"
+      ]
+    },
+    {
+      "id": "premji_invest",
+      "name": "Premji Invest",
+      "type": "single_family_office",
+      "principals": [
+        "Azim Premji"
+      ],
+      "wealth_source": "Wipro founder",
+      "headquarters": "Bengaluru, India",
+      "founded": 2006,
+      "key_people": [],
+      "focus": [
+        "technology",
+        "consumer",
+        "financial services",
+        "healthcare"
+      ],
+      "q3_2026_deal_count": null,
+      "q3_2026_example_deals": [
+        {
+          "company": "Databricks",
+          "round_size": "$5B",
+          "source": "https://www.the-founders-corner.com/p/the-1000-investors-most-founders"
+        }
+      ],
+      "verification": "verified",
+      "founder_note": "Returns mainly fund the Azim Premji Foundation. Also has a Menlo Park, CA office. Invests in private and public markets. Databricks participation comes from the seed article only and was not independently confirmed.",
+      "website": "https://www.premjiinvest.com",
+      "sources": [
+        "https://www.the-founders-corner.com/p/the-1000-investors-most-founders",
+        "https://andsimple.co/insights/a-glimpse-into-indias-largest-family-offices",
+        "https://privateequitylist.com/investor/premjiinvest",
+        "https://www.cbinsights.com/investor/premji-invest-1"
+      ]
+    },
+    {
+      "id": "hillspire",
+      "name": "Hillspire",
+      "type": "single_family_office",
+      "principals": [
+        "Eric Schmidt",
+        "Wendy Schmidt"
+      ],
+      "wealth_source": "Former Google CEO",
+      "headquarters": "Menlo Park, CA, US",
+      "founded": 2006,
+      "key_people": [],
+      "focus": [
+        "artificial intelligence"
+      ],
+      "q3_2026_deal_count": null,
+      "q3_2026_example_deals": [
+        {
+          "company": "Mistral AI",
+          "round_size": "EUR 3B",
+          "source": "https://www.trendingtopics.eu/mistral-3-milliarden-euro-investment/"
+        }
+      ],
+      "verification": "verified",
+      "founder_note": "Ranked first in CNBC's inaugural Family Office 15 for 2025 dealmaking, with 15 investments, mostly AI. Also runs the Schmidt family's philanthropy.",
+      "sources": [
+        "https://www.the-founders-corner.com/p/the-1000-investors-most-founders",
+        "https://familyofficehub.io/blog/the-eric-schmidt-family-office-hillspire/",
+        "https://www.trendingtopics.eu/mistral-3-milliarden-euro-investment/",
+        "https://www.raptorgroup.com/news/inside-wealth-family-office-15-most-active-investment-firms-of-the-ultra-wealthy/"
+      ]
+    },
+    {
+      "id": "burda_principal_investments",
+      "name": "Burda Principal Investments",
+      "type": "family_holding_company",
+      "principals": [
+        "Burda family"
+      ],
+      "wealth_source": "Hubert Burda Media, German media group",
+      "headquarters": "Munich, Germany",
+      "founded": null,
+      "key_people": [],
+      "focus": [
+        "digital technology",
+        "media",
+        "deep tech"
+      ],
+      "q3_2026_deal_count": null,
+      "q3_2026_example_deals": [
+        {
+          "company": "Proxima Fusion",
+          "round_size": "EUR 411M Series B",
+          "date": "2026-07",
+          "source": "https://www.eu-startups.com/2026/07/largest-european-fusion-investment-on-record-sees-proxima-fusion-raise-e411-million/"
+        }
+      ],
+      "verification": "verified",
+      "founder_note": "Invests off the Burda balance sheet, not a closed-end fund. Offices in Munich, Berlin, London, Singapore. Founding year conflicts across sources (1998 vs 2016). Portfolio includes Vinted, Nord Security, Aleph Alpha.",
+      "sources": [
+        "https://www.the-founders-corner.com/p/the-1000-investors-most-founders",
+        "https://www.munich-startup.de/en/financing/burda-principal-investments",
+        "https://www.eu-startups.com/2026/07/largest-european-fusion-investment-on-record-sees-proxima-fusion-raise-e411-million/",
+        "https://www.gtlaw.com/de/news/2026/07/press-releases/greenberg-traurig-advises-burda-principal-investments-on-entry-into-gaming-industry"
+      ]
+    },
+    {
+      "id": "emerson_collective",
+      "name": "Emerson Collective",
+      "type": "single_family_office",
+      "principals": [
+        "Laurene Powell Jobs"
+      ],
+      "wealth_source": "Steve Jobs estate (Apple, Disney)",
+      "headquarters": null,
+      "founded": 2011,
+      "key_people": [
+        "Laurene Powell Jobs (founder and president)"
+      ],
+      "focus": [
+        "impact investing",
+        "education",
+        "climate",
+        "media"
+      ],
+      "q3_2026_deal_count": null,
+      "q3_2026_example_deals": [
+        {
+          "company": "Emerald AI",
+          "round_size": "$150M Series A",
+          "date": "2026-08-25",
+          "source": "https://www.businesswire.com/news/home/20260825127649/en/Emerald-AI-Raises-$150-Million-Series-A-at-$1.05-Billion-Valuation-to-Scale-Power-Flexible-AI-Data-Centers"
+        }
+      ],
+      "verification": "verified",
+      "founder_note": "Structured as an LLC so it can mix venture investing, philanthropy, and media. Owns a majority of The Atlantic. Has backed 1Password and Acorns. Founding year 2011 in most sources, 2004 in one.",
+      "website": "https://www.emersoncollective.com",
+      "sources": [
+        "https://www.the-founders-corner.com/p/the-1000-investors-most-founders",
+        "https://emersoncollective.com/articles/q-and-a-with-ec-founder-and-president-laurene-powell-jobs",
+        "https://www.influencewatch.org/non-profit/emerson-collective/",
+        "https://www.businesswire.com/news/home/20260825127649/en/Emerald-AI-Raises-$150-Million-Series-A-at-$1.05-Billion-Valuation-to-Scale-Power-Flexible-AI-Data-Centers"
+      ]
+    },
+    {
+      "id": "olayan_group",
+      "name": "The Olayan Group",
+      "type": "family_holding_company",
+      "principals": [
+        "Olayan family"
+      ],
+      "wealth_source": "Saudi conglomerate founded by Suliman Saleh Olayan in 1947",
+      "headquarters": "Vaduz, Liechtenstein",
+      "founded": 1947,
+      "key_people": [],
+      "focus": [
+        "private equity",
+        "direct investments",
+        "fund commitments"
+      ],
+      "q3_2026_deal_count": null,
+      "q3_2026_example_deals": [
+        {
+          "company": "Emerald AI",
+          "round_size": "$150M Series A",
+          "date": "2026-08-25",
+          "source": "https://www.businesswire.com/news/home/20260825127649/en/Emerald-AI-Raises-$150-Million-Series-A-at-$1.05-Billion-Valuation-to-Scale-Power-Flexible-AI-Data-Centers"
+        }
+      ],
+      "verification": "verified",
+      "founder_note": "Single-family ownership. Saudi business runs through Olayan Financing Company in Riyadh. Offices in New York, London, Luxembourg, Athens, Singapore. Invests both directly and as a fund LP.",
+      "website": "https://olayan.com",
+      "sources": [
+        "https://www.the-founders-corner.com/p/the-1000-investors-most-founders",
+        "https://olayan.com/about-us/",
+        "https://www.tharawat-magazine.com/?p=49583",
+        "https://www.businesswire.com/news/home/20260825127649/en/Emerald-AI-Raises-$150-Million-Series-A-at-$1.05-Billion-Valuation-to-Scale-Power-Flexible-AI-Data-Centers"
+      ]
+    },
+    {
+      "id": "temerty_group",
+      "name": "Temerty Group",
+      "type": "single_family_office",
+      "principals": [
+        "Temerty family (inferred, not confirmed)"
+      ],
+      "wealth_source": "Likely James Temerty, founder of Northland Power (inferred, not confirmed)",
+      "headquarters": null,
+      "founded": null,
+      "key_people": [],
+      "focus": [
+        "clean energy"
+      ],
+      "q3_2026_deal_count": null,
+      "q3_2026_example_deals": [
+        {
+          "company": "Emerald AI",
+          "round_size": "$150M Series A",
+          "date": "2026-08-25",
+          "source": "https://www.businesswire.com/news/home/20260825127649/en/Emerald-AI-Raises-$150-Million-Series-A-at-$1.05-Billion-Valuation-to-Scale-Power-Flexible-AI-Data-Centers"
+        }
+      ],
+      "verification": "partial",
+      "founder_note": "Named as an investor in the Emerald AI press release. No public source describes the entity or confirms its owner. The link to James Temerty is an inference from the name and his clean-energy background.",
+      "sources": [
+        "https://www.the-founders-corner.com/p/the-1000-investors-most-founders",
+        "https://www.businesswire.com/news/home/20260825127649/en/Emerald-AI-Raises-$150-Million-Series-A-at-$1.05-Billion-Valuation-to-Scale-Power-Flexible-AI-Data-Centers",
+        "https://en.wikipedia.org/wiki/James_C._Temerty"
       ]
     }
   ]
