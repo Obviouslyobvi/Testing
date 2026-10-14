@@ -1,0 +1,192 @@
+{
+  "dataset": "family_offices",
+  "description": "Family offices actively writing startup checks. Seeded with the eight most active offices named in The Founders Corner's Q3 2026 report, each checked against public sources.",
+  "compiled_on": "2026-10-14",
+  "seed_source": {
+    "title": "The Investors Who Are Actually Writing Checks In Q3",
+    "author": "Chris Tottman",
+    "publication": "The Founders Corner",
+    "published_on": "2026-10-14",
+    "url": "https://www.the-founders-corner.com/p/the-1000-investors-most-founders"
+  },
+  "field_guide": {
+    "type": "single_family_office = one family's own money; multi_family_office = manages money for several families; investment_entity = a principal's personal investing vehicle; unverified = name not confirmed in public sources",
+    "verification": "verified = identity and principal confirmed by two or more independent public sources; partial = identity confirmed but some fields thinly sourced; unverified = could not confirm the entity exists under this name",
+    "q3_2026_deal_count": "Publicly reported Q3 2026 deals as counted by the seed article. A floor, since many offices do not announce deals.",
+    "null values": "A null field means no reliable public source was found. It does not mean the answer is no."
+  },
+  "office_count": 8,
+  "offices": [
+    {
+      "id": "a16z_perennial",
+      "name": "a16z Perennial",
+      "type": "multi_family_office",
+      "principals": ["Andreessen Horowitz"],
+      "wealth_source": "Venture capital firm wealth-management arm serving founders and investors already in the a16z network",
+      "headquarters": null,
+      "founded": 2022,
+      "key_people": ["Scott Kupor (founder of the unit)", "Michel Del Buono (oversees investments)"],
+      "focus": ["wealth management", "private equity access via outside managers"],
+      "q3_2026_deal_count": 11,
+      "q3_2026_example_deals": [],
+      "verification": "verified",
+      "founder_note": "Serves people already partnered with a16z, so it is a warm-intro-only target.",
+      "sources": [
+        "https://www.the-founders-corner.com/p/the-1000-investors-most-founders",
+        "https://fortune.com/2024/06/24/andreessen-horowitz-a16z-private-equity-fund",
+        "https://www.axios.com/newsletters/axios-pro-rata-9867e778-2609-4cc4-833d-b1ba9bcfc32b.html"
+      ]
+    },
+    {
+      "id": "yzi_labs",
+      "name": "YZi Labs",
+      "type": "single_family_office",
+      "principals": ["Changpeng Zhao", "Yi He"],
+      "wealth_source": "Binance cryptocurrency exchange founders",
+      "headquarters": null,
+      "founded": 2018,
+      "key_people": ["Ella Zhang (head)"],
+      "focus": ["Web3", "artificial intelligence", "biotechnology"],
+      "q3_2026_deal_count": 10,
+      "q3_2026_deal_count_note": "Seed article counts 10 transactions in August 2026 alone, mostly early stage.",
+      "q3_2026_example_deals": [],
+      "verification": "verified",
+      "founder_note": "Formerly Binance Labs. Renamed and converted to a family office on 2025-01-23, managing about $10B. Founded year refers to Binance Labs.",
+      "sources": [
+        "https://www.the-founders-corner.com/p/the-1000-investors-most-founders",
+        "https://cointelegraph.com/news/binance-labs-rebrands-yzi-labs-biotech-ai",
+        "https://www.advisorperspectives.com/articles/2025/01/24/turns-vc-firm-giant-family-office-cryptos-richest-man",
+        "https://www.financemagnates.com/trending/zhao-converts-binance-labs-into-10-billion-family-office-yzi-labs/"
+      ]
+    },
+    {
+      "id": "bezos_expeditions",
+      "name": "Bezos Expeditions",
+      "type": "single_family_office",
+      "principals": ["Jeff Bezos"],
+      "wealth_source": "Amazon founder",
+      "headquarters": "Mercer Island, WA, US",
+      "founded": 2005,
+      "key_people": [],
+      "focus": ["early-stage venture", "late-stage venture", "multi-sector"],
+      "q3_2026_deal_count": 5,
+      "q3_2026_example_deals": [],
+      "verification": "verified",
+      "founder_note": "Invests only the principal's capital. Past holdings include Airbnb, Uber, Twitter, Workday, and Anduril.",
+      "website": "https://www.bezosexpeditions.com",
+      "sources": [
+        "https://www.the-founders-corner.com/p/the-1000-investors-most-founders",
+        "https://en.wikipedia.org/wiki/Bezos_Expeditions"
+      ]
+    },
+    {
+      "id": "iconiq",
+      "name": "ICONIQ",
+      "type": "multi_family_office",
+      "principals": ["Clients reported to include Mark Zuckerberg, Sheryl Sandberg, Jack Dorsey, Reid Hoffman"],
+      "wealth_source": "Technology founders and executives",
+      "headquarters": "San Francisco, CA, US",
+      "founded": 2011,
+      "key_people": ["Divesh Makan (founder and CEO)", "Michael Anders (partner)", "Will Griffith (partner)"],
+      "focus": ["venture", "growth", "credit"],
+      "q3_2026_deal_count": 4,
+      "q3_2026_example_deals": [
+        {"company": "Helsing", "round_size": "$1.8B", "source": "https://www.the-founders-corner.com/p/the-1000-investors-most-founders"}
+      ],
+      "verification": "verified",
+      "founder_note": "Reported AUM ranges from about $54B (Bloomberg, 2021) to $117.5B (SEC Form ADV, per a directory profile). Past bets include Snowflake, Epic Games, and Robinhood.",
+      "website": "https://www.iconiqcapital.com",
+      "sources": [
+        "https://www.the-founders-corner.com/p/the-1000-investors-most-founders",
+        "https://en.wikipedia.org/wiki/Iconiq_Capital",
+        "https://www.wealthmanagement.com/high-net-worth/wealth-firm-for-silicon-valley-billionaires-sets-up-in-london"
+      ]
+    },
+    {
+      "id": "duquesne_family_office",
+      "name": "Duquesne Family Office",
+      "type": "single_family_office",
+      "principals": ["Stanley Druckenmiller"],
+      "wealth_source": "Hedge fund manager, Duquesne Capital Management",
+      "headquarters": null,
+      "founded": 2010,
+      "key_people": [],
+      "focus": ["biotech", "health care", "technology"],
+      "q3_2026_deal_count": 4,
+      "q3_2026_example_deals": [
+        {"company": "Precision Neuroscience", "round_size": null, "source": "https://www.the-founders-corner.com/p/the-1000-investors-most-founders"}
+      ],
+      "verification": "partial",
+      "founder_note": "Set up in 2010 after Druckenmiller closed his hedge fund. Joined the $257M Cellares Series D in January 2026. Venture portfolio is thinly documented in public sources.",
+      "sources": [
+        "https://www.the-founders-corner.com/p/the-1000-investors-most-founders",
+        "https://allbusiness.africa/investors/duquesne-family-office",
+        "https://familyofficehub.io/blog/druckenmiller-family-office-invests-in-cellares/"
+      ]
+    },
+    {
+      "id": "doerr_capital",
+      "name": "Doerr Capital",
+      "type": "unverified",
+      "principals": ["John Doerr"],
+      "wealth_source": "Venture capitalist, Kleiner Perkins chairman",
+      "headquarters": null,
+      "founded": null,
+      "key_people": [],
+      "focus": ["climate", "clean energy"],
+      "q3_2026_deal_count": 4,
+      "q3_2026_example_deals": [
+        {"company": "Antora Energy", "round_size": "$550M Series C", "source": "https://www.businesswire.com/news/home/20260730278399/en/Antora-Closes-$550-Million-in-Series-C-Funding-to-Meet-Surging-Energy-Demand-and-Reindustrialize-America"}
+      ],
+      "verification": "unverified",
+      "founder_note": "The seed article names this office, but no public source confirms an entity called Doerr Capital. The Antora press release lists John Doerr personally as an investor. His confirmed investing vehicle is Foris Ventures, listed separately. This record may be a duplicate of Foris Ventures and should be merged if so.",
+      "sources": [
+        "https://www.the-founders-corner.com/p/the-1000-investors-most-founders",
+        "https://www.businesswire.com/news/home/20260730278399/en/Antora-Closes-$550-Million-in-Series-C-Funding-to-Meet-Surging-Energy-Demand-and-Reindustrialize-America",
+        "https://www.cnbc.com/2026/08/06/family-offices-sustainability-startups-july-dealmaking.html"
+      ]
+    },
+    {
+      "id": "thiel_capital",
+      "name": "Thiel Capital",
+      "type": "single_family_office",
+      "principals": ["Peter Thiel"],
+      "wealth_source": "PayPal co-founder, Palantir co-founder, early Facebook investor",
+      "headquarters": "Los Angeles, CA, US",
+      "founded": 2011,
+      "key_people": [],
+      "focus": ["artificial intelligence", "deep tech"],
+      "q3_2026_deal_count": 3,
+      "q3_2026_example_deals": [
+        {"company": "Etched", "round_size": "$700M", "source": "https://www.the-founders-corner.com/p/the-1000-investors-most-founders"}
+      ],
+      "verification": "verified",
+      "founder_note": "Opened a Miami office in December 2025. Separate from Founders Fund, which Thiel co-founded. Etched round reports conflict and name Thiel personally, so confirm the investing entity before citing it.",
+      "sources": [
+        "https://www.the-founders-corner.com/p/the-1000-investors-most-founders",
+        "https://en.wikipedia.org/wiki/Thiel_Capital",
+        "https://www.businesswire.com/news/home/20251230610919/en/Thiel-Capital-Opens-Miami-Office"
+      ]
+    },
+    {
+      "id": "foris_ventures",
+      "name": "Foris Ventures",
+      "type": "investment_entity",
+      "principals": ["John Doerr"],
+      "wealth_source": "Venture capitalist, Kleiner Perkins chairman",
+      "headquarters": null,
+      "founded": null,
+      "key_people": [],
+      "focus": ["clean energy", "climate", "consumer"],
+      "q3_2026_deal_count": 3,
+      "q3_2026_example_deals": [],
+      "verification": "verified",
+      "founder_note": "Described as John Doerr's private venture firm and family office. Backed Panthalassa, Pacific Fusion, Rondo Energy, Complete Solaria ($10M, 2023), and led Tradesy's $67M Series D.",
+      "sources": [
+        "https://www.the-founders-corner.com/p/the-1000-investors-most-founders",
+        "https://www.cnbc.com/2026/08/06/family-offices-sustainability-startups-july-dealmaking.html",
+        "https://www.businesswire.com/news/home/20230213005216/en"
+      ]
+    }
+  ]
+}
