@@ -300,7 +300,10 @@ footer p { margin: 0; max-width: 80ch; }
       ((c.website || o.website) ? '<li><a href="' + esc(c.website || o.website) + '" target="_blank" rel="noopener">' + esc(host(c.website || o.website)) + '</a></li>' : "");
     var contactBlock = '<div class="contact">' +
       '<div><h4>Key people</h4>' + (people.length ? '<ul>' + people.map(function (p) {
-        return '<li>' + esc(p.name) + (p.title ? ' <span class="lbl">· ' + esc(p.title) + '</span>' : "") + '</li>';
+        return '<li>' + esc(p.name) + (p.title ? ' <span class="lbl">· ' + esc(p.title) + '</span>' : "") +
+          (p.work_email ? '<div class="line"><span class="val">' + esc(p.work_email) + '</span>' +
+            '<button type="button" class="copy" data-copy="' + esc(p.work_email) + '">Copy</button>' +
+            (p.work_email_check ? ' <span class="lbl">check: ' + esc(p.work_email_check) + '</span>' : "") + '</div>' : "") + '</li>';
       }).join("") + '</ul>' : '<span class="none">None published</span>') + '</div>' +
       '<div><h4>Office address</h4>' + (addr || '<span class="none">Not published</span>') + '</div>' +
       '<div><h4>How to reach</h4>' + (reach ? '<ul>' + reach + '</ul>' : '<span class="none">No public contact published</span>') + '</div>' +
