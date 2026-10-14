@@ -1,21 +1,40 @@
 {
   "dataset": "family_offices",
-  "description": "Family offices actively writing startup checks. Seeded with offices named in The Founders Corner's Q3 2026 report, each checked against public sources.",
+  "description": "Family offices actively writing startup checks, each checked against public sources. Seeded from The Founders Corner's Q3 2026 report and CNBC's monthly family office deal roundups (Oct 2025 to Sep 2026). Deals live in deals.json and reference offices by id.",
   "compiled_on": "2026-10-14",
-  "seed_source": {
-    "title": "The Investors Who Are Actually Writing Checks In Q3",
-    "author": "Chris Tottman",
-    "publication": "The Founders Corner",
-    "published_on": "2026-10-14",
-    "url": "https://www.the-founders-corner.com/p/the-1000-investors-most-founders"
-  },
   "field_guide": {
     "type": "single_family_office = one family's own money; multi_family_office = manages money for several families; family_holding_company = investment arm of a family-controlled business group; investment_entity = a principal's personal investing vehicle; unverified = name not confirmed in public sources",
     "verification": "verified = identity and principal confirmed by two or more independent public sources; partial = identity confirmed but some fields thinly sourced; unverified = could not confirm the entity exists under this name",
-    "q3_2026_deal_count": "Publicly reported Q3 2026 deals as counted by the seed article. A floor, since many offices do not announce deals. Null means the article did not give a count for that office.",
+    "q3_2026_deal_count": "Publicly reported Q3 2026 deals as counted by the seed article. A floor. Null means the article gave no count.",
     "null values": "A null field means no reliable public source was found. It does not mean the answer is no."
   },
-  "office_count": 14,
+  "office_count": 28,
+  "discovery_sources": [
+    {
+      "title": "The Investors Who Are Actually Writing Checks In Q3",
+      "author": "Chris Tottman",
+      "publication": "The Founders Corner",
+      "published_on": "2026-10-14",
+      "url": "https://www.the-founders-corner.com/p/the-1000-investors-most-founders"
+    },
+    {
+      "title": "CNBC Inside Wealth monthly family office deal roundups (Fintrx data)",
+      "urls": [
+        "https://www.cnbc.com/2025/11/06/family-offices-deals-october-ai.html",
+        "https://www.cnbc.com/2025/12/04/billionaire-investments-family-office.html",
+        "https://www.cnbc.com/2026/01/08/family-office-deals-bets-december.html",
+        "https://www.cnbc.com/2026/02/05/billionaire-investing-family-office.html",
+        "https://www.cnbc.com/2026/03/05/family-offices-ai-investments.html",
+        "https://www.cnbc.com/2026/04/02/family-offices-stall-deal-making-during-iran-conflict.html",
+        "https://www.cnbc.com/2026/05/07/family-office-dealmaking-april-healthcare-bets.html",
+        "https://www.cnbc.com/2026/06/05/family-office-sport-investments.html",
+        "https://www.cnbc.com/2026/07/02/jeff-bezos-family-office-backed-five-ai-startups-in-june.html",
+        "https://www.cnbc.com/2026/08/06/family-offices-sustainability-startups-july-dealmaking.html",
+        "https://www.cnbc.com/2026/09/03/family-offices-health-care-biotech-startups-august.html",
+        "https://www.cnbc.com/2026/10/01/billionaire-family-offices-back-geothermal-energy-in-september.html"
+      ]
+    }
+  ],
   "offices": [
     {
       "id": "a16z_perennial",
@@ -36,7 +55,6 @@
         "private equity access via outside managers"
       ],
       "q3_2026_deal_count": 11,
-      "q3_2026_example_deals": [],
       "verification": "verified",
       "founder_note": "Serves people already partnered with a16z, so it is a warm-intro-only target.",
       "sources": [
@@ -65,10 +83,8 @@
         "biotechnology"
       ],
       "q3_2026_deal_count": 10,
-      "q3_2026_deal_count_note": "Seed article counts 10 transactions in August 2026 alone, mostly early stage.",
-      "q3_2026_example_deals": [],
       "verification": "verified",
-      "founder_note": "Formerly Binance Labs. Renamed and converted to a family office on 2025-01-23, managing about $10B. Founded year refers to Binance Labs.",
+      "founder_note": "Formerly Binance Labs. Renamed and converted to a family office on 2025-01-23, managing about $10B. Founded year refers to Binance Labs. Seed article counts 10 transactions in August 2026 alone, mostly early stage.",
       "sources": [
         "https://www.the-founders-corner.com/p/the-1000-investors-most-founders",
         "https://cointelegraph.com/news/binance-labs-rebrands-yzi-labs-biotech-ai",
@@ -93,7 +109,6 @@
         "multi-sector"
       ],
       "q3_2026_deal_count": 5,
-      "q3_2026_example_deals": [],
       "verification": "verified",
       "founder_note": "Invests only the principal's capital. Past holdings include Airbnb, Uber, Twitter, Workday, and Anduril.",
       "website": "https://www.bezosexpeditions.com",
@@ -123,13 +138,6 @@
         "credit"
       ],
       "q3_2026_deal_count": 4,
-      "q3_2026_example_deals": [
-        {
-          "company": "Helsing",
-          "round_size": "$1.8B",
-          "source": "https://www.the-founders-corner.com/p/the-1000-investors-most-founders"
-        }
-      ],
       "verification": "verified",
       "founder_note": "Reported AUM ranges from about $54B (Bloomberg, 2021) to $117.5B (SEC Form ADV, per a directory profile). Past bets include Snowflake, Epic Games, and Robinhood.",
       "website": "https://www.iconiqcapital.com",
@@ -156,13 +164,6 @@
         "technology"
       ],
       "q3_2026_deal_count": 4,
-      "q3_2026_example_deals": [
-        {
-          "company": "Precision Neuroscience",
-          "round_size": null,
-          "source": "https://www.the-founders-corner.com/p/the-1000-investors-most-founders"
-        }
-      ],
       "verification": "partial",
       "founder_note": "Set up in 2010 after Druckenmiller closed his hedge fund. Joined the $257M Cellares Series D in January 2026. Venture portfolio is thinly documented in public sources.",
       "sources": [
@@ -187,19 +188,6 @@
         "clean energy"
       ],
       "q3_2026_deal_count": 4,
-      "q3_2026_example_deals": [
-        {
-          "company": "Antora Energy",
-          "round_size": "$550M Series C",
-          "source": "https://www.businesswire.com/news/home/20260730278399/en/Antora-Closes-$550-Million-in-Series-C-Funding-to-Meet-Surging-Energy-Demand-and-Reindustrialize-America"
-        },
-        {
-          "company": "Emerald AI",
-          "round_size": "$150M Series A",
-          "date": "2026-08-25",
-          "source": "https://www.businesswire.com/news/home/20260825127649/en/Emerald-AI-Raises-$150-Million-Series-A-at-$1.05-Billion-Valuation-to-Scale-Power-Flexible-AI-Data-Centers"
-        }
-      ],
       "verification": "unverified",
       "founder_note": "The seed article names this office, but no public source confirms an entity called Doerr Capital. The Antora press release lists John Doerr personally as an investor. His confirmed investing vehicle is Foris Ventures, listed separately. This record may be a duplicate of Foris Ventures and should be merged if so.",
       "sources": [
@@ -225,13 +213,6 @@
         "deep tech"
       ],
       "q3_2026_deal_count": 3,
-      "q3_2026_example_deals": [
-        {
-          "company": "Etched",
-          "round_size": "$700M",
-          "source": "https://www.the-founders-corner.com/p/the-1000-investors-most-founders"
-        }
-      ],
       "verification": "verified",
       "founder_note": "Opened a Miami office in December 2025. Separate from Founders Fund, which Thiel co-founded. Etched round reports conflict and name Thiel personally, so confirm the investing entity before citing it.",
       "sources": [
@@ -257,7 +238,6 @@
         "consumer"
       ],
       "q3_2026_deal_count": 3,
-      "q3_2026_example_deals": [],
       "verification": "verified",
       "founder_note": "Described as John Doerr's private venture firm and family office. Backed Panthalassa, Pacific Fusion, Rondo Energy, Complete Solaria ($10M, 2023), and led Tradesy's $67M Series D.",
       "sources": [
@@ -284,13 +264,6 @@
         "healthcare"
       ],
       "q3_2026_deal_count": null,
-      "q3_2026_example_deals": [
-        {
-          "company": "Databricks",
-          "round_size": "$5B",
-          "source": "https://www.the-founders-corner.com/p/the-1000-investors-most-founders"
-        }
-      ],
       "verification": "verified",
       "founder_note": "Returns mainly fund the Azim Premji Foundation. Also has a Menlo Park, CA office. Invests in private and public markets. Databricks participation comes from the seed article only and was not independently confirmed.",
       "website": "https://www.premjiinvest.com",
@@ -317,13 +290,6 @@
         "artificial intelligence"
       ],
       "q3_2026_deal_count": null,
-      "q3_2026_example_deals": [
-        {
-          "company": "Mistral AI",
-          "round_size": "EUR 3B",
-          "source": "https://www.trendingtopics.eu/mistral-3-milliarden-euro-investment/"
-        }
-      ],
       "verification": "verified",
       "founder_note": "Ranked first in CNBC's inaugural Family Office 15 for 2025 dealmaking, with 15 investments, mostly AI. Also runs the Schmidt family's philanthropy.",
       "sources": [
@@ -350,14 +316,6 @@
         "deep tech"
       ],
       "q3_2026_deal_count": null,
-      "q3_2026_example_deals": [
-        {
-          "company": "Proxima Fusion",
-          "round_size": "EUR 411M Series B",
-          "date": "2026-07",
-          "source": "https://www.eu-startups.com/2026/07/largest-european-fusion-investment-on-record-sees-proxima-fusion-raise-e411-million/"
-        }
-      ],
       "verification": "verified",
       "founder_note": "Invests off the Burda balance sheet, not a closed-end fund. Offices in Munich, Berlin, London, Singapore. Founding year conflicts across sources (1998 vs 2016). Portfolio includes Vinted, Nord Security, Aleph Alpha.",
       "sources": [
@@ -387,14 +345,6 @@
         "media"
       ],
       "q3_2026_deal_count": null,
-      "q3_2026_example_deals": [
-        {
-          "company": "Emerald AI",
-          "round_size": "$150M Series A",
-          "date": "2026-08-25",
-          "source": "https://www.businesswire.com/news/home/20260825127649/en/Emerald-AI-Raises-$150-Million-Series-A-at-$1.05-Billion-Valuation-to-Scale-Power-Flexible-AI-Data-Centers"
-        }
-      ],
       "verification": "verified",
       "founder_note": "Structured as an LLC so it can mix venture investing, philanthropy, and media. Owns a majority of The Atlantic. Has backed 1Password and Acorns. Founding year 2011 in most sources, 2004 in one.",
       "website": "https://www.emersoncollective.com",
@@ -422,14 +372,6 @@
         "fund commitments"
       ],
       "q3_2026_deal_count": null,
-      "q3_2026_example_deals": [
-        {
-          "company": "Emerald AI",
-          "round_size": "$150M Series A",
-          "date": "2026-08-25",
-          "source": "https://www.businesswire.com/news/home/20260825127649/en/Emerald-AI-Raises-$150-Million-Series-A-at-$1.05-Billion-Valuation-to-Scale-Power-Flexible-AI-Data-Centers"
-        }
-      ],
       "verification": "verified",
       "founder_note": "Single-family ownership. Saudi business runs through Olayan Financing Company in Riyadh. Offices in New York, London, Luxembourg, Athens, Singapore. Invests both directly and as a fund LP.",
       "website": "https://olayan.com",
@@ -455,20 +397,371 @@
         "clean energy"
       ],
       "q3_2026_deal_count": null,
-      "q3_2026_example_deals": [
-        {
-          "company": "Emerald AI",
-          "round_size": "$150M Series A",
-          "date": "2026-08-25",
-          "source": "https://www.businesswire.com/news/home/20260825127649/en/Emerald-AI-Raises-$150-Million-Series-A-at-$1.05-Billion-Valuation-to-Scale-Power-Flexible-AI-Data-Centers"
-        }
-      ],
       "verification": "partial",
       "founder_note": "Named as an investor in the Emerald AI press release. No public source describes the entity or confirms its owner. The link to James Temerty is an inference from the name and his clean-energy background.",
       "sources": [
         "https://www.the-founders-corner.com/p/the-1000-investors-most-founders",
         "https://www.businesswire.com/news/home/20260825127649/en/Emerald-AI-Raises-$150-Million-Series-A-at-$1.05-Billion-Valuation-to-Scale-Power-Flexible-AI-Data-Centers",
         "https://en.wikipedia.org/wiki/James_C._Temerty"
+      ]
+    },
+    {
+      "id": "winklevoss_capital",
+      "name": "Winklevoss Capital",
+      "type": "single_family_office",
+      "principals": [
+        "Tyler Winklevoss",
+        "Cameron Winklevoss"
+      ],
+      "wealth_source": "Facebook settlement, early Bitcoin, Gemini exchange founders",
+      "headquarters": "New York, NY, US",
+      "founded": 2012,
+      "key_people": [],
+      "focus": [
+        "crypto",
+        "space",
+        "energy",
+        "biotech"
+      ],
+      "q3_2026_deal_count": null,
+      "verification": "verified",
+      "founder_note": "Early-stage focus. Reported holdings include Flexport, Protocol Labs, and Animoca Brands.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Winklevoss_Capital_Management",
+        "https://www.bloomberg.com/news/articles/2022-05-20/winklevoss-twins-have-fortunes-riding-on-crypto-startup-comeback",
+        "https://www.cnbc.com/2025/11/06/family-offices-deals-october-ai.html"
+      ]
+    },
+    {
+      "id": "aglae_ventures",
+      "name": "Aglaé Ventures",
+      "type": "single_family_office",
+      "principals": [
+        "Bernard Arnault"
+      ],
+      "wealth_source": "LVMH chairman and CEO",
+      "headquarters": "Paris, France",
+      "founded": 2017,
+      "key_people": [],
+      "focus": [
+        "technology",
+        "artificial intelligence",
+        "consumer"
+      ],
+      "q3_2026_deal_count": null,
+      "verification": "verified",
+      "founder_note": "Venture arm of the Arnault family office, now called Agache. Checks from EUR 100K to EUR 100M at all stages. Earlier family-office bets include Netflix, Spotify, and Airbnb.",
+      "sources": [
+        "https://fortune.com/europe/2024/08/21/bernard-arnault-has-quietly-invested-in-five-ai-startups-this-year-via-his-family-office",
+        "https://sifted.eu/articles/bernard-arnault-startups-aglae-news",
+        "https://www.cnbc.com/2025/12/04/billionaire-investments-family-office.html"
+      ]
+    },
+    {
+      "id": "twg_global",
+      "name": "TWG Global",
+      "type": "family_holding_company",
+      "principals": [
+        "Mark Walter",
+        "Thomas Tull"
+      ],
+      "wealth_source": "Guggenheim Partners CEO (Walter); film producer and investor (Tull)",
+      "headquarters": "Chicago, IL and New York, NY, US",
+      "founded": 2024,
+      "key_people": [
+        "Mark Walter",
+        "Thomas Tull (co-chairman)"
+      ],
+      "focus": [
+        "artificial intelligence",
+        "financial services",
+        "insurance",
+        "sports"
+      ],
+      "q3_2026_deal_count": null,
+      "verification": "verified",
+      "founder_note": "Holding company spanning Guggenheim businesses, the Los Angeles Dodgers, Chelsea FC, and AI. Fintrx labels it the Mark Walter family office.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/TWG_Global",
+        "https://ny1.com/nyc/all-boroughs/ap-top-news/2025/06/20/billionaire-mark-walter-set-to-own-controlling-stake-in-lakers-built-fortune-in-investing",
+        "https://www.fintrx.com/blog/5-largest-family-office-direct-deals-of-november-2025"
+      ]
+    },
+    {
+      "id": "tulco",
+      "name": "Tulco",
+      "type": "investment_entity",
+      "principals": [
+        "Thomas Tull"
+      ],
+      "wealth_source": "Film producer (Legendary Entertainment) and investor",
+      "headquarters": null,
+      "founded": null,
+      "key_people": [],
+      "focus": [
+        "artificial intelligence",
+        "machine learning"
+      ],
+      "q3_2026_deal_count": null,
+      "verification": "partial",
+      "founder_note": "Described as an AI and machine-learning holding group. Fintrx labels it the Thomas Tull family office. Tull is also co-chairman of TWG Global.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/TWG_Global",
+        "https://www.fintrx.com/blog/5-largest-family-office-direct-deals-of-november-2025"
+      ]
+    },
+    {
+      "id": "motier_ventures",
+      "name": "Motier Ventures",
+      "type": "single_family_office",
+      "principals": [
+        "Moulin-Houzé family"
+      ],
+      "wealth_source": "Galeries Lafayette owners",
+      "headquarters": "Paris, France",
+      "founded": 2021,
+      "key_people": [
+        "Guillaume Houzé (founder)"
+      ],
+      "focus": [
+        "commerce",
+        "fintech",
+        "consumer",
+        "gaming",
+        "artificial intelligence"
+      ],
+      "q3_2026_deal_count": null,
+      "verification": "verified",
+      "founder_note": "Writes angel checks up to EUR 300K and up to EUR 3M in later rounds. Runs La Maison, a startup hub in Paris.",
+      "sources": [
+        "https://techcrunch.com/2024/10/02/motier-ventures-unveils-la-maison-a-community-space-for-the-french-tech-ecosystem",
+        "https://www.maddyness.com/2023/09/04/que-font-les-fonds-motier-ventures/",
+        "https://www.cnbc.com/2026/01/08/family-office-deals-bets-december.html"
+      ]
+    },
+    {
+      "id": "lmdv_capital",
+      "name": "LMDV Capital",
+      "type": "single_family_office",
+      "principals": [
+        "Leonardo Maria Del Vecchio"
+      ],
+      "wealth_source": "Luxottica heir",
+      "headquarters": "Milan, Italy",
+      "founded": 2022,
+      "key_people": [],
+      "focus": [
+        "media",
+        "real estate",
+        "industrials",
+        "food and hospitality"
+      ],
+      "q3_2026_deal_count": null,
+      "verification": "verified",
+      "founder_note": "More than 30 holdings worth about EUR 500M as of March 2026. Mostly Italian media and industrial stakes, less startup-focused than most offices here.",
+      "sources": [
+        "https://forbes.it/2024/08/02/leonardo-maria-del-vecchio-tutti-i-suoi-investimenti-con-lmdv-capital/",
+        "https://www.bloomberg.com/news/articles/2025-08-28/del-vecchio-s-billionaire-heir-gets-350-million-from-indosuez",
+        "https://www.cnbc.com/2026/01/08/family-office-deals-bets-december.html"
+      ]
+    },
+    {
+      "id": "bolt_ventures",
+      "name": "Bolt Ventures",
+      "type": "single_family_office",
+      "principals": [
+        "David Blitzer"
+      ],
+      "wealth_source": "Blackstone senior executive",
+      "headquarters": null,
+      "founded": 2018,
+      "key_people": [],
+      "focus": [
+        "sports",
+        "media",
+        "entertainment"
+      ],
+      "q3_2026_deal_count": null,
+      "verification": "verified",
+      "founder_note": "Backs sports leagues and teams such as Premier Lacrosse League, Kings League, and The Snow League. Not the Munich firm Bolt Ventures GmbH, which belongs to Gerard Bolt.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/David_Blitzer",
+        "https://www.businesswire.com/news/home/20260408417313/en/Former-Blackstone-Colleagues-Isaac-Harrouche-and-Mike-Berlin-Partner-with-David-Blitzer-and-Announce-Final-Close-of-%24400-Million-Debut-Fund",
+        "https://www.fintrx.com/blog/5-family-offices-investing-in-sports-companies",
+        "https://www.cnbc.com/2026/02/05/billionaire-investing-family-office.html"
+      ]
+    },
+    {
+      "id": "darco_capital",
+      "name": "Darco Capital",
+      "type": "single_family_office",
+      "principals": [
+        "David Adelman"
+      ],
+      "wealth_source": "Campus Apartments CEO, FS Investments co-founder",
+      "headquarters": null,
+      "founded": 2010,
+      "key_people": [],
+      "focus": [
+        "climate tech",
+        "fintech",
+        "sports and media",
+        "spirits"
+      ],
+      "q3_2026_deal_count": null,
+      "verification": "verified",
+      "founder_note": "More than 90 venture and growth investments. Adelman is also a partner in Harris Blitzer Sports & Entertainment.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/David_J._Adelman",
+        "https://www.cbinsights.com/company/darco-capital",
+        "https://www.cnbc.com/2026/06/05/family-office-sport-investments.html"
+      ]
+    },
+    {
+      "id": "dundon_capital_partners",
+      "name": "Dundon Capital Partners",
+      "type": "investment_entity",
+      "principals": [
+        "Tom Dundon"
+      ],
+      "wealth_source": "Financial services businessman",
+      "headquarters": null,
+      "founded": null,
+      "key_people": [],
+      "focus": [
+        "sports"
+      ],
+      "q3_2026_deal_count": null,
+      "verification": "partial",
+      "founder_note": "CNBC calls it Tom Dundon's family office. Other sources only call it his investment vehicle. Holds majority control of Pickleball Inc.",
+      "sources": [
+        "https://www.sportcal.com/news/apollo-leads-225m-investment-in-pickleballs-mlp-and-ppa-tour/",
+        "https://qz.com/apollo-sports-capital-pickleball-inc-225-million-investment-050126",
+        "https://www.cnbc.com/2026/06/05/family-office-sport-investments.html"
+      ]
+    },
+    {
+      "id": "centaurus_capital",
+      "name": "Centaurus Capital",
+      "type": "single_family_office",
+      "principals": [
+        "John Arnold",
+        "Laura Arnold"
+      ],
+      "wealth_source": "Energy trader, former Centaurus Energy hedge fund",
+      "headquarters": "Houston, TX, US",
+      "founded": null,
+      "key_people": [],
+      "focus": [
+        "energy",
+        "geothermal",
+        "climate"
+      ],
+      "q3_2026_deal_count": null,
+      "verification": "verified",
+      "founder_note": "Energy-focused family office. Reported to have committed about $500M to energy credit firm EOC Partners. Founding year conflicts across sources (2008 vs 2009).",
+      "sources": [
+        "https://energypolicy.columbia.edu/?p=1583",
+        "https://www.marketscreener.com/insider/JOHN-ARNOLD-A0F1H5/",
+        "https://www.epmag.com/exclusives/billionaire-john-arnold-backing-energy-focused-credit-fund-sources-200286",
+        "https://www.cnbc.com/2026/10/01/billionaire-family-offices-back-geothermal-energy-in-september.html"
+      ]
+    },
+    {
+      "id": "builders_vision",
+      "name": "Builders Vision",
+      "type": "single_family_office",
+      "principals": [
+        "Lukas Walton"
+      ],
+      "wealth_source": "Walmart heir",
+      "headquarters": null,
+      "founded": 2021,
+      "key_people": [],
+      "focus": [
+        "food and agriculture",
+        "clean energy",
+        "oceans"
+      ],
+      "q3_2026_deal_count": null,
+      "verification": "verified",
+      "founder_note": "Combines S2G Ventures (2014) and Builders Initiative philanthropy (2017). Had deployed more than $3B by 2023 through direct deals, grants, and funds.",
+      "sources": [
+        "https://www.cnbc.com/2022/09/19/billionaire-lukas-waltons-family-office-fans-impact-investing-push.html",
+        "https://globalaginvesting.com/walmart-heir-behind-s2g-ventures-launches-new-platform-builders-vision/",
+        "https://www.cnbc.com/2026/08/06/family-offices-sustainability-startups-july-dealmaking.html"
+      ]
+    },
+    {
+      "id": "gates_frontier",
+      "name": "Gates Frontier",
+      "type": "investment_entity",
+      "principals": [
+        "Bill Gates"
+      ],
+      "wealth_source": "Microsoft co-founder",
+      "headquarters": null,
+      "founded": null,
+      "key_people": [],
+      "focus": [
+        "biotech",
+        "health care"
+      ],
+      "q3_2026_deal_count": null,
+      "verification": "partial",
+      "founder_note": "Bill Gates's venture firm. His main family office is Cascade Investment in Kirkland, WA. A Denver family office tied to the Charles C. Gates legacy uses a similar name, so confirm the entity before outreach.",
+      "sources": [
+        "https://www.fiercebiotech.com/biotech/lifemines-frozen-platform-thawed-263m-fundraise-backed-gates-and-bezos",
+        "https://www.cbinsights.com/company/gates-frontier",
+        "https://www.cnbc.com/2026/09/03/family-offices-health-care-biotech-startups-august.html"
+      ]
+    },
+    {
+      "id": "peugeot_family_office",
+      "name": "Peugeot family office",
+      "type": "family_holding_company",
+      "principals": [
+        "Peugeot family"
+      ],
+      "wealth_source": "Peugeot automotive dynasty",
+      "headquarters": "France",
+      "founded": null,
+      "key_people": [],
+      "focus": [
+        "industrials",
+        "sustainability"
+      ],
+      "q3_2026_deal_count": null,
+      "verification": "partial",
+      "founder_note": "Deal notices say only 'the Peugeot family office'. Peugeot Invest is the family's listed investment company and the most likely entity, but this is not confirmed.",
+      "sources": [
+        "https://www.lemondedudroit.fr/deals/105520-bird-bird-conseille-bpifrance.html",
+        "https://pipelineroad.com/directory/peugeot-invest",
+        "https://nordic9.com/news/syntetica-raises-30-million-series-a-led-by-t/",
+        "https://www.cnbc.com/2026/08/06/family-offices-sustainability-startups-july-dealmaking.html"
+      ]
+    },
+    {
+      "id": "volta_circle",
+      "name": "Volta Circle",
+      "type": "single_family_office",
+      "principals": [
+        "Leading shareholder family of Indorama Ventures"
+      ],
+      "wealth_source": "Indorama Ventures, petrochemicals and textiles",
+      "headquarters": null,
+      "founded": null,
+      "key_people": [],
+      "focus": [
+        "sustainability",
+        "textiles"
+      ],
+      "q3_2026_deal_count": null,
+      "verification": "partial",
+      "founder_note": "Named as the family office of Indorama Ventures' shareholders in Syntetica's 2024 seed round. Indorama is controlled by the Lohia family, but no source here names them as Volta Circle's owner.",
+      "sources": [
+        "https://www.goodwinlaw.com/en/news-and-events/news/2024/07/announcements-technology-ip-syntetica-raises-42-million",
+        "https://www.lemondedudroit.fr/deals/105520-bird-bird-conseille-bpifrance.html"
       ]
     }
   ]
