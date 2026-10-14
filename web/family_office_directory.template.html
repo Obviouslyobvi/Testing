@@ -118,6 +118,17 @@ input, select {
 .deal-lines .d { font-family: var(--font-data); color: var(--muted); font-variant-numeric: tabular-nums; }
 .deal-lines .amt { font-family: var(--font-data); font-variant-numeric: tabular-nums; text-align: right; }
 .no-deals { font-size: var(--step--1); color: var(--muted); margin: 0; }
+.contact { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 0.75rem 1.5rem; padding: 0.75rem 0.85rem; background: var(--bg); border-radius: 8px; font-size: var(--step--1); }
+.contact h4 { margin: 0 0 0.25rem; font: 600 var(--step--1) var(--font-body); color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
+.contact > div { min-width: 0; }
+.contact address { font-style: normal; overflow-wrap: anywhere; }
+.contact address + address { margin-top: 0.4rem; }
+.contact .lbl { color: var(--muted); }
+.contact ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 0.2rem; }
+.contact .line { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem; overflow-wrap: anywhere; }
+.contact .val { font-family: var(--font-data); user-select: all; }
+.copy { font: 500 0.75rem var(--font-body); color: var(--accent); background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 0.05rem 0.45rem; cursor: pointer; }
+.none { color: var(--muted); }
 details summary { cursor: pointer; font-size: var(--step--1); color: var(--muted); }
 details ol { margin: 0.4rem 0 0; padding-left: 1.2rem; font-size: var(--step--1); display: grid; gap: 0.15rem; }
 details li { overflow-wrap: anywhere; }
@@ -241,7 +252,8 @@ footer p { margin: 0; max-width: 80ch; }
   function haystack(o) {
     var ds = (dealsByOffice[o.id] || []).map(function (d) { return d.company + " " + d.sector; }).join(" ");
     return [o.name, (o.principals || []).join(" "), o.wealth_source, o.headquarters, (o.focus || []).join(" "),
-      o.founder_note, TYPE_LABEL[o.type], ds].join(" ").toLowerCase();
+      o.founder_note, TYPE_LABEL[o.type], ds, (o.key_people || []).map(function (p) { return p.name + " " + (p.title || ""); }).join(" "),
+      ((o.contact || {}).addresses || []).map(function (a) { return [a.city, a.region, a.country].join(" "); }).join(" ")].join(" ").toLowerCase();
   }
   offices.forEach(function (o) { o._hay = haystack(o); });
 
@@ -271,6 +283,28 @@ footer p { margin: 0; max-width: 80ch; }
     if (o.founded) facts.push(["Founded", o.founded]);
     facts.push(["Deals logged", ds.length]);
     if (o.q3_2026_deal_count != null) facts.push(["Q3 2026 deals reported", o.q3_2026_deal_count]);
+    var c = o.contact || {};
+    var people = (o.key_people || []);
+    var addr = (c.addresses || []).map(function (a) {
+      var cityLine = [a.city, a.region, a.postal_code].filter(Boolean).join(", ");
+      return '<address>' + (a.label ? '<span class="lbl">' + esc(a.label) + '</span><br>' : "") +
+        [a.street, cityLine, a.country].filter(Boolean).map(esc).join("<br>") + '</address>';
+    }).join("");
+    function copyLine(label, item) {
+      if (!item || !item.value) return "";
+      return '<li class="line"><span class="lbl">' + label + '</span> <span class="val">' + esc(item.value) + '</span>' +
+        '<button type="button" class="copy" data-copy="' + esc(item.value) + '">Copy</button></li>';
+    }
+    var reach = copyLine("Email", c.email) + copyLine("Phone", c.phone) +
+      (c.contact_form_url ? '<li><a href="' + esc(c.contact_form_url) + '" target="_blank" rel="noopener">Contact form</a></li>' : "") +
+      ((c.website || o.website) ? '<li><a href="' + esc(c.website || o.website) + '" target="_blank" rel="noopener">' + esc(host(c.website || o.website)) + '</a></li>' : "");
+    var contactBlock = '<div class="contact">' +
+      '<div><h4>Key people</h4>' + (people.length ? '<ul>' + people.map(function (p) {
+        return '<li>' + esc(p.name) + (p.title ? ' <span class="lbl">· ' + esc(p.title) + '</span>' : "") + '</li>';
+      }).join("") + '</ul>' : '<span class="none">None published</span>') + '</div>' +
+      '<div><h4>Office address</h4>' + (addr || '<span class="none">Not published</span>') + '</div>' +
+      '<div><h4>How to reach</h4>' + (reach ? '<ul>' + reach + '</ul>' : '<span class="none">No public contact published</span>') + '</div>' +
+      '</div>';
     return '<article class="office" id="o-' + esc(o.id) + '">' +
       '<div class="office-head"><h3>' + esc(o.name) + '</h3>' +
       '<span class="pill type">' + esc(TYPE_LABEL[o.type] || o.type) + '</span>' +
@@ -279,6 +313,8 @@ footer p { margin: 0; max-width: 80ch; }
       '<dl class="facts">' + facts.map(function (f) { return '<div><dt>' + esc(f[0]) + '</dt><dd>' + esc(f[1]) + '</dd></div>'; }).join("") + '</dl>' +
       ((o.focus || []).length ? '<ul class="tags">' + o.focus.map(function (t) { return '<li>' + esc(t) + '</li>'; }).join("") + '</ul>' : "") +
       (o.founder_note ? '<p class="note">' + esc(o.founder_note) + '</p>' : "") +
+      contactBlock +
+      (c.notes ? '<p class="note">Contact note: ' + esc(c.notes) + '</p>' : "") +
       (ds.length ? '<ul class="deal-lines">' + ds.map(function (d) {
         return '<li><span class="d">' + esc(fmtDate(d.date)) + '</span><span>' + esc(d.company) + (d.round ? ' · ' + esc(d.round) : "") + '</span><span class="amt">' + esc(d.amount_reported || "Undisclosed") + '</span></li>';
       }).join("") + '</ul>' : '<p class="no-deals">No deals logged yet.</p>') +
@@ -339,6 +375,16 @@ footer p { margin: 0; max-width: 80ch; }
     document.getElementById("q").value = o.name; typeSel.value = ""; document.getElementById("f-status").value = "";
     renderOffices(); show("offices");
     var el = document.getElementById("o-" + o.id); if (el) el.scrollIntoView({ block: "start" });
+  });
+  document.getElementById("office-list").addEventListener("click", function (e) {
+    var b = e.target.closest(".copy"); if (!b) return;
+    var text = b.getAttribute("data-copy");
+    function done() { b.textContent = "Copied"; setTimeout(function () { b.textContent = "Copy"; }, 1500); }
+    function fallback() {
+      var v = b.previousElementSibling; var r = document.createRange(); r.selectNodeContents(v);
+      var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r); b.textContent = "Selected";
+    }
+    try { navigator.clipboard.writeText(text).then(done, fallback); } catch (err) { fallback(); }
   });
   ["q", "f-type", "f-status", "f-sort"].forEach(function (id) {
     document.getElementById(id).addEventListener("input", renderOffices);

@@ -32,6 +32,18 @@ def main():
             errors.append(f"office {o['id']} has unknown type {o['type']}")
         if o["verification"] not in STATUSES:
             errors.append(f"office {o['id']} has unknown verification {o['verification']}")
+        for person in o.get("key_people", []):
+            if not isinstance(person, dict) or not person.get("name") or not person.get("source"):
+                errors.append(f"office {o['id']} has a key person without a name and source: {person}")
+        contact = o.get("contact")
+        if contact:
+            for a in contact.get("addresses", []):
+                if not a.get("source"):
+                    errors.append(f"office {o['id']} has an address without a source")
+            for field in ("phone", "email"):
+                item = contact.get(field)
+                if item and (not item.get("value") or not item.get("source")):
+                    errors.append(f"office {o['id']} has a {field} without a value and source")
 
     known = set(office_ids)
     deal_ids = [d["id"] for d in deals["deals"]]

@@ -47,8 +47,16 @@
       "headquarters": null,
       "founded": 2022,
       "key_people": [
-        "Scott Kupor (founder of the unit)",
-        "Michel Del Buono (oversees investments)"
+        {
+          "name": "Scott Kupor",
+          "title": "Founder of Perennial",
+          "source": "https://fortune.com/2024/06/24/andreessen-horowitz-a16z-private-equity-fund"
+        },
+        {
+          "name": "Michel Del Buono",
+          "title": "Head of investments",
+          "source": "https://fortune.com/2024/06/24/andreessen-horowitz-a16z-private-equity-fund"
+        }
       ],
       "focus": [
         "wealth management",
@@ -75,7 +83,11 @@
       "headquarters": null,
       "founded": 2018,
       "key_people": [
-        "Ella Zhang (head)"
+        {
+          "name": "Ella Zhang",
+          "title": "Head",
+          "source": "https://cointelegraph.com/news/binance-labs-rebrands-yzi-labs-biotech-ai"
+        }
       ],
       "focus": [
         "Web3",
@@ -128,9 +140,16 @@
       "headquarters": "San Francisco, CA, US",
       "founded": 2011,
       "key_people": [
-        "Divesh Makan (founder and CEO)",
-        "Michael Anders (partner)",
-        "Will Griffith (partner)"
+        {
+          "name": "Divesh Makan",
+          "title": "Founder and CEO",
+          "source": "https://en.wikipedia.org/wiki/Iconiq_Capital"
+        },
+        {
+          "name": "Michael Anders",
+          "title": "Partner",
+          "source": "https://en.wikipedia.org/wiki/Iconiq_Capital"
+        }
       ],
       "focus": [
         "venture",
@@ -336,7 +355,11 @@
       "headquarters": null,
       "founded": 2011,
       "key_people": [
-        "Laurene Powell Jobs (founder and president)"
+        {
+          "name": "Laurene Powell Jobs",
+          "title": "Founder and president",
+          "source": "https://emersoncollective.com/articles/q-and-a-with-ec-founder-and-president-laurene-powell-jobs"
+        }
       ],
       "focus": [
         "impact investing",
@@ -469,8 +492,16 @@
       "headquarters": "Chicago, IL and New York, NY, US",
       "founded": 2024,
       "key_people": [
-        "Mark Walter",
-        "Thomas Tull (co-chairman)"
+        {
+          "name": "Mark Walter",
+          "title": "Principal",
+          "source": "https://en.wikipedia.org/wiki/TWG_Global"
+        },
+        {
+          "name": "Thomas Tull",
+          "title": "Co-chairman",
+          "source": "https://en.wikipedia.org/wiki/TWG_Global"
+        }
       ],
       "focus": [
         "artificial intelligence",
@@ -521,7 +552,11 @@
       "headquarters": "Paris, France",
       "founded": 2021,
       "key_people": [
-        "Guillaume Houzé (founder)"
+        {
+          "name": "Guillaume Houzé",
+          "title": "Founder",
+          "source": "https://techcrunch.com/2024/10/02/motier-ventures-unveils-la-maison-a-community-space-for-the-french-tech-ecosystem"
+        }
       ],
       "focus": [
         "commerce",
