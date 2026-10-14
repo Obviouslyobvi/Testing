@@ -1,0 +1,353 @@
+<title>Family Office Directory</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a working ledger. Summary strip, filter bar, then one column of office entries, each carrying its own deal lines. */
+:root {
+  --bg: #f3f5f4;
+  --surface: #ffffff;
+  --ink: #16201e;
+  --muted: #586561;
+  --line: #d6dcd9;
+  --accent: #1d6a5b;
+  --accent-soft: #dfeee9;
+  --ok: #26734a;
+  --ok-soft: #e0f1e7;
+  --warn: #8f5a0c;
+  --warn-soft: #f8ecd6;
+  --bad: #9c3424;
+  --bad-soft: #f6e1dc;
+  --font-display: "Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --font-body: "IBM Plex Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-data: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --step--1: 0.8125rem;
+  --step-0: 0.9375rem;
+  --step-1: 1.125rem;
+  --step-2: 1.5rem;
+  --step-3: 2.25rem;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f1514; --surface: #162120; --ink: #e4ebe8; --muted: #98a6a1; --line: #293533;
+    --accent: #62c2ab; --accent-soft: #1b3530; --ok: #70c797; --ok-soft: #173326;
+    --warn: #e3a94d; --warn-soft: #3a2c14; --bad: #ee8573; --bad-soft: #3d1f19; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0f1514; --surface: #162120; --ink: #e4ebe8; --muted: #98a6a1; --line: #293533;
+  --accent: #62c2ab; --accent-soft: #1b3530; --ok: #70c797; --ok-soft: #173326;
+  --warn: #e3a94d; --warn-soft: #3a2c14; --bad: #ee8573; --bad-soft: #3d1f19; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: var(--step-0); line-height: 1.55;
+}
+.wrap {
+  max-width: 68rem; margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 2rem 3rem;
+  display: grid; gap: 1.5rem;
+}
+a { color: var(--accent); }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible {
+  outline: 2px solid var(--accent); outline-offset: 2px;
+}
+h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; margin: 0; letter-spacing: -0.01em; }
+h1 { font-size: var(--step-3); line-height: 1.1; }
+.lede { margin: 0.5rem 0 0; color: var(--muted); max-width: 62ch; }
+.eyebrow {
+  font-family: var(--font-data); font-size: var(--step--1); text-transform: uppercase; letter-spacing: 0.08em;
+  color: var(--accent); margin: 0 0 0.5rem;
+}
+
+.summary { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border: 1px solid var(--line); background: var(--surface); border-radius: 10px; }
+.summary div { padding: 0.9rem 1rem; display: grid; gap: 0.15rem; }
+.summary div + div { border-left: 1px solid var(--line); }
+.summary b { font-family: var(--font-display); font-size: var(--step-2); font-variant-numeric: tabular-nums; line-height: 1.1; }
+.summary span { color: var(--muted); font-size: var(--step--1); }
+
+.tabs { display: flex; gap: 0.25rem; border-bottom: 1px solid var(--line); }
+.tabs button {
+  font: 600 var(--step-0) var(--font-body); color: var(--muted); background: none; border: 0;
+  padding: 0.6rem 0.9rem; border-bottom: 2px solid transparent; margin-bottom: -1px; cursor: pointer;
+}
+.tabs button[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--accent); }
+
+.filters { display: flex; flex-wrap: wrap; gap: 0.6rem; align-items: end; }
+.field { display: grid; gap: 0.25rem; flex: 1 1 10rem; min-width: 0; }
+.field.grow { flex: 3 1 16rem; }
+.field label { font-size: var(--step--1); color: var(--muted); font-weight: 500; }
+input, select {
+  font: inherit; color: var(--ink); background: var(--surface); border: 1px solid var(--line);
+  border-radius: 8px; padding: 0 0.65rem; width: 100%; height: 2.5rem;
+}
+.count { color: var(--muted); font-size: var(--step--1); margin: 0; }
+
+.offices { display: grid; gap: 0.75rem; }
+.office {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 10px;
+  padding: 1rem 1.1rem; display: grid; gap: 0.6rem; min-width: 0;
+}
+.office-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.5rem 0.75rem; }
+.office-head h3 { font-size: var(--step-1); margin-right: auto; }
+.pill {
+  font-size: var(--step--1); font-weight: 500; padding: 0.1rem 0.55rem; border-radius: 999px;
+  white-space: nowrap; border: 1px solid transparent;
+}
+.pill.type { color: var(--muted); border-color: var(--line); }
+.pill.verified { background: var(--ok-soft); color: var(--ok); }
+.pill.partial { background: var(--warn-soft); color: var(--warn); }
+.pill.unverified { background: var(--bad-soft); color: var(--bad); }
+.who { margin: 0; }
+.who strong { font-weight: 600; }
+.facts { display: flex; flex-wrap: wrap; gap: 0.25rem 1.5rem; margin: 0; font-size: var(--step--1); }
+.facts div { display: flex; gap: 0.35rem; }
+.facts dt { color: var(--muted); }
+.facts dd { margin: 0; font-variant-numeric: tabular-nums; }
+.tags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 0; padding: 0; list-style: none; }
+.tags li { font-size: var(--step--1); background: var(--accent-soft); color: var(--accent); padding: 0.05rem 0.5rem; border-radius: 4px; }
+.note { margin: 0; color: var(--muted); max-width: 72ch; }
+.deal-lines { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+.deal-lines li {
+  display: grid; grid-template-columns: 6.5rem minmax(0, 1fr) auto; gap: 0.75rem;
+  padding: 0.4rem 0; border-bottom: 1px dashed var(--line); font-size: var(--step--1); align-items: baseline;
+}
+.deal-lines .d { font-family: var(--font-data); color: var(--muted); font-variant-numeric: tabular-nums; }
+.deal-lines .amt { font-family: var(--font-data); font-variant-numeric: tabular-nums; text-align: right; }
+.no-deals { font-size: var(--step--1); color: var(--muted); margin: 0; }
+details summary { cursor: pointer; font-size: var(--step--1); color: var(--muted); }
+details ol { margin: 0.4rem 0 0; padding-left: 1.2rem; font-size: var(--step--1); display: grid; gap: 0.15rem; }
+details li { overflow-wrap: anywhere; }
+
+.table-wrap { overflow-x: auto; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; }
+table { border-collapse: collapse; width: 100%; min-width: 46rem; font-size: var(--step--1); }
+th, td { text-align: left; padding: 0.55rem 0.75rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-weight: 600; color: var(--muted); background: var(--bg); position: sticky; top: 0; }
+td.num, th.num { text-align: right; font-family: var(--font-data); font-variant-numeric: tabular-nums; white-space: nowrap; }
+td.date { font-family: var(--font-data); white-space: nowrap; color: var(--muted); }
+tr:last-child td { border-bottom: 0; }
+.office-link { background: none; border: 0; padding: 0; font: inherit; color: var(--accent); cursor: pointer; text-decoration: underline; text-underline-offset: 2px; }
+.empty { padding: 1.5rem; text-align: center; color: var(--muted); background: var(--surface); border: 1px dashed var(--line); border-radius: 10px; }
+
+footer { color: var(--muted); font-size: var(--step--1); display: grid; gap: 0.4rem; border-top: 1px solid var(--line); padding-top: 1rem; }
+footer p { margin: 0; max-width: 80ch; }
+
+@media (max-width: 640px) {
+  .summary { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .summary div:nth-child(3) { border-left: 0; }
+  .summary div:nth-child(n+3) { border-top: 1px solid var(--line); }
+  .deal-lines li { grid-template-columns: minmax(0, 1fr) auto; }
+  .deal-lines .d { grid-column: 1 / -1; }
+  h1 { font-size: var(--step-2); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .office { transition: border-color 0.15s ease; }
+  .office:hover { border-color: var(--accent); }
+}
+</style>
+
+<div class="wrap">
+  <header>
+    <p class="eyebrow">Startup investors · public sources only</p>
+    <h1>Family Office Directory</h1>
+    <p class="lede">Family offices that write checks into startups, with the deals they joined and a source link for every claim. Search by name, founder, sector, or where the money came from.</p>
+  </header>
+
+  <section class="summary" aria-label="Directory totals">
+    <div><b id="s-offices">0</b><span>family offices</span></div>
+    <div><b id="s-verified">0</b><span>verified by 2+ sources</span></div>
+    <div><b id="s-deals">0</b><span>deals logged</span></div>
+    <div><b id="s-active">0</b><span>offices with a logged deal</span></div>
+  </section>
+
+  <nav class="tabs" role="tablist" aria-label="View">
+    <button role="tab" id="tab-offices" aria-selected="true" aria-controls="panel-offices">Offices</button>
+    <button role="tab" id="tab-deals" aria-selected="false" aria-controls="panel-deals">Deals</button>
+  </nav>
+
+  <section id="panel-offices" role="tabpanel" aria-labelledby="tab-offices" class="offices-panel" style="display:grid;gap:1rem">
+    <div class="filters">
+      <div class="field grow"><label for="q">Search</label><input id="q" type="search" placeholder="Try biotech, Amazon, Paris, or Bezos" autocomplete="off"></div>
+      <div class="field"><label for="f-type">Type</label><select id="f-type"><option value="">All types</option></select></div>
+      <div class="field"><label for="f-status">Verification</label><select id="f-status"><option value="">Any status</option><option value="verified">Verified</option><option value="partial">Partial</option><option value="unverified">Unverified</option></select></div>
+      <div class="field"><label for="f-sort">Sort</label><select id="f-sort"><option value="deals">Most deals logged</option><option value="name">Name A to Z</option><option value="status">Verified first</option></select></div>
+    </div>
+    <p class="count" id="o-count" aria-live="polite"></p>
+    <div class="offices" id="office-list"></div>
+  </section>
+
+  <section id="panel-deals" role="tabpanel" aria-labelledby="tab-deals" hidden style="display:grid;gap:1rem">
+    <div class="filters">
+      <div class="field grow"><label for="dq">Search deals</label><input id="dq" type="search" placeholder="Company, round, or office" autocomplete="off"></div>
+      <div class="field"><label for="d-sector">Sector</label><select id="d-sector"><option value="">All sectors</option></select></div>
+    </div>
+    <p class="count" id="d-count" aria-live="polite"></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Date</th><th>Company</th><th>Round</th><th class="num">Round size</th><th>Sector</th><th>Family offices</th><th>Source</th></tr></thead>
+        <tbody id="deal-rows"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer>
+    <p id="compiled"></p>
+    <p>Round size is the total raised in the round, not the office's own check. A blank field means no reliable public source was found, not that the answer is no.</p>
+    <p>Partial means the office is real but some detail is unconfirmed. Unverified means no public source confirms the entity under that name. Read each record's note before reaching out.</p>
+  </footer>
+</div>
+
+<script id="data" type="application/json">__DATA__</script>
+<script>
+(function () {
+  var DATA = JSON.parse(document.getElementById("data").textContent);
+  var offices = DATA.offices.offices;
+  var deals = DATA.deals.deals;
+  var byId = {};
+  offices.forEach(function (o) { byId[o.id] = o; });
+  var dealsByOffice = {};
+  deals.forEach(function (d) {
+    d.office_ids.forEach(function (id) { (dealsByOffice[id] = dealsByOffice[id] || []).push(d); });
+  });
+
+  var TYPE_LABEL = {
+    single_family_office: "Single-family office",
+    multi_family_office: "Multi-family office",
+    family_holding_company: "Family holding company",
+    investment_entity: "Personal investment vehicle",
+    unverified: "Entity unconfirmed"
+  };
+  var STATUS_LABEL = { verified: "Verified", partial: "Partial", unverified: "Unverified" };
+  var STATUS_RANK = { verified: 0, partial: 1, unverified: 2 };
+  var MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+  function esc(s) {
+    return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+  function fmtDate(d) {
+    var q = /^(\d{4})-Q(\d)$/.exec(d); if (q) return "Q" + q[2] + " " + q[1];
+    var p = d.split("-");
+    if (p.length === 3) return MONTHS[+p[1] - 1] + " " + (+p[2]) + ", " + p[0];
+    if (p.length === 2) return MONTHS[+p[1] - 1] + " " + p[0];
+    return d;
+  }
+  function sortKey(d) { return d.replace(/-Q3$/, "-09-30").replace(/^(\d{4}-\d{2})$/, "$1-15"); }
+  function host(u) { try { return new URL(u).hostname.replace(/^www\./, ""); } catch (e) { return u; } }
+  function haystack(o) {
+    var ds = (dealsByOffice[o.id] || []).map(function (d) { return d.company + " " + d.sector; }).join(" ");
+    return [o.name, (o.principals || []).join(" "), o.wealth_source, o.headquarters, (o.focus || []).join(" "),
+      o.founder_note, TYPE_LABEL[o.type], ds].join(" ").toLowerCase();
+  }
+  offices.forEach(function (o) { o._hay = haystack(o); });
+
+  // Summary
+  document.getElementById("s-offices").textContent = offices.length;
+  document.getElementById("s-verified").textContent = offices.filter(function (o) { return o.verification === "verified"; }).length;
+  document.getElementById("s-deals").textContent = deals.length;
+  document.getElementById("s-active").textContent = offices.filter(function (o) { return dealsByOffice[o.id]; }).length;
+  document.getElementById("compiled").textContent = "Compiled " + DATA.offices.compiled_on + " from The Founders Corner's Q3 2026 report, CNBC's monthly family office deal roundups (Oct 2025 to Sep 2026), and the press coverage linked in each record.";
+
+  // Filter options
+  var typeSel = document.getElementById("f-type");
+  Object.keys(TYPE_LABEL).forEach(function (t) {
+    if (offices.some(function (o) { return o.type === t; })) {
+      var op = document.createElement("option"); op.value = t; op.textContent = TYPE_LABEL[t]; typeSel.appendChild(op);
+    }
+  });
+  var secSel = document.getElementById("d-sector");
+  Array.from(new Set(deals.map(function (d) { return d.sector; }))).sort().forEach(function (s) {
+    var op = document.createElement("option"); op.value = s; op.textContent = s.charAt(0).toUpperCase() + s.slice(1); secSel.appendChild(op);
+  });
+
+  function officeCard(o) {
+    var ds = (dealsByOffice[o.id] || []).slice().sort(function (a, b) { return sortKey(b.date) < sortKey(a.date) ? -1 : 1; });
+    var facts = [];
+    if (o.headquarters) facts.push(["Based in", o.headquarters]);
+    if (o.founded) facts.push(["Founded", o.founded]);
+    facts.push(["Deals logged", ds.length]);
+    if (o.q3_2026_deal_count != null) facts.push(["Q3 2026 deals reported", o.q3_2026_deal_count]);
+    return '<article class="office" id="o-' + esc(o.id) + '">' +
+      '<div class="office-head"><h3>' + esc(o.name) + '</h3>' +
+      '<span class="pill type">' + esc(TYPE_LABEL[o.type] || o.type) + '</span>' +
+      '<span class="pill ' + esc(o.verification) + '">' + esc(STATUS_LABEL[o.verification]) + '</span></div>' +
+      '<p class="who"><strong>' + esc((o.principals || []).join(", ")) + '</strong>' + (o.wealth_source ? " · " + esc(o.wealth_source) : "") + '</p>' +
+      '<dl class="facts">' + facts.map(function (f) { return '<div><dt>' + esc(f[0]) + '</dt><dd>' + esc(f[1]) + '</dd></div>'; }).join("") + '</dl>' +
+      ((o.focus || []).length ? '<ul class="tags">' + o.focus.map(function (t) { return '<li>' + esc(t) + '</li>'; }).join("") + '</ul>' : "") +
+      (o.founder_note ? '<p class="note">' + esc(o.founder_note) + '</p>' : "") +
+      (ds.length ? '<ul class="deal-lines">' + ds.map(function (d) {
+        return '<li><span class="d">' + esc(fmtDate(d.date)) + '</span><span>' + esc(d.company) + (d.round ? ' · ' + esc(d.round) : "") + '</span><span class="amt">' + esc(d.amount_reported || "Undisclosed") + '</span></li>';
+      }).join("") + '</ul>' : '<p class="no-deals">No deals logged yet.</p>') +
+      '<details><summary>Sources (' + o.sources.length + ')</summary><ol>' +
+      o.sources.map(function (u) { return '<li><a href="' + esc(u) + '" target="_blank" rel="noopener">' + esc(host(u)) + '</a></li>'; }).join("") +
+      '</ol></details></article>';
+  }
+
+  function renderOffices() {
+    var q = document.getElementById("q").value.trim().toLowerCase();
+    var t = typeSel.value, s = document.getElementById("f-status").value, sort = document.getElementById("f-sort").value;
+    var terms = q ? q.split(/\s+/) : [];
+    var list = offices.filter(function (o) {
+      return (!t || o.type === t) && (!s || o.verification === s) &&
+        terms.every(function (w) { return o._hay.indexOf(w) !== -1; });
+    });
+    list.sort(function (a, b) {
+      if (sort === "name") return a.name.localeCompare(b.name);
+      if (sort === "status") return (STATUS_RANK[a.verification] - STATUS_RANK[b.verification]) || a.name.localeCompare(b.name);
+      return ((dealsByOffice[b.id] || []).length - (dealsByOffice[a.id] || []).length) || a.name.localeCompare(b.name);
+    });
+    document.getElementById("o-count").textContent = "Showing " + list.length + " of " + offices.length + " offices";
+    document.getElementById("office-list").innerHTML = list.length ? list.map(officeCard).join("") :
+      '<div class="empty">No offices match. Clear the search or pick a different type.</div>';
+  }
+
+  function renderDeals() {
+    var q = document.getElementById("dq").value.trim().toLowerCase(), sec = secSel.value;
+    var terms = q ? q.split(/\s+/) : [];
+    var list = deals.filter(function (d) {
+      var hay = [d.company, d.round, d.sector, d.office_ids.map(function (id) { return byId[id] ? byId[id].name : id; }).join(" ")].join(" ").toLowerCase();
+      return (!sec || d.sector === sec) && terms.every(function (w) { return hay.indexOf(w) !== -1; });
+    }).sort(function (a, b) { return sortKey(b.date) < sortKey(a.date) ? -1 : 1; });
+    document.getElementById("d-count").textContent = "Showing " + list.length + " of " + deals.length + " deals, newest first";
+    document.getElementById("deal-rows").innerHTML = list.length ? list.map(function (d) {
+      return '<tr><td class="date">' + esc(fmtDate(d.date)) + '</td><td>' + esc(d.company) + (d.note ? '<br><span style="color:var(--muted)">' + esc(d.note) + '</span>' : "") + '</td>' +
+        '<td>' + esc(d.round || "") + '</td><td class="num">' + esc(d.amount_reported || "Undisclosed") + '</td><td>' + esc(d.sector) + '</td>' +
+        '<td>' + d.office_ids.map(function (id) { return '<button class="office-link" type="button" data-office="' + esc(id) + '">' + esc(byId[id] ? byId[id].name : id) + '</button>'; }).join(", ") + '</td>' +
+        '<td>' + d.sources.map(function (u) { return '<a href="' + esc(u) + '" target="_blank" rel="noopener">' + esc(host(u)) + '</a>'; }).join("<br>") + '</td></tr>';
+    }).join("") : '<tr><td colspan="7" class="empty">No deals match. Clear the search or pick a different sector.</td></tr>';
+  }
+
+  var tabs = { offices: document.getElementById("tab-offices"), deals: document.getElementById("tab-deals") };
+  var panels = { offices: document.getElementById("panel-offices"), deals: document.getElementById("panel-deals") };
+  function show(name) {
+    Object.keys(tabs).forEach(function (k) {
+      tabs[k].setAttribute("aria-selected", String(k === name));
+      panels[k].hidden = k !== name;
+    });
+    try { localStorage.setItem("fo-tab", name); } catch (e) {}
+  }
+  tabs.offices.addEventListener("click", function () { show("offices"); });
+  tabs.deals.addEventListener("click", function () { show("deals"); });
+
+  document.getElementById("deal-rows").addEventListener("click", function (e) {
+    var b = e.target.closest(".office-link"); if (!b) return;
+    var o = byId[b.getAttribute("data-office")]; if (!o) return;
+    document.getElementById("q").value = o.name; typeSel.value = ""; document.getElementById("f-status").value = "";
+    renderOffices(); show("offices");
+    var el = document.getElementById("o-" + o.id); if (el) el.scrollIntoView({ block: "start" });
+  });
+  ["q", "f-type", "f-status", "f-sort"].forEach(function (id) {
+    document.getElementById(id).addEventListener("input", renderOffices);
+  });
+  ["dq", "d-sector"].forEach(function (id) { document.getElementById(id).addEventListener("input", renderDeals); });
+
+  renderOffices(); renderDeals();
+  var start = location.hash === "#deals" ? "deals" : location.hash === "#offices" ? "offices" : null;
+  if (!start) { try { start = localStorage.getItem("fo-tab"); } catch (e) {} }
+  show(start === "deals" ? "deals" : "offices");
+})();
+</script>
