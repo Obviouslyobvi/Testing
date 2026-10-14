@@ -12,3 +12,6 @@ build/
 .DS_Store
 Thumbs.db
 *.log
+
+# Licensed contact data (Apollo) stays out of the public repo
+data/family_offices/private/

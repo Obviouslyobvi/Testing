@@ -1,0 +1,683 @@
+{
+  "dataset": "family_office_deals",
+  "description": "Startup deals by family offices in data/family_offices/offices.json. Each deal lists the offices that joined by id.",
+  "compiled_on": "2026-10-14",
+  "field_guide": {
+    "date": "YYYY-MM-DD when known, YYYY-MM for the month reported, or YYYY-Q3 when only the quarter is known.",
+    "amount_reported": "Total round size as the source states it, not the office's share. Null when not disclosed.",
+    "amount_usd_millions": "Approximate total round size in US dollars, millions. Euro amounts use the conversion the source gave.",
+    "office_ids": "Ids from offices.json. Several offices can share a deal."
+  },
+  "deal_count": 42,
+  "deals": [
+    {
+      "id": "2025-08-commonwealth-fusion-systems",
+      "date": "2025-08",
+      "company": "Commonwealth Fusion Systems",
+      "round": null,
+      "amount_reported": null,
+      "amount_usd_millions": null,
+      "sector": "energy",
+      "office_ids": [
+        "emerson_collective",
+        "duquesne_family_office"
+      ],
+      "note": "Round announced August 2025. Size not given in source.",
+      "sources": [
+        "https://www.cnbc.com/2025/11/06/family-offices-deals-october-ai.html"
+      ]
+    },
+    {
+      "id": "2025-10-reflection-ai",
+      "date": "2025-10",
+      "company": "Reflection AI",
+      "round": "Series B",
+      "amount_reported": "$2B",
+      "amount_usd_millions": 2000,
+      "sector": "artificial intelligence",
+      "office_ids": [
+        "hillspire"
+      ],
+      "sources": [
+        "https://www.cnbc.com/2025/11/06/family-offices-deals-october-ai.html"
+      ]
+    },
+    {
+      "id": "2025-10-crusoe",
+      "date": "2025-10",
+      "company": "Crusoe",
+      "round": "Series E",
+      "amount_reported": "$1.4B",
+      "amount_usd_millions": 1400,
+      "sector": "artificial intelligence infrastructure",
+      "office_ids": [
+        "winklevoss_capital"
+      ],
+      "note": "Fintrx reports $1.375B.",
+      "sources": [
+        "https://www.cnbc.com/2025/11/06/family-offices-deals-october-ai.html",
+        "https://www.fintrx.com/blog/5-largest-family-office-direct-deals-of-october-2025"
+      ]
+    },
+    {
+      "id": "2025-11-profluent",
+      "date": "2025-11",
+      "company": "Profluent",
+      "round": null,
+      "amount_reported": "$106M",
+      "amount_usd_millions": 106,
+      "sector": "biotech",
+      "office_ids": [
+        "bezos_expeditions"
+      ],
+      "note": "Bezos Expeditions co-led.",
+      "sources": [
+        "https://www.cnbc.com/2025/12/04/billionaire-investments-family-office.html"
+      ]
+    },
+    {
+      "id": "2025-11-function-health",
+      "date": "2025-11",
+      "company": "Function Health",
+      "round": "Series B",
+      "amount_reported": "$298M",
+      "amount_usd_millions": 298,
+      "sector": "health care",
+      "office_ids": [
+        "aglae_ventures"
+      ],
+      "sources": [
+        "https://www.cnbc.com/2025/12/04/billionaire-investments-family-office.html"
+      ]
+    },
+    {
+      "id": "2025-11-anysphere",
+      "date": "2025-11",
+      "company": "Anysphere",
+      "round": null,
+      "amount_reported": "$2.3B",
+      "amount_usd_millions": 2300,
+      "sector": "artificial intelligence",
+      "office_ids": [
+        "a16z_perennial"
+      ],
+      "sources": [
+        "https://www.fintrx.com/blog/5-largest-family-office-direct-deals-of-november-2025"
+      ]
+    },
+    {
+      "id": "2025-11-lambda",
+      "date": "2025-11",
+      "company": "Lambda",
+      "round": "Series E",
+      "amount_reported": "$1.5B",
+      "amount_usd_millions": 1500,
+      "sector": "artificial intelligence infrastructure",
+      "office_ids": [
+        "twg_global",
+        "tulco"
+      ],
+      "sources": [
+        "https://www.fintrx.com/blog/5-largest-family-office-direct-deals-of-november-2025"
+      ]
+    },
+    {
+      "id": "2025-12-lucis",
+      "date": "2025-12",
+      "company": "Lucis",
+      "round": "Seed",
+      "amount_reported": "EUR 7.2M",
+      "amount_usd_millions": 8.5,
+      "sector": "health care",
+      "office_ids": [
+        "motier_ventures"
+      ],
+      "sources": [
+        "https://www.cnbc.com/2026/01/08/family-office-deals-bets-december.html"
+      ]
+    },
+    {
+      "id": "2025-12-il-giornale",
+      "date": "2025-12",
+      "company": "Il Giornale",
+      "round": "Stake acquisition",
+      "amount_reported": "30% stake",
+      "amount_usd_millions": null,
+      "sector": "media",
+      "office_ids": [
+        "lmdv_capital"
+      ],
+      "note": "Acquisition of an established newspaper, not a startup round.",
+      "sources": [
+        "https://www.cnbc.com/2026/01/08/family-office-deals-bets-december.html"
+      ]
+    },
+    {
+      "id": "2026-01-cellares",
+      "date": "2026-01",
+      "company": "Cellares",
+      "round": "Series D",
+      "amount_reported": "$257M",
+      "amount_usd_millions": 257,
+      "sector": "biotech",
+      "office_ids": [
+        "duquesne_family_office",
+        "gates_frontier"
+      ],
+      "sources": [
+        "https://familyofficehub.io/blog/druckenmiller-family-office-invests-in-cellares/",
+        "https://www.cbinsights.com/company/gates-frontier"
+      ]
+    },
+    {
+      "id": "2026-01-red-bull-ktm-tech3",
+      "date": "2026-01",
+      "company": "Red Bull KTM Tech3",
+      "round": "Team acquisition",
+      "amount_reported": "$50M",
+      "amount_usd_millions": 50,
+      "sector": "sports",
+      "office_ids": [
+        "bolt_ventures"
+      ],
+      "note": "Consortium purchase of a MotoGP team, not a startup round.",
+      "sources": [
+        "https://www.cnbc.com/2026/02/05/billionaire-investing-family-office.html"
+      ]
+    },
+    {
+      "id": "2026-01-skild-ai",
+      "date": "2026-01",
+      "company": "Skild AI",
+      "round": null,
+      "amount_reported": "$1.4B",
+      "amount_usd_millions": 1400,
+      "sector": "robotics",
+      "office_ids": [
+        "bezos_expeditions"
+      ],
+      "note": "Bezos Expeditions co-led.",
+      "sources": [
+        "https://www.cnbc.com/2026/02/05/billionaire-investing-family-office.html"
+      ]
+    },
+    {
+      "id": "2026-01-humans",
+      "date": "2026-01",
+      "company": "Humans&",
+      "round": "Seed",
+      "amount_reported": "$480M",
+      "amount_usd_millions": 480,
+      "sector": "artificial intelligence",
+      "office_ids": [
+        "bezos_expeditions",
+        "emerson_collective"
+      ],
+      "sources": [
+        "https://www.cnbc.com/2026/02/05/billionaire-investing-family-office.html"
+      ]
+    },
+    {
+      "id": "2026-02-world-labs",
+      "date": "2026-02",
+      "company": "World Labs",
+      "round": null,
+      "amount_reported": "$1B",
+      "amount_usd_millions": 1000,
+      "sector": "artificial intelligence",
+      "office_ids": [
+        "emerson_collective"
+      ],
+      "sources": [
+        "https://www.cnbc.com/2026/03/05/family-offices-ai-investments.html"
+      ]
+    },
+    {
+      "id": "2026-02-runway",
+      "date": "2026-02",
+      "company": "Runway",
+      "round": "Series E",
+      "amount_reported": "$315M",
+      "amount_usd_millions": 315,
+      "sector": "artificial intelligence",
+      "office_ids": [
+        "premji_invest"
+      ],
+      "sources": [
+        "https://www.cnbc.com/2026/03/05/family-offices-ai-investments.html"
+      ]
+    },
+    {
+      "id": "2026-02-goodfire",
+      "date": "2026-02",
+      "company": "Goodfire",
+      "round": "Series B",
+      "amount_reported": "$150M",
+      "amount_usd_millions": 150,
+      "sector": "artificial intelligence",
+      "office_ids": [
+        "hillspire"
+      ],
+      "sources": [
+        "https://www.cnbc.com/2026/03/05/family-offices-ai-investments.html"
+      ]
+    },
+    {
+      "id": "2026-03-ami-labs",
+      "date": "2026-03",
+      "company": "AMI Labs",
+      "round": "Seed",
+      "amount_reported": "$1.03B",
+      "amount_usd_millions": 1030,
+      "sector": "artificial intelligence",
+      "office_ids": [
+        "bezos_expeditions"
+      ],
+      "note": "Bezos Expeditions co-led.",
+      "sources": [
+        "https://www.cnbc.com/2026/04/02/family-offices-stall-deal-making-during-iran-conflict.html"
+      ]
+    },
+    {
+      "id": "2026-04-ultralight",
+      "date": "2026-04",
+      "company": "Ultralight",
+      "round": null,
+      "amount_reported": null,
+      "amount_usd_millions": null,
+      "sector": "health care",
+      "office_ids": [
+        "emerson_collective"
+      ],
+      "sources": [
+        "https://www.cnbc.com/2026/05/07/family-office-dealmaking-april-healthcare-bets.html"
+      ]
+    },
+    {
+      "id": "2026-04-stipple-bio",
+      "date": "2026-04",
+      "company": "Stipple Bio",
+      "round": null,
+      "amount_reported": null,
+      "amount_usd_millions": null,
+      "sector": "biotech",
+      "office_ids": [
+        "emerson_collective"
+      ],
+      "note": "Made through Yosemite, an oncology fund founded by Reed Jobs.",
+      "sources": [
+        "https://www.cnbc.com/2026/05/07/family-office-dealmaking-april-healthcare-bets.html"
+      ]
+    },
+    {
+      "id": "2026-05-pickleball-inc",
+      "date": "2026-05",
+      "company": "Pickleball Inc",
+      "round": null,
+      "amount_reported": "$225M",
+      "amount_usd_millions": 225,
+      "sector": "sports",
+      "office_ids": [
+        "dundon_capital_partners"
+      ],
+      "note": "Led by Apollo Sports Capital. Dundon co-invested.",
+      "sources": [
+        "https://www.cnbc.com/2026/06/05/family-office-sport-investments.html",
+        "https://www.sportcal.com/news/apollo-leads-225m-investment-in-pickleballs-mlp-and-ppa-tour/"
+      ]
+    },
+    {
+      "id": "2026-05-playerdata",
+      "date": "2026-05",
+      "company": "PlayerData",
+      "round": "Series A",
+      "amount_reported": "$12M",
+      "amount_usd_millions": 12,
+      "sector": "sports technology",
+      "office_ids": [
+        "darco_capital",
+        "bolt_ventures"
+      ],
+      "note": "Co-led by Darco Capital, Bolt Ventures, and Pentland Ventures.",
+      "sources": [
+        "https://www.cnbc.com/2026/06/05/family-office-sport-investments.html"
+      ]
+    },
+    {
+      "id": "2026-06-prometheus",
+      "date": "2026-06",
+      "company": "Prometheus",
+      "round": "Series B",
+      "amount_reported": "$12B",
+      "amount_usd_millions": 12000,
+      "sector": "artificial intelligence",
+      "office_ids": [
+        "bezos_expeditions"
+      ],
+      "sources": [
+        "https://www.cnbc.com/2026/07/02/jeff-bezos-family-office-backed-five-ai-startups-in-june.html"
+      ]
+    },
+    {
+      "id": "2026-06-general-intuition",
+      "date": "2026-06",
+      "company": "General Intuition",
+      "round": "Series A",
+      "amount_reported": "$320M",
+      "amount_usd_millions": 320,
+      "sector": "artificial intelligence",
+      "office_ids": [
+        "bezos_expeditions",
+        "hillspire"
+      ],
+      "sources": [
+        "https://www.cnbc.com/2026/07/02/jeff-bezos-family-office-backed-five-ai-startups-in-june.html"
+      ]
+    },
+    {
+      "id": "2026-06-cuspai",
+      "date": "2026-06",
+      "company": "CuspAI",
+      "round": null,
+      "amount_reported": null,
+      "amount_usd_millions": null,
+      "sector": "artificial intelligence",
+      "office_ids": [
+        "bezos_expeditions"
+      ],
+      "sources": [
+        "https://www.cnbc.com/2026/07/02/jeff-bezos-family-office-backed-five-ai-startups-in-june.html"
+      ]
+    },
+    {
+      "id": "2026-06-generalist",
+      "date": "2026-06",
+      "company": "Generalist",
+      "round": null,
+      "amount_reported": null,
+      "amount_usd_millions": null,
+      "sector": "artificial intelligence",
+      "office_ids": [
+        "bezos_expeditions"
+      ],
+      "sources": [
+        "https://www.cnbc.com/2026/07/02/jeff-bezos-family-office-backed-five-ai-startups-in-june.html"
+      ]
+    },
+    {
+      "id": "2026-06-flourish",
+      "date": "2026-06",
+      "company": "Flourish",
+      "round": null,
+      "amount_reported": null,
+      "amount_usd_millions": null,
+      "sector": "artificial intelligence",
+      "office_ids": [
+        "bezos_expeditions"
+      ],
+      "sources": [
+        "https://www.cnbc.com/2026/07/02/jeff-bezos-family-office-backed-five-ai-startups-in-june.html"
+      ]
+    },
+    {
+      "id": "2026-07-blue-origin",
+      "date": "2026-07",
+      "company": "Blue Origin",
+      "round": null,
+      "amount_reported": "$10B",
+      "amount_usd_millions": 10000,
+      "sector": "space",
+      "office_ids": [
+        "bezos_expeditions"
+      ],
+      "note": "Bezos Expeditions contributed $2B.",
+      "sources": [
+        "https://www.cnbc.com/2026/08/06/family-offices-sustainability-startups-july-dealmaking.html"
+      ]
+    },
+    {
+      "id": "2026-07-antora-energy",
+      "date": "2026-07",
+      "company": "Antora Energy",
+      "round": "Series C",
+      "amount_reported": "$550M",
+      "amount_usd_millions": 550,
+      "sector": "energy",
+      "office_ids": [
+        "doerr_capital"
+      ],
+      "note": "Press release names John Doerr personally.",
+      "sources": [
+        "https://www.cnbc.com/2026/08/06/family-offices-sustainability-startups-july-dealmaking.html",
+        "https://www.businesswire.com/news/home/20260730278399/en/Antora-Closes-$550-Million-in-Series-C-Funding-to-Meet-Surging-Energy-Demand-and-Reindustrialize-America"
+      ]
+    },
+    {
+      "id": "2026-07-hephae-energy-technology",
+      "date": "2026-07",
+      "company": "Hephae Energy Technology",
+      "round": "Series A",
+      "amount_reported": "$17.8M",
+      "amount_usd_millions": 17.8,
+      "sector": "geothermal",
+      "office_ids": [
+        "centaurus_capital"
+      ],
+      "note": "Source names John Arnold. Attributed to his family office.",
+      "sources": [
+        "https://www.cnbc.com/2026/08/06/family-offices-sustainability-startups-july-dealmaking.html"
+      ]
+    },
+    {
+      "id": "2026-07-lydian",
+      "date": "2026-07",
+      "company": "Lydian",
+      "round": "Series A",
+      "amount_reported": "$43M",
+      "amount_usd_millions": 43,
+      "sector": "clean fuels",
+      "office_ids": [
+        "builders_vision"
+      ],
+      "note": "Led by Breakthrough Energy Ventures.",
+      "sources": [
+        "https://www.cnbc.com/2026/08/06/family-offices-sustainability-startups-july-dealmaking.html"
+      ]
+    },
+    {
+      "id": "2026-07-syntetica",
+      "date": "2026-07",
+      "company": "Syntetica",
+      "round": "Series A",
+      "amount_reported": "$30M",
+      "amount_usd_millions": 30,
+      "sector": "sustainability",
+      "office_ids": [
+        "peugeot_family_office",
+        "volta_circle"
+      ],
+      "note": "Led by Bpifrance's Ecotechnologies 2 fund. The Etam family office also joined but is not named.",
+      "sources": [
+        "https://www.cnbc.com/2026/08/06/family-offices-sustainability-startups-july-dealmaking.html",
+        "https://www.lemondedudroit.fr/deals/105520-bird-bird-conseille-bpifrance.html"
+      ]
+    },
+    {
+      "id": "2026-07-proxima-fusion",
+      "date": "2026-07",
+      "company": "Proxima Fusion",
+      "round": "Series B",
+      "amount_reported": "EUR 411M",
+      "amount_usd_millions": 468,
+      "sector": "energy",
+      "office_ids": [
+        "burda_principal_investments"
+      ],
+      "sources": [
+        "https://www.eu-startups.com/2026/07/largest-european-fusion-investment-on-record-sees-proxima-fusion-raise-e411-million/"
+      ]
+    },
+    {
+      "id": "2026-08-epicrispr-biotechnologies",
+      "date": "2026-08",
+      "company": "Epicrispr Biotechnologies",
+      "round": "Series C",
+      "amount_reported": "$90M",
+      "amount_usd_millions": 90,
+      "sector": "biotech",
+      "office_ids": [
+        "duquesne_family_office"
+      ],
+      "sources": [
+        "https://www.cnbc.com/2026/09/03/family-offices-health-care-biotech-startups-august.html"
+      ]
+    },
+    {
+      "id": "2026-08-lifemine-therapeutics",
+      "date": "2026-08",
+      "company": "LifeMine Therapeutics",
+      "round": "Series E",
+      "amount_reported": "$188M",
+      "amount_usd_millions": 188,
+      "sector": "biotech",
+      "office_ids": [
+        "bezos_expeditions",
+        "gates_frontier"
+      ],
+      "sources": [
+        "https://www.cnbc.com/2026/09/03/family-offices-health-care-biotech-startups-august.html",
+        "https://www.fiercebiotech.com/biotech/lifemines-frozen-platform-thawed-263m-fundraise-backed-gates-and-bezos"
+      ]
+    },
+    {
+      "id": "2026-08-25-emerald-ai",
+      "date": "2026-08-25",
+      "company": "Emerald AI",
+      "round": "Series A",
+      "amount_reported": "$150M",
+      "amount_usd_millions": 150,
+      "sector": "energy software",
+      "office_ids": [
+        "emerson_collective",
+        "olayan_group",
+        "temerty_group",
+        "doerr_capital"
+      ],
+      "note": "Co-led by Energize Capital and DCVC. Press release names John Doerr personally.",
+      "sources": [
+        "https://www.businesswire.com/news/home/20260825127649/en/Emerald-AI-Raises-$150-Million-Series-A-at-$1.05-Billion-Valuation-to-Scale-Power-Flexible-AI-Data-Centers"
+      ]
+    },
+    {
+      "id": "2026-09-fab2",
+      "date": "2026-09",
+      "company": "Fab2",
+      "round": "Series A",
+      "amount_reported": "$500M",
+      "amount_usd_millions": 500,
+      "sector": "semiconductors",
+      "office_ids": [
+        "duquesne_family_office"
+      ],
+      "sources": [
+        "https://www.cnbc.com/2026/10/01/billionaire-family-offices-back-geothermal-energy-in-september.html"
+      ]
+    },
+    {
+      "id": "2026-09-precision-neuroscience",
+      "date": "2026-09",
+      "company": "Precision Neuroscience",
+      "round": "Series D",
+      "amount_reported": "$250M",
+      "amount_usd_millions": 250,
+      "sector": "medical devices",
+      "office_ids": [
+        "duquesne_family_office"
+      ],
+      "sources": [
+        "https://www.cnbc.com/2026/10/01/billionaire-family-offices-back-geothermal-energy-in-september.html",
+        "https://www.the-founders-corner.com/p/the-1000-investors-most-founders"
+      ]
+    },
+    {
+      "id": "2026-09-mistral-ai",
+      "date": "2026-09",
+      "company": "Mistral AI",
+      "round": "Series D",
+      "amount_reported": "EUR 3B",
+      "amount_usd_millions": 3400,
+      "sector": "artificial intelligence",
+      "office_ids": [
+        "hillspire"
+      ],
+      "sources": [
+        "https://www.cnbc.com/2026/10/01/billionaire-family-offices-back-geothermal-energy-in-september.html",
+        "https://www.the-founders-corner.com/p/the-1000-investors-most-founders"
+      ]
+    },
+    {
+      "id": "2026-09-mazama-energy",
+      "date": "2026-09",
+      "company": "Mazama Energy",
+      "round": "Series B",
+      "amount_reported": "$135M",
+      "amount_usd_millions": 135,
+      "sector": "geothermal",
+      "office_ids": [
+        "centaurus_capital",
+        "foris_ventures"
+      ],
+      "note": "Co-led by Centaurus Capital and John Doerr's family office, attributed here to Foris Ventures.",
+      "sources": [
+        "https://www.cnbc.com/2026/10/01/billionaire-family-offices-back-geothermal-energy-in-september.html"
+      ]
+    },
+    {
+      "id": "2026-q3-databricks",
+      "date": "2026-Q3",
+      "company": "Databricks",
+      "round": null,
+      "amount_reported": "$5B",
+      "amount_usd_millions": 5000,
+      "sector": "artificial intelligence",
+      "office_ids": [
+        "premji_invest"
+      ],
+      "note": "Reported only by the seed article.",
+      "sources": [
+        "https://www.the-founders-corner.com/p/the-1000-investors-most-founders"
+      ]
+    },
+    {
+      "id": "2026-q3-helsing",
+      "date": "2026-Q3",
+      "company": "Helsing",
+      "round": null,
+      "amount_reported": "$1.8B",
+      "amount_usd_millions": 1800,
+      "sector": "defense technology",
+      "office_ids": [
+        "iconiq"
+      ],
+      "sources": [
+        "https://www.the-founders-corner.com/p/the-1000-investors-most-founders"
+      ]
+    },
+    {
+      "id": "2026-q3-etched",
+      "date": "2026-Q3",
+      "company": "Etched",
+      "round": "Series D",
+      "amount_reported": "$700M",
+      "amount_usd_millions": 700,
+      "sector": "semiconductors",
+      "office_ids": [
+        "thiel_capital"
+      ],
+      "note": "Other reports name Peter Thiel personally.",
+      "sources": [
+        "https://www.the-founders-corner.com/p/the-1000-investors-most-founders"
+      ]
+    }
+  ]
+}
