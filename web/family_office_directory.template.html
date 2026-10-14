@@ -314,7 +314,7 @@ footer p { margin: 0; max-width: 80ch; }
       ((o.focus || []).length ? '<ul class="tags">' + o.focus.map(function (t) { return '<li>' + esc(t) + '</li>'; }).join("") + '</ul>' : "") +
       (o.founder_note ? '<p class="note">' + esc(o.founder_note) + '</p>' : "") +
       contactBlock +
-      (c.notes ? '<p class="note">Contact note: ' + esc(c.notes) + '</p>' : "") +
+      (c.notes ? '<details><summary>Contact notes</summary><p class="note" style="margin-top:0.4rem">' + esc(c.notes) + '</p></details>' : "") +
       (ds.length ? '<ul class="deal-lines">' + ds.map(function (d) {
         return '<li><span class="d">' + esc(fmtDate(d.date)) + '</span><span>' + esc(d.company) + (d.round ? ' · ' + esc(d.round) : "") + '</span><span class="amt">' + esc(d.amount_reported || "Undisclosed") + '</span></li>';
       }).join("") + '</ul>' : '<p class="no-deals">No deals logged yet.</p>') +

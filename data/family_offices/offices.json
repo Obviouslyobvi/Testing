@@ -6,7 +6,9 @@
     "type": "single_family_office = one family's own money; multi_family_office = manages money for several families; family_holding_company = investment arm of a family-controlled business group; investment_entity = a principal's personal investing vehicle; unverified = name not confirmed in public sources",
     "verification": "verified = identity and principal confirmed by two or more independent public sources; partial = identity confirmed but some fields thinly sourced; unverified = could not confirm the entity exists under this name",
     "q3_2026_deal_count": "Publicly reported Q3 2026 deals as counted by the seed article. A floor. Null means the article gave no count.",
-    "null values": "A null field means no reliable public source was found. It does not mean the answer is no."
+    "null values": "A null field means no reliable public source was found. It does not mean the answer is no.",
+    "contact": "Business contact details the firm, a regulator, or an official press release published. No home addresses, personal emails, or personal phones, and no emails guessed from name patterns. Some addresses are registered or filing addresses rather than staffed offices; the contact note says so.",
+    "key_people": "People publicly named in a business role at the office, each with a source. Titles follow the source and may lag recent changes."
   },
   "office_count": 28,
   "discovery_sources": [
@@ -44,18 +46,33 @@
         "Andreessen Horowitz"
       ],
       "wealth_source": "Venture capital firm wealth-management arm serving founders and investors already in the a16z network",
-      "headquarters": null,
+      "headquarters": "Menlo Park, CA, US",
       "founded": 2022,
       "key_people": [
         {
-          "name": "Scott Kupor",
-          "title": "Founder of Perennial",
-          "source": "https://fortune.com/2024/06/24/andreessen-horowitz-a16z-private-equity-fund"
+          "name": "Michel Del Buono",
+          "title": "Chief Investment Officer",
+          "source": "https://www.sec.gov/Archives/edgar/data/2009275/000200927526000003/0002009275-26-000003-index.htm"
         },
         {
-          "name": "Michel Del Buono",
-          "title": "Head of investments",
-          "source": "https://fortune.com/2024/06/24/andreessen-horowitz-a16z-private-equity-fund"
+          "name": "Robert Scott Thomas Walker",
+          "title": "Chief Compliance Officer (Form ADV Schedule A)",
+          "source": "https://reports.adviserinfo.sec.gov/reports/ADV/324429/PDF/324429.pdf"
+        },
+        {
+          "name": "Mindy Isenstein",
+          "title": "Investing team (role label on firm page)",
+          "source": "https://a16z.com/perennial/"
+        },
+        {
+          "name": "Jeff Bramel",
+          "title": "Investing team (role label on firm page)",
+          "source": "https://a16z.com/perennial/"
+        },
+        {
+          "name": "Julia Van de Walle",
+          "title": "Legal & Regulatory (role label on firm page)",
+          "source": "https://a16z.com/perennial/"
         }
       ],
       "focus": [
@@ -68,8 +85,46 @@
       "sources": [
         "https://www.the-founders-corner.com/p/the-1000-investors-most-founders",
         "https://fortune.com/2024/06/24/andreessen-horowitz-a16z-private-equity-fund",
-        "https://www.axios.com/newsletters/axios-pro-rata-9867e778-2609-4cc4-833d-b1ba9bcfc32b.html"
-      ]
+        "https://www.axios.com/newsletters/axios-pro-rata-9867e778-2609-4cc4-833d-b1ba9bcfc32b.html",
+        "https://a16z.com/perennial/",
+        "https://reports.adviserinfo.sec.gov/reports/ADV/324429/PDF/324429.pdf",
+        "https://adviserinfo.sec.gov/firm/summary/324429",
+        "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002009275",
+        "https://www.sec.gov/Archives/edgar/data/2009275/000200927526000003/0002009275-26-000003-index.htm",
+        "https://www.sec.gov/Archives/edgar/data/1979404/000110465926083453/0001104659-26-083453-index.htm",
+        "https://techcrunch.com/2023/06/22/andreessen-horowitz-a16z-perennial-evergreen-fund/"
+      ],
+      "contact": {
+        "website": "https://a16z.com/perennial/",
+        "addresses": [
+          {
+            "label": "Principal office (Form ADV)",
+            "street": "2875 Sand Hill Rd",
+            "city": "Menlo Park",
+            "region": "CA",
+            "postal_code": "94025",
+            "country": "United States",
+            "source": "https://reports.adviserinfo.sec.gov/reports/ADV/324429/PDF/324429.pdf"
+          },
+          {
+            "label": "Business address (SEC EDGAR, 13F filer record)",
+            "street": "2865 Sand Hill Road, Suite 101",
+            "city": "Menlo Park",
+            "region": "CA",
+            "postal_code": "94025",
+            "country": "United States",
+            "source": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002009275"
+          }
+        ],
+        "phone": {
+          "value": "+1 650-798-5800",
+          "source": "https://reports.adviserinfo.sec.gov/reports/ADV/324429/PDF/324429.pdf"
+        },
+        "email": null,
+        "contact_form_url": null,
+        "notes": "Registered adviser entity is a16z Perennial Management, L.P. (SEC 801-127229, CRD 324429), part of Andreessen Horowitz. Address conflict: Form ADV lists 2875 Sand Hill Rd, while the EDGAR company record and Form D filings list 2865 Sand Hill Road (Suite 101 on the 13F filer record); both are Menlo Park, CA 94025. Phone 650-798-5800 is the a16z main line given in Form ADV and Form D; the EDGAR filer header for the management entity shows 650-512-8962 and the 13F signature block shows 650-799-3192 (signatory's line), not used. Form ADV also lists https://www.a16zperennial.com as a firm website. Scott Kupor, who started the unit per press reports, is not listed in the latest filings and is not included. No general email or contact form found on the Perennial page."
+      },
+      "website": "https://a16z.com/perennial/"
     },
     {
       "id": "yzi_labs",
@@ -84,9 +139,19 @@
       "founded": 2018,
       "key_people": [
         {
-          "name": "Ella Zhang",
-          "title": "Head",
-          "source": "https://cointelegraph.com/news/binance-labs-rebrands-yzi-labs-biotech-ai"
+          "name": "Changpeng Zhao",
+          "title": "Sole Director, YZILabs Management Ltd.",
+          "source": "https://www.sec.gov/Archives/edgar/data/2098271/000092189525003215/0000921895-25-003215-index.htm"
+        },
+        {
+          "name": "Ella (Ling) Zhang",
+          "title": "Managing Partner and Head of YZi Labs",
+          "source": "https://www.sec.gov/Archives/edgar/data/1482541/000149315226029966/ex99-1.htm"
+        },
+        {
+          "name": "Alex Odagiu",
+          "title": "Investment Partner",
+          "source": "https://www.sec.gov/Archives/edgar/data/1482541/000149315226029966/ex99-1.htm"
         }
       ],
       "focus": [
@@ -101,8 +166,36 @@
         "https://www.the-founders-corner.com/p/the-1000-investors-most-founders",
         "https://cointelegraph.com/news/binance-labs-rebrands-yzi-labs-biotech-ai",
         "https://www.advisorperspectives.com/articles/2025/01/24/turns-vc-firm-giant-family-office-cryptos-richest-man",
-        "https://www.financemagnates.com/trending/zhao-converts-binance-labs-into-10-billion-family-office-yzi-labs/"
-      ]
+        "https://www.financemagnates.com/trending/zhao-converts-binance-labs-into-10-billion-family-office-yzi-labs/",
+        "https://www.yzilabs.com",
+        "https://www.sec.gov/Archives/edgar/data/2098271/000092189525003215/0000921895-25-003215-index.htm",
+        "https://www.sec.gov/Archives/edgar/data/2098271/000092189526002598/0000921895-26-002598-index.htm",
+        "https://www.sec.gov/Archives/edgar/data/1482541/000149315226029966/ex99-1.htm",
+        "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002098271",
+        "https://cryptoslate.com/binance-labs-rebrands-to-yzi-labs-expands-focus-to-ai-and-biotech-with-cz-mentorship/"
+      ],
+      "contact": {
+        "website": "https://www.yzilabs.com",
+        "addresses": [
+          {
+            "label": "Principal business address (registered, Schedule 13D)",
+            "street": "2nd Floor, Water's Edge Building, Wickhams Cay II",
+            "city": "Road Town, Tortola",
+            "region": null,
+            "postal_code": "VG1110",
+            "country": "British Virgin Islands",
+            "source": "https://www.sec.gov/Archives/edgar/data/2098271/000092189525003215/0000921895-25-003215-index.htm"
+          }
+        ],
+        "phone": null,
+        "email": {
+          "value": "media@yzilabs.com",
+          "source": "https://www.sec.gov/Archives/edgar/data/1482541/000149315226029966/ex99-1.htm"
+        },
+        "contact_form_url": "https://forms.monday.com/forms/134e751c0468024801be890b7a411f18?r=apse2",
+        "notes": "Legal entity is YZILabs Management Ltd., a British Virgin Islands company (SEC CIK 0002098271). The BVI address is a registered/filing address; press profiles place operations in Hong Kong, but no street address for an operating office was found from an official source. media@yzilabs.com is the YZi Labs media contact given in a June 23, 2026 joint press release filed with the SEC. The contact form is the 'Direct Investment' form linked from the firm homepage, meant for investment applications. The EDGAR filer header shows a phone value '54-9-11-4082-5010', which does not look like a valid business number, so phone is null. Yi He is described in news coverage as a co-founder of the family office, but no official YZi Labs or regulatory source naming her role was found, so she is not listed. The yzilabs.com homepage names no team members."
+      },
+      "website": "https://www.yzilabs.com"
     },
     {
       "id": "bezos_expeditions",
@@ -114,7 +207,13 @@
       "wealth_source": "Amazon founder",
       "headquarters": "Mercer Island, WA, US",
       "founded": 2005,
-      "key_people": [],
+      "key_people": [
+        {
+          "name": "Jeff Bezos",
+          "title": "Founder and principal (Bezos Expeditions is described as 'the investment arm of Jeff Bezos')",
+          "source": "https://www.sec.gov/Archives/edgar/data/1513845/000110465925045373/tm2514304d1_ex99-1.htm"
+        }
+      ],
       "focus": [
         "early-stage venture",
         "late-stage venture",
@@ -126,8 +225,19 @@
       "website": "https://www.bezosexpeditions.com",
       "sources": [
         "https://www.the-founders-corner.com/p/the-1000-investors-most-founders",
-        "https://en.wikipedia.org/wiki/Bezos_Expeditions"
-      ]
+        "https://en.wikipedia.org/wiki/Bezos_Expeditions",
+        "https://www.bezosexpeditions.com",
+        "https://www.sec.gov/Archives/edgar/data/1513845/000110465925045373/tm2514304d1_ex99-1.htm",
+        "https://efts.sec.gov/LATEST/search-index?q=%22Bezos%20Expeditions%22"
+      ],
+      "contact": {
+        "website": "https://www.bezosexpeditions.com",
+        "addresses": [],
+        "phone": null,
+        "email": null,
+        "contact_form_url": null,
+        "notes": "The firm website lists no address, phone, email, contact form, or staff. Bezos Expeditions does not appear as an SEC filer, and no regulator or firm source with a street address was found. Third-party directories place it in Mercer Island, WA (one says Seattle), but none give a firm-published street address, so addresses are left empty. Melinda Lewison is named as Managing Director only on aggregator profiles (Crunchbase, TheOrg and similar), with no official confirmation, so she is not listed."
+      }
     },
     {
       "id": "iconiq",
@@ -142,13 +252,43 @@
       "key_people": [
         {
           "name": "Divesh Makan",
-          "title": "Founder and CEO",
-          "source": "https://en.wikipedia.org/wiki/Iconiq_Capital"
+          "title": "Founding Partner (Partner since 2011 per Form ADV Schedule A)",
+          "source": "https://reports.adviserinfo.sec.gov/reports/ADV/159198/PDF/159198.pdf"
         },
         {
           "name": "Michael Anders",
+          "title": "Partner (co-founder)",
+          "source": "https://reports.adviserinfo.sec.gov/reports/ADV/159198/PDF/159198.pdf"
+        },
+        {
+          "name": "William (Will) Griffith",
           "title": "Partner",
-          "source": "https://en.wikipedia.org/wiki/Iconiq_Capital"
+          "source": "https://reports.adviserinfo.sec.gov/reports/ADV/159198/PDF/159198.pdf"
+        },
+        {
+          "name": "Matthew Jacobson",
+          "title": "Partner",
+          "source": "https://reports.adviserinfo.sec.gov/reports/ADV/159198/PDF/159198.pdf"
+        },
+        {
+          "name": "Kevin Foster",
+          "title": "Managing Director",
+          "source": "https://reports.adviserinfo.sec.gov/reports/ADV/159198/PDF/159198.pdf"
+        },
+        {
+          "name": "Louis Thorne",
+          "title": "Chief Operating Officer",
+          "source": "https://reports.adviserinfo.sec.gov/reports/ADV/159198/PDF/159198.pdf"
+        },
+        {
+          "name": "Katherine Dougan",
+          "title": "Chief Financial Officer",
+          "source": "https://reports.adviserinfo.sec.gov/reports/ADV/159198/PDF/159198.pdf"
+        },
+        {
+          "name": "Jason Craig",
+          "title": "Chief Compliance Officer and Senior Counsel",
+          "source": "https://www.sec.gov/Archives/edgar/data/1569709/000101143826000517/0001011438-26-000517-index.htm"
         }
       ],
       "focus": [
@@ -159,12 +299,72 @@
       "q3_2026_deal_count": 4,
       "verification": "verified",
       "founder_note": "Reported AUM ranges from about $54B (Bloomberg, 2021) to $117.5B (SEC Form ADV, per a directory profile). Past bets include Snowflake, Epic Games, and Robinhood.",
-      "website": "https://www.iconiqcapital.com",
+      "website": "https://www.iconiq.com",
       "sources": [
         "https://www.the-founders-corner.com/p/the-1000-investors-most-founders",
         "https://en.wikipedia.org/wiki/Iconiq_Capital",
-        "https://www.wealthmanagement.com/high-net-worth/wealth-firm-for-silicon-valley-billionaires-sets-up-in-london"
-      ]
+        "https://www.wealthmanagement.com/high-net-worth/wealth-firm-for-silicon-valley-billionaires-sets-up-in-london",
+        "https://www.iconiq.com/",
+        "https://www.iconiq.com/email",
+        "https://reports.adviserinfo.sec.gov/reports/ADV/159198/PDF/159198.pdf",
+        "https://adviserinfo.sec.gov/firm/summary/159198",
+        "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001569709",
+        "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002011341",
+        "https://www.sec.gov/Archives/edgar/data/1569709/000101143826000517/0001011438-26-000517-index.htm",
+        "https://find-and-update.company-information.service.gov.uk/company/OC441075",
+        "https://fortune.com/2024/07/23/inside-look-iconiq-capital-silicon-valleys-most-mysterious-venture-fund"
+      ],
+      "contact": {
+        "website": "https://www.iconiq.com",
+        "addresses": [
+          {
+            "label": "Headquarters (principal office)",
+            "street": "50 Beale St., Suite 2300",
+            "city": "San Francisco",
+            "region": "CA",
+            "postal_code": "94105",
+            "country": "United States",
+            "source": "https://reports.adviserinfo.sec.gov/reports/ADV/159198/PDF/159198.pdf"
+          },
+          {
+            "label": "New York office",
+            "street": "360 Park Ave South, 20th Floor",
+            "city": "New York",
+            "region": "NY",
+            "postal_code": "10010",
+            "country": "United States",
+            "source": "https://reports.adviserinfo.sec.gov/reports/ADV/159198/PDF/159198.pdf"
+          },
+          {
+            "label": "Palo Alto office",
+            "street": "228 Hamilton Avenue, Second Floor",
+            "city": "Palo Alto",
+            "region": "CA",
+            "postal_code": "94301",
+            "country": "United States",
+            "source": "https://reports.adviserinfo.sec.gov/reports/ADV/159198/PDF/159198.pdf"
+          },
+          {
+            "label": "London (ICONIQ Partners (UK) LLP registered office)",
+            "street": "127 Charing Cross Road, 5th Floor",
+            "city": "London",
+            "region": null,
+            "postal_code": "WC2H 0EW",
+            "country": "United Kingdom",
+            "source": "https://find-and-update.company-information.service.gov.uk/company/OC441075"
+          }
+        ],
+        "phone": {
+          "value": "+1 415-967-7763",
+          "source": "https://reports.adviserinfo.sec.gov/reports/ADV/159198/PDF/159198.pdf"
+        },
+        "email": {
+          "value": "info@ICONIQCapital.com",
+          "source": "https://www.iconiq.com/email"
+        },
+        "contact_form_url": null,
+        "notes": "The old domain iconiqcapital.com now redirects to iconiq.com. The site lists offices in San Francisco, London, Palo Alto, Singapore and New York, without street addresses. US street addresses and phone come from Form ADV (ICONIQ Capital, LLC, SEC 801-72878, CRD 159198). Office phones in Form ADV: Palo Alto 650-252-0707, New York 212-981-6150. Phone conflict: the EDGAR filer header for ICONIQ Capital, LLC shows 415-937-7763, while Form ADV, the 13F signature block and the ICONIQ Capital Group, L.P. record all show 415-967-7763; the latter is used. The London address is the Companies House registered office of ICONIQ Partners (UK) LLP (OC441075). No Singapore street address was found from an official source. Makan is widely called founder and CEO in press (e.g. Fortune), but Form ADV lists his title as Partner. Chad Boeding is named as a co-founder on Wikipedia but is not on the current Form ADV Schedule A, so he is not listed."
+      }
     },
     {
       "id": "duquesne_family_office",
@@ -174,9 +374,20 @@
         "Stanley Druckenmiller"
       ],
       "wealth_source": "Hedge fund manager, Duquesne Capital Management",
-      "headquarters": null,
+      "headquarters": "New York, NY, US",
       "founded": 2010,
-      "key_people": [],
+      "key_people": [
+        {
+          "name": "Stanley Druckenmiller",
+          "title": "Chairman and CEO",
+          "source": "https://www.sec.gov/Archives/edgar/data/1536411/000089914026001060/0000899140-26-001060-index.htm"
+        },
+        {
+          "name": "Sue Meng",
+          "title": "General Counsel",
+          "source": "https://www.sec.gov/Archives/edgar/data/1536411/000153641126000006/0001536411-26-000006-index.htm"
+        }
+      ],
       "focus": [
         "biotech",
         "health care",
@@ -188,8 +399,32 @@
       "sources": [
         "https://www.the-founders-corner.com/p/the-1000-investors-most-founders",
         "https://allbusiness.africa/investors/duquesne-family-office",
-        "https://familyofficehub.io/blog/druckenmiller-family-office-invests-in-cellares/"
-      ]
+        "https://familyofficehub.io/blog/druckenmiller-family-office-invests-in-cellares/",
+        "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001536411",
+        "https://www.sec.gov/Archives/edgar/data/1536411/000153641126000006/0001536411-26-000006-index.htm",
+        "https://www.sec.gov/Archives/edgar/data/1536411/000089914026001060/0000899140-26-001060-index.htm"
+      ],
+      "contact": {
+        "website": null,
+        "addresses": [
+          {
+            "label": "Headquarters (principal business office)",
+            "street": "40 West 57th Street, 25th Floor",
+            "city": "New York",
+            "region": "NY",
+            "postal_code": "10019",
+            "country": "United States",
+            "source": "https://www.sec.gov/Archives/edgar/data/1536411/000089914026001060/0000899140-26-001060-index.htm"
+          }
+        ],
+        "phone": {
+          "value": "+1 212-830-6500",
+          "source": "https://www.sec.gov/Archives/edgar/data/1536411/000153641126000006/0001536411-26-000006-index.htm"
+        },
+        "email": null,
+        "contact_form_url": null,
+        "notes": "Duquesne Family Office LLC is a Delaware LLC (SEC CIK 0001536411, 13F file no. 028-14660). The address and phone match across the EDGAR company record, the Q2 2026 13F and the September 2026 Schedule 13G/A. A 2013 13F amendment showed the 24th floor at the same building, so the suite has changed over time. No official website was found."
+      }
     },
     {
       "id": "doerr_capital",
@@ -213,8 +448,20 @@
         "https://www.the-founders-corner.com/p/the-1000-investors-most-founders",
         "https://www.businesswire.com/news/home/20260730278399/en/Antora-Closes-$550-Million-in-Series-C-Funding-to-Meet-Surging-Energy-Demand-and-Reindustrialize-America",
         "https://www.cnbc.com/2026/08/06/family-offices-sustainability-startups-july-dealmaking.html",
-        "https://www.businesswire.com/news/home/20260825127649/en/Emerald-AI-Raises-$150-Million-Series-A-at-$1.05-Billion-Valuation-to-Scale-Power-Flexible-AI-Data-Centers"
-      ]
+        "https://www.businesswire.com/news/home/20260825127649/en/Emerald-AI-Raises-$150-Million-Series-A-at-$1.05-Billion-Valuation-to-Scale-Power-Flexible-AI-Data-Centers",
+        "https://www.sec.gov/Archives/edgar/data/1032455/000119312526390955/0001193125-26-390955-index.htm",
+        "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001032455",
+        "https://efts.sec.gov/LATEST/search-index?q=%22Doerr%20Capital%22",
+        "https://en.wikipedia.org/wiki/John_Doerr"
+      ],
+      "contact": {
+        "website": null,
+        "addresses": [],
+        "phone": null,
+        "email": null,
+        "contact_form_url": null,
+        "notes": "No entity called Doerr Capital appears in SEC EDGAR or on the web. John Doerr's confirmed investing vehicle is Foris Ventures; use that record's contact details."
+      }
     },
     {
       "id": "thiel_capital",
@@ -226,7 +473,13 @@
       "wealth_source": "PayPal co-founder, Palantir co-founder, early Facebook investor",
       "headquarters": "Los Angeles, CA, US",
       "founded": 2011,
-      "key_people": [],
+      "key_people": [
+        {
+          "name": "Peter Thiel",
+          "title": "Founder; Manager, Thiel Capital LLC",
+          "source": "https://www.sec.gov/Archives/edgar/data/1321655/000110465923021547/tm235858d1_sc13ga.htm"
+        }
+      ],
       "focus": [
         "artificial intelligence",
         "deep tech"
@@ -237,8 +490,45 @@
       "sources": [
         "https://www.the-founders-corner.com/p/the-1000-investors-most-founders",
         "https://en.wikipedia.org/wiki/Thiel_Capital",
-        "https://www.businesswire.com/news/home/20251230610919/en/Thiel-Capital-Opens-Miami-Office"
-      ]
+        "https://www.businesswire.com/news/home/20251230610919/en/Thiel-Capital-Opens-Miami-Office",
+        "https://thielcapital.com/",
+        "https://www.sec.gov/Archives/edgar/data/1211060/000121106026000005/0001211060-26-000005-index.htm",
+        "https://www.sec.gov/Archives/edgar/data/1321655/000110465923021547/tm235858d1_sc13ga.htm",
+        "https://www.sec.gov/Archives/edgar/data/1321655/000119312520250103/d904406dex91.htm",
+        "https://www.sec.gov/Archives/edgar/data/1815086/000119312523153719/d499873dex106.htm",
+        "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001211060"
+      ],
+      "contact": {
+        "website": "https://thielcapital.com",
+        "addresses": [
+          {
+            "label": "Miami office (c/o Thiel Capital LLC, Schedule 13G/A Feb 2026)",
+            "street": "215 NW 24th St., Suite 801",
+            "city": "Miami",
+            "region": "FL",
+            "postal_code": "33127",
+            "country": "United States",
+            "source": "https://www.sec.gov/Archives/edgar/data/1211060/000121106026000005/0001211060-26-000005-index.htm"
+          },
+          {
+            "label": "Los Angeles-area office (c/o Thiel Capital LLC, Schedule 13G/A Feb 2023)",
+            "street": "9200 Sunset Boulevard, Suite 1110",
+            "city": "West Hollywood",
+            "region": "CA",
+            "postal_code": "90069",
+            "country": "United States",
+            "source": "https://www.sec.gov/Archives/edgar/data/1321655/000110465923021547/tm235858d1_sc13ga.htm"
+          }
+        ],
+        "phone": null,
+        "email": {
+          "value": "legal@thielcapital.com",
+          "source": "https://www.sec.gov/Archives/edgar/data/1321655/000119312520250103/d904406dex91.htm"
+        },
+        "contact_form_url": null,
+        "notes": "thielcapital.com shows only a logo, with no contact details or staff. The Miami address (Wynwood) appears as c/o Thiel Capital LLC in Peter Thiel's February 2026 Schedule 13G/A and is his current EDGAR business address. It matches the December 2025 press release announcing a Wynwood office. The West Hollywood address (9200 Sunset Blvd, Suite 1110) is the older c/o Thiel Capital LLC address in 2020-2023 filings; the press release says Los Angeles operations continue, but it is unconfirmed whether that suite is still in use. legal@thielcapital.com is a legal-notices address (Attention: General Counsel) published in SEC-filed agreements (Palantir S-1/A Exhibit 9.1, 2020; Bridgetown Holdings 8-K, 2023). It is not a general inquiries address. Aggregators name others (e.g. Blake Masters as COO, Eric Weinstein or Jack Selby as managing director), but no official current source confirms them, so they are not listed. The Business Wire release could not be fetched (403)."
+      },
+      "website": "https://thielcapital.com"
     },
     {
       "id": "foris_ventures",
@@ -250,7 +540,18 @@
       "wealth_source": "Venture capitalist, Kleiner Perkins chairman",
       "headquarters": null,
       "founded": null,
-      "key_people": [],
+      "key_people": [
+        {
+          "name": "L. John Doerr",
+          "title": "Principal; reporting person alongside Foris Ventures, LLC and Vallejo Ventures Trust in Schedule 13D/A filings",
+          "source": "https://www.sec.gov/Archives/edgar/data/1749713/000119312524133435/d832668dsc13da.htm"
+        },
+        {
+          "name": "Barbara Hager",
+          "title": "Manager, Foris Ventures, LLC (also Special Trustee, Vallejo Ventures Trust)",
+          "source": "https://www.sec.gov/Archives/edgar/data/1749713/000119312524133435/d832668dsc13da.htm"
+        }
+      ],
       "focus": [
         "clean energy",
         "climate",
@@ -262,8 +563,45 @@
       "sources": [
         "https://www.the-founders-corner.com/p/the-1000-investors-most-founders",
         "https://www.cnbc.com/2026/08/06/family-offices-sustainability-startups-july-dealmaking.html",
-        "https://www.businesswire.com/news/home/20230213005216/en"
-      ]
+        "https://www.businesswire.com/news/home/20230213005216/en",
+        "https://data.sec.gov/submissions/CIK0001749713.json",
+        "https://www.sec.gov/Archives/edgar/data/1749713/000119312524133435/d832668dsc13da.htm",
+        "https://www.sec.gov/Archives/edgar/data/1365916/000119312524003393/0001193125-24-003393-index.htm",
+        "https://www.sec.gov/Archives/edgar/data/1032455/000119312526390955/0001193125-26-390955-index.htm",
+        "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001032455",
+        "https://efts.sec.gov/LATEST/search-index?q=%22Doerr%20Capital%22",
+        "https://en.wikipedia.org/wiki/John_Doerr"
+      ],
+      "contact": {
+        "website": null,
+        "addresses": [
+          {
+            "label": "Business and mailing address (SEC EDGAR)",
+            "street": "751 Laurel Street, #717",
+            "city": "San Carlos",
+            "region": "CA",
+            "postal_code": "94070",
+            "country": "United States",
+            "source": "https://data.sec.gov/submissions/CIK0001749713.json"
+          },
+          {
+            "label": "Principal business office of Foris Ventures, LLC / Vallejo Ventures Trust (Schedule 13G)",
+            "street": "1180 San Carlos Avenue, #717",
+            "city": "San Carlos",
+            "region": "CA",
+            "postal_code": "94070",
+            "country": "United States",
+            "source": "https://www.sec.gov/Archives/edgar/data/1032455/000119312526390955/0001193125-26-390955-index.htm"
+          }
+        ],
+        "phone": {
+          "value": "+1 650-384-0240",
+          "source": "https://data.sec.gov/submissions/CIK0001749713.json"
+        },
+        "email": null,
+        "contact_form_url": null,
+        "notes": "No official website found. The address and phone come from Foris Ventures, LLC's SEC EDGAR filer record (CIK 0001749713, Delaware LLC). '#717' at 751 Laurel Street may be a mailbox or suite rather than a staffed office. Third-party profiles describe Foris as Menlo Park based, but no regulator or firm source confirms a Menlo Park street address. The EDGAR filings found are Schedule 13D/A and Forms 3/4 for Amyris, not Form D. No entity called 'Doerr Capital' was found. EDGAR full-text search finds no filer or filing under that name, and no firm site exists. The Doerr family's investment holdings are reported through Foris Ventures, LLC (Delaware), whose sole member is The Vallejo Ventures Trust; John Doerr and Ann Doerr are its trustees. The record above is that structure, not a 'Doerr Capital'. The San Carlos address is given as the reporting persons' principal business office in a September 2026 Schedule 13G; '#717' suggests a suite or mailbox. John Doerr's older EDGAR mailing address is c/o Kleiner Perkins, 2750 Sand Hill Road, Menlo Park, CA 94025, which is the venture firm where he is chairman, not a family office. No website, phone or email found."
+      }
     },
     {
       "id": "premji_invest",
@@ -275,7 +613,23 @@
       "wealth_source": "Wipro founder",
       "headquarters": "Bengaluru, India",
       "founded": 2006,
-      "key_people": [],
+      "key_people": [
+        {
+          "name": "Azim Premji",
+          "title": "Sponsor of Premji Invest; Chairman (Founder Chairman), Wipro Ltd.",
+          "source": "https://www.premjiinvest.com/team/tk-kurien"
+        },
+        {
+          "name": "T K Kurien",
+          "title": "Chief Executive Officer",
+          "source": "https://www.premjiinvest.com/team/tk-kurien"
+        },
+        {
+          "name": "Sandesh Patnam",
+          "title": "Managing Partner (US private and listed equities; global tech investing)",
+          "source": "https://www.premjiinvest.com/team/sandesh-patnam"
+        }
+      ],
       "focus": [
         "technology",
         "consumer",
@@ -290,8 +644,43 @@
         "https://www.the-founders-corner.com/p/the-1000-investors-most-founders",
         "https://andsimple.co/insights/a-glimpse-into-indias-largest-family-offices",
         "https://privateequitylist.com/investor/premjiinvest",
-        "https://www.cbinsights.com/investor/premji-invest-1"
-      ]
+        "https://www.cbinsights.com/investor/premji-invest-1",
+        "https://www.premjiinvest.com",
+        "https://www.premjiinvest.com/team",
+        "https://in.premjiinvest.com/",
+        "https://www.premjiinvest.com/team/tk-kurien",
+        "https://www.premjiinvest.com/team/sandesh-patnam"
+      ],
+      "contact": {
+        "website": "https://www.premjiinvest.com",
+        "addresses": [
+          {
+            "label": "United States office",
+            "street": "2180 Sand Hill Road, Suite 100",
+            "city": "Menlo Park",
+            "region": "California",
+            "postal_code": "94025",
+            "country": "United States",
+            "source": "https://www.premjiinvest.com/team"
+          },
+          {
+            "label": "India office",
+            "street": "134, Doddakannelli, Sarjapur Road",
+            "city": "Bengaluru (Bangalore)",
+            "region": "Karnataka",
+            "postal_code": "560035",
+            "country": "India",
+            "source": "https://in.premjiinvest.com/"
+          }
+        ],
+        "phone": null,
+        "email": {
+          "value": "contact@premjiinvest.com",
+          "source": "https://in.premjiinvest.com/"
+        },
+        "contact_form_url": null,
+        "notes": "The India site (in.premjiinvest.com) also lists media@premjiinvest.com for media and press. The US site lists office addresses but no phone or email. The India site warns about people impersonating Premji Invest staff and says the firm's only social media presence is LinkedIn. Other team members are listed on the US team page without titles."
+      }
     },
     {
       "id": "hillspire",
@@ -304,7 +693,18 @@
       "wealth_source": "Former Google CEO",
       "headquarters": "Menlo Park, CA, US",
       "founded": 2006,
-      "key_people": [],
+      "key_people": [
+        {
+          "name": "Eric E. Schmidt",
+          "title": "Principal; co-manager of Hillspire Holdings, LLC per SEC Schedule 13G/A",
+          "source": "https://www.sec.gov/Archives/edgar/data/1242463/000095017025109161/primary_doc.xml"
+        },
+        {
+          "name": "Kenneth A. Goldman",
+          "title": "Former President, Hillspire LLC (September 2017 to April 2022)",
+          "source": "https://www.sec.gov/Archives/edgar/data/1262039/000207709626000106/ea0287420-01.htm"
+        }
+      ],
       "focus": [
         "artificial intelligence"
       ],
@@ -315,8 +715,30 @@
         "https://www.the-founders-corner.com/p/the-1000-investors-most-founders",
         "https://familyofficehub.io/blog/the-eric-schmidt-family-office-hillspire/",
         "https://www.trendingtopics.eu/mistral-3-milliarden-euro-investment/",
-        "https://www.raptorgroup.com/news/inside-wealth-family-office-15-most-active-investment-firms-of-the-ultra-wealthy/"
-      ]
+        "https://www.raptorgroup.com/news/inside-wealth-family-office-15-most-active-investment-firms-of-the-ultra-wealthy/",
+        "https://www.sec.gov/Archives/edgar/data/1242463/000095017025109161/primary_doc.xml",
+        "https://www.sec.gov/Archives/edgar/data/1262039/000207709626000106/ea0287420-01.htm",
+        "https://www.sec.gov/Archives/edgar/data/1262039/000117494723000676/def14a0423_fortinetinc.htm",
+        "https://www.privateequityinternational.com/institution-profiles/hillspire-llc.html"
+      ],
+      "contact": {
+        "website": null,
+        "addresses": [
+          {
+            "label": "Office address given for Hillspire Holdings, LLC and other Schmidt reporting persons (SEC Schedule 13G/A)",
+            "street": "1010 Alma Street",
+            "city": "Menlo Park",
+            "region": "CA",
+            "postal_code": "94025",
+            "country": "United States",
+            "source": "https://www.sec.gov/Archives/edgar/data/1242463/000095017025109161/primary_doc.xml"
+          }
+        ],
+        "phone": null,
+        "email": null,
+        "contact_form_url": null,
+        "notes": "No official Hillspire website was reachable (hillspire.com did not respond). The address comes from a 2025 Schedule 13G/A filed by Eric Schmidt, which lists it for Hillspire Holdings, LLC among other reporting persons. That entity is a holding vehicle and may differ from the Hillspire LLC operating company, though Private Equity International lists the same 1010 Alma St address for Hillspire LLC. Sources conflict on Ken Goldman: Fortinet's 2023 proxy calls him President of Hillspire 'since September 2017', but its 2026 proxy says he served 'through April 2022'. No firm or regulator source names a current President or CIO. A Private Equity International profile names Chuck Chai as President and CIO, but this could not be confirmed from a primary source, so he is left out of key_people. A lawyer-directory listing gives 1010 El Camino Real and a phone number, but it is not an official source and is not used."
+      }
     },
     {
       "id": "burda_principal_investments",
@@ -328,7 +750,43 @@
       "wealth_source": "Hubert Burda Media, German media group",
       "headquarters": "Munich, Germany",
       "founded": null,
-      "key_people": [],
+      "key_people": [
+        {
+          "name": "Christian Teichmann",
+          "title": "CEO & Managing Director",
+          "source": "https://www.burdaprincipalinvestments.com/our-people/"
+        },
+        {
+          "name": "Clare McCartney Beer",
+          "title": "COO & Managing Director",
+          "source": "https://www.burdaprincipalinvestments.com/our-people/"
+        },
+        {
+          "name": "John Greger",
+          "title": "CPO & Managing Director",
+          "source": "https://www.burdaprincipalinvestments.com/our-people/"
+        },
+        {
+          "name": "Julian von Eckartsberg",
+          "title": "Managing Director Europe",
+          "source": "https://www.burdaprincipalinvestments.com/our-people/"
+        },
+        {
+          "name": "Thomas Juvin",
+          "title": "Managing Director Europe",
+          "source": "https://www.burdaprincipalinvestments.com/our-people/"
+        },
+        {
+          "name": "Neil Fong",
+          "title": "Managing Director Asia",
+          "source": "https://www.burdaprincipalinvestments.com/our-people/"
+        },
+        {
+          "name": "Natalie Schmitke",
+          "title": "Managing Director Capital Networks",
+          "source": "https://www.burdaprincipalinvestments.com/our-people/"
+        }
+      ],
       "focus": [
         "digital technology",
         "media",
@@ -341,8 +799,64 @@
         "https://www.the-founders-corner.com/p/the-1000-investors-most-founders",
         "https://www.munich-startup.de/en/financing/burda-principal-investments",
         "https://www.eu-startups.com/2026/07/largest-european-fusion-investment-on-record-sees-proxima-fusion-raise-e411-million/",
-        "https://www.gtlaw.com/de/news/2026/07/press-releases/greenberg-traurig-advises-burda-principal-investments-on-entry-into-gaming-industry"
-      ]
+        "https://www.gtlaw.com/de/news/2026/07/press-releases/greenberg-traurig-advises-burda-principal-investments-on-entry-into-gaming-industry",
+        "https://www.burdaprincipalinvestments.com",
+        "https://www.burdaprincipalinvestments.com/imprint/",
+        "https://www.burdaprincipalinvestments.com/contact/",
+        "https://www.burdaprincipalinvestments.com/our-people/"
+      ],
+      "contact": {
+        "website": "https://www.burdaprincipalinvestments.com",
+        "addresses": [
+          {
+            "label": "Headquarters (Burda Principal Investments GmbH & Co. KG)",
+            "street": "Arabellastraße 23",
+            "city": "Munich (München)",
+            "region": "Bavaria",
+            "postal_code": "81925",
+            "country": "Germany",
+            "source": "https://www.burdaprincipalinvestments.com/imprint/"
+          },
+          {
+            "label": "Berlin office (Burda Principal Investments Berlin GmbH)",
+            "street": "Heiligegeistkirchplatz 1",
+            "city": "Berlin",
+            "region": "Berlin",
+            "postal_code": "10178",
+            "country": "Germany",
+            "source": "https://www.burdaprincipalinvestments.com/contact/"
+          },
+          {
+            "label": "London office (Burda Principal Investments Limited)",
+            "street": "10-11 Park Place, St. James's",
+            "city": "London",
+            "region": null,
+            "postal_code": "SW1A 1LP",
+            "country": "United Kingdom",
+            "source": "https://www.burdaprincipalinvestments.com/contact/"
+          },
+          {
+            "label": "Singapore office (Burda Principal Investments Pte. Ltd)",
+            "street": "600 North Bridge Road, #16-05",
+            "city": "Singapore",
+            "region": null,
+            "postal_code": "188778",
+            "country": "Singapore",
+            "source": "https://www.burdaprincipalinvestments.com/contact/"
+          }
+        ],
+        "phone": {
+          "value": "+49 89 9250 1280",
+          "source": "https://www.burdaprincipalinvestments.com/imprint/"
+        },
+        "email": {
+          "value": "investments@burda.com",
+          "source": "https://www.burdaprincipalinvestments.com/imprint/"
+        },
+        "contact_form_url": "https://www.burdaprincipalinvestments.com/contact/",
+        "notes": "The imprint lists Christian Teichmann, Clare McCartney Beer and John Greger as Managing Directors (Geschäftsführer) and gives the commercial register entry as 'Munich HRB 105973'. An HRB number usually belongs to a GmbH, while a GmbH & Co. KG is normally registered under HRA, so the number may be the general partner's. Confirm in the Handelsregister if needed. The contact page is an address listing, not a form. BPI is the investment arm of Hubert Burda Media."
+      },
+      "website": "https://www.burdaprincipalinvestments.com"
     },
     {
       "id": "emerson_collective",
@@ -352,13 +866,43 @@
         "Laurene Powell Jobs"
       ],
       "wealth_source": "Steve Jobs estate (Apple, Disney)",
-      "headquarters": null,
+      "headquarters": "Palo Alto, CA, US",
       "founded": 2011,
       "key_people": [
         {
           "name": "Laurene Powell Jobs",
-          "title": "Founder and president",
-          "source": "https://emersoncollective.com/articles/q-and-a-with-ec-founder-and-president-laurene-powell-jobs"
+          "title": "Founder and President",
+          "source": "https://www.emersoncollective.com/about-us"
+        },
+        {
+          "name": "Diedra Nelson",
+          "title": "Managing Director, Chief Operating Officer",
+          "source": "https://www.emersoncollective.com/about-us"
+        },
+        {
+          "name": "Brad Powell",
+          "title": "Managing Director, Investments",
+          "source": "https://www.emersoncollective.com/about-us"
+        },
+        {
+          "name": "Fern Mandelbaum",
+          "title": "Managing Director, Venture Investing",
+          "source": "https://www.emersoncollective.com/about-us"
+        },
+        {
+          "name": "Steve McDermid",
+          "title": "Managing Director, Venture Investing",
+          "source": "https://www.emersoncollective.com/about-us"
+        },
+        {
+          "name": "Stacey Rubin",
+          "title": "Chief of Staff & Managing Director, Strategy",
+          "source": "https://www.emersoncollective.com/about-us"
+        },
+        {
+          "name": "Christy Brook",
+          "title": "Managing Director, General Counsel",
+          "source": "https://www.emersoncollective.com/about-us"
         }
       ],
       "focus": [
@@ -375,8 +919,32 @@
         "https://www.the-founders-corner.com/p/the-1000-investors-most-founders",
         "https://emersoncollective.com/articles/q-and-a-with-ec-founder-and-president-laurene-powell-jobs",
         "https://www.influencewatch.org/non-profit/emerson-collective/",
-        "https://www.businesswire.com/news/home/20260825127649/en/Emerald-AI-Raises-$150-Million-Series-A-at-$1.05-Billion-Valuation-to-Scale-Power-Flexible-AI-Data-Centers"
-      ]
+        "https://www.businesswire.com/news/home/20260825127649/en/Emerald-AI-Raises-$150-Million-Series-A-at-$1.05-Billion-Valuation-to-Scale-Power-Flexible-AI-Data-Centers",
+        "https://www.emersoncollective.com/",
+        "https://www.emersoncollective.com/legal/terms-and-conditions",
+        "https://www.emersoncollective.com/about-us"
+      ],
+      "contact": {
+        "website": "https://www.emersoncollective.com",
+        "addresses": [
+          {
+            "label": "Palo Alto office (address given for DMCA designated agent in website Terms)",
+            "street": "555 Bryant St., Suite 259",
+            "city": "Palo Alto",
+            "region": "CA",
+            "postal_code": "94301",
+            "country": "United States",
+            "source": "https://www.emersoncollective.com/legal/terms-and-conditions"
+          }
+        ],
+        "phone": null,
+        "email": {
+          "value": "info@emersoncollective.com",
+          "source": "https://www.emersoncollective.com/"
+        },
+        "contact_form_url": null,
+        "notes": "The only postal address the firm publishes is in its website Terms, as the copyright/DMCA notice address. The same section gives a designated-agent phone (650-422-2167) and legal@emersoncollective.com for legal notices. These are not a general main line, so phone is null. The homepage 'Contact' link is mailto:info@emersoncollective.com. Third-party directories list other Palo Alto street addresses (e.g. '55 Bryant St' and others); these conflict with the firm's own '555 Bryant St.' and were not used. The about page lists many more staff."
+      }
     },
     {
       "id": "olayan_group",
@@ -388,7 +956,33 @@
       "wealth_source": "Saudi conglomerate founded by Suliman Saleh Olayan in 1947",
       "headquarters": "Vaduz, Liechtenstein",
       "founded": 1947,
-      "key_people": [],
+      "key_people": [
+        {
+          "name": "Hutham S. Olayan",
+          "title": "Chair of the Shareholders Board (also described as Chair of the Corporate Board in an October 2023 announcement)",
+          "source": "https://olayan.com/about-us/"
+        },
+        {
+          "name": "Hani Lazkani",
+          "title": "Chief Executive Officer (since January 1, 2024)",
+          "source": "https://olayan.com/news/a-message-from-the-chair/"
+        },
+        {
+          "name": "Samer Yaghnam",
+          "title": "Chief Operations Officer",
+          "source": "https://olayan.com/about-us/"
+        },
+        {
+          "name": "Musa Zaghloul",
+          "title": "Chief Financial Officer (since January 1, 2026)",
+          "source": "https://olayan.com/news/the-olayan-group-announces-new-cfo/"
+        },
+        {
+          "name": "Janet Lam",
+          "title": "Director, Finance and Operations, Head of the Singapore Office",
+          "source": "https://olayan.com/our-people/"
+        }
+      ],
       "focus": [
         "private equity",
         "direct investments",
@@ -402,31 +996,169 @@
         "https://www.the-founders-corner.com/p/the-1000-investors-most-founders",
         "https://olayan.com/about-us/",
         "https://www.tharawat-magazine.com/?p=49583",
-        "https://www.businesswire.com/news/home/20260825127649/en/Emerald-AI-Raises-$150-Million-Series-A-at-$1.05-Billion-Valuation-to-Scale-Power-Flexible-AI-Data-Centers"
-      ]
+        "https://www.businesswire.com/news/home/20260825127649/en/Emerald-AI-Raises-$150-Million-Series-A-at-$1.05-Billion-Valuation-to-Scale-Power-Flexible-AI-Data-Centers",
+        "https://olayan.com",
+        "https://olayan.com/directory/",
+        "https://olayan.com/news/a-message-from-the-chair/",
+        "https://olayan.com/news/the-olayan-group-announces-new-cfo/",
+        "https://olayan.com/our-people/"
+      ],
+      "contact": {
+        "website": "https://olayan.com",
+        "addresses": [
+          {
+            "label": "Office of the Parent Company (Olayan Investments Company Establishment)",
+            "street": "Herrengasse 2",
+            "city": "Vaduz",
+            "region": null,
+            "postal_code": "9490",
+            "country": "Liechtenstein",
+            "source": "https://olayan.com/directory/"
+          },
+          {
+            "label": "KHHL Legacy Fund Establishment",
+            "street": "Kirchstrasse 3",
+            "city": "Vaduz",
+            "region": null,
+            "postal_code": "9490",
+            "country": "Liechtenstein",
+            "source": "https://olayan.com/directory/"
+          },
+          {
+            "label": "Olayan America",
+            "street": "550 Madison Avenue, 34th floor",
+            "city": "New York",
+            "region": "NY",
+            "postal_code": "10022",
+            "country": "United States",
+            "source": "https://olayan.com/directory/"
+          },
+          {
+            "label": "Olayan Europe Limited",
+            "street": "140 Piccadilly",
+            "city": "London",
+            "region": null,
+            "postal_code": "W1J 7NS",
+            "country": "United Kingdom",
+            "source": "https://olayan.com/directory/"
+          },
+          {
+            "label": "Olayan Investments Company Establishment (Branch Office)",
+            "street": "111 Poseidonos Avenue",
+            "city": "Athens",
+            "region": null,
+            "postal_code": "16610",
+            "country": "Greece",
+            "source": "https://olayan.com/directory/"
+          },
+          {
+            "label": "Competrol Luxembourg SARL",
+            "street": "Geiben House (2nd floor), 17A, rue des Bains",
+            "city": "Luxembourg",
+            "region": null,
+            "postal_code": "L-1212",
+            "country": "Luxembourg",
+            "source": "https://olayan.com/directory/"
+          },
+          {
+            "label": "Olayan Singapore",
+            "street": "1 Raffles Quay, #30-02 North Tower",
+            "city": "Singapore",
+            "region": null,
+            "postal_code": null,
+            "country": "Singapore",
+            "source": "https://olayan.com/directory/"
+          },
+          {
+            "label": "Olayan Financing Company (Head Office)",
+            "street": "P.O. Box 8772",
+            "city": "Riyadh",
+            "region": null,
+            "postal_code": "11492",
+            "country": "Saudi Arabia",
+            "source": "https://olayan.com/directory/"
+          },
+          {
+            "label": "Olayan Financing Company (Branch Office)",
+            "street": "P.O. Box 1520",
+            "city": "Al-Khobar",
+            "region": null,
+            "postal_code": "31952",
+            "country": "Saudi Arabia",
+            "source": "https://olayan.com/directory/"
+          }
+        ],
+        "phone": {
+          "value": "+423 230-0010 (Vaduz)",
+          "source": "https://olayan.com/directory/"
+        },
+        "email": null,
+        "contact_form_url": null,
+        "notes": "The firm's directory page lists the phone numbers per office: Vaduz +423 230-0010 (shown once under both Vaduz entities), New York +1 212 418-2700, London +44 207 245-4000, Athens +30 210 891-3000, Luxembourg +352 26-26-62, Singapore +65 6018-6238, Riyadh +966 11 839-2000, Al-Khobar +966 13 887-1000. No street address or postal code is given for Riyadh/Al-Khobar (P.O. boxes only), and none for Singapore. No email or contact form was found. Older third-party sources name other chairs or CEOs (e.g. Camile Saba, who retired as CEO on December 31, 2023). Lubna S. Olayan has been described elsewhere as Chair of the Executive Committee of Olayan Financing Company, but olayan.com pages checked did not confirm her current role."
+      }
     },
     {
       "id": "temerty_group",
       "name": "Temerty Group",
       "type": "single_family_office",
       "principals": [
-        "Temerty family (inferred, not confirmed)"
+        "James C. Temerty"
       ],
-      "wealth_source": "Likely James Temerty, founder of Northland Power (inferred, not confirmed)",
-      "headquarters": null,
+      "wealth_source": "Northland Power founder",
+      "headquarters": "Toronto, ON, Canada",
       "founded": null,
-      "key_people": [],
+      "key_people": [
+        {
+          "name": "James C. Temerty",
+          "title": "Controlling person; the 'Temerty Group' is defined as persons and entities holding shares over which he exercises control or direction (founder of Northland Power)",
+          "source": "https://ca.finance.yahoo.com/news/temerty-foundation-announces-gift-common-214700011.html"
+        },
+        {
+          "name": "Mike Lord",
+          "title": "Named media/early-warning contact for the Temerty Foundation and Temerty Group release (title not given)",
+          "source": "https://ca.finance.yahoo.com/news/temerty-foundation-announces-gift-common-214700011.html"
+        }
+      ],
       "focus": [
         "clean energy"
       ],
       "q3_2026_deal_count": null,
-      "verification": "partial",
-      "founder_note": "Named as an investor in the Emerald AI press release. No public source describes the entity or confirms its owner. The link to James Temerty is an inference from the name and his clean-energy background.",
+      "verification": "verified",
+      "founder_note": "A 2020 press release defines the Temerty Group as the Temerty Foundation plus entities James C. Temerty controls or directs. Joined Emerald AI's Series A in August 2026.",
       "sources": [
         "https://www.the-founders-corner.com/p/the-1000-investors-most-founders",
         "https://www.businesswire.com/news/home/20260825127649/en/Emerald-AI-Raises-$150-Million-Series-A-at-$1.05-Billion-Valuation-to-Scale-Power-Flexible-AI-Data-Centers",
-        "https://en.wikipedia.org/wiki/James_C._Temerty"
-      ]
+        "https://en.wikipedia.org/wiki/James_C._Temerty",
+        "https://ca.finance.yahoo.com/news/temerty-foundation-announces-gift-common-214700011.html",
+        "https://www.globenewswire.com/news-release/2020/09/24/2099040/0/en/Temerty-Foundation-Announces-Gift-of-Common-Shares-to-University-of-Toronto.html",
+        "https://ca.linkedin.com/company/temerty-group",
+        "https://pitchbook.com/profiles/limited-partner/594257-41",
+        "https://thevarsity.ca/2026/10/11/seeding-life-sciences-innovation-at-ontario-universities/"
+      ],
+      "contact": {
+        "website": null,
+        "addresses": [
+          {
+            "label": "Contact address in Temerty Foundation / Temerty Group early-warning press release (Sept 2020)",
+            "street": "22 St. Clair Avenue East, Suite 1500",
+            "city": "Toronto",
+            "region": "Ontario",
+            "postal_code": "M4T 2S3",
+            "country": "Canada",
+            "source": "https://ca.finance.yahoo.com/news/temerty-foundation-announces-gift-common-214700011.html"
+          }
+        ],
+        "phone": {
+          "value": "+1 647-660-2228",
+          "source": "https://ca.finance.yahoo.com/news/temerty-foundation-announces-gift-common-214700011.html"
+        },
+        "email": {
+          "value": "info@temertyfoundation.com",
+          "source": "https://ca.finance.yahoo.com/news/temerty-foundation-announces-gift-common-214700011.html"
+        },
+        "contact_form_url": null,
+        "notes": "Ownership confirmed: a September 2020 press release (GlobeNewswire, mirrored on Yahoo Finance) defines the 'Temerty Group' as the Temerty Foundation together with other persons and entities whose shares James C. Temerty controls or directs. The same release gives the contact address, phone and email. That email is the Temerty Foundation's (info@temertyfoundation.com), so it may not be a dedicated Temerty Group inbox. The firm's own LinkedIn page describes Temerty Group as a 'Private Family Office' in Investment Management at 22 St Clair Ave E, Toronto M4T 2S3, which matches the release. PitchBook calls it a single-family office in Toronto, and The Varsity (Oct 2026) names it as an LP in the Genesys University Seed Fund. No official website was found. The GlobeNewswire original could not be fetched directly (403), so the Yahoo Finance mirror was used."
+      }
     },
     {
       "id": "winklevoss_capital",
@@ -439,7 +1171,18 @@
       "wealth_source": "Facebook settlement, early Bitcoin, Gemini exchange founders",
       "headquarters": "New York, NY, US",
       "founded": 2012,
-      "key_people": [],
+      "key_people": [
+        {
+          "name": "Cameron Winklevoss",
+          "title": "Co-founder",
+          "source": "https://www.winklevosscapital.com/about"
+        },
+        {
+          "name": "Tyler Winklevoss",
+          "title": "Co-founder",
+          "source": "https://www.winklevosscapital.com/about"
+        }
+      ],
       "focus": [
         "crypto",
         "space",
@@ -452,8 +1195,37 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Winklevoss_Capital_Management",
         "https://www.bloomberg.com/news/articles/2022-05-20/winklevoss-twins-have-fortunes-riding-on-crypto-startup-comeback",
-        "https://www.cnbc.com/2025/11/06/family-offices-deals-october-ai.html"
-      ]
+        "https://www.cnbc.com/2025/11/06/family-offices-deals-october-ai.html",
+        "https://www.winklevosscapital.com/",
+        "https://www.winklevosscapital.com/about",
+        "https://www.winklevosscapital.com/terms",
+        "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002096657&owner=include",
+        "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002085726&owner=include",
+        "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002055592&owner=include",
+        "https://commercialobserver.com/2015/07/brand-strategy-advisor-renews-in-flatiron-district-building/"
+      ],
+      "contact": {
+        "website": "https://www.winklevosscapital.com/",
+        "addresses": [
+          {
+            "label": "SEC EDGAR business/mailing address (Winklevoss Capital Management, LLC, CIK 0002096657)",
+            "street": "301 N. Market Street, Suite 1463",
+            "city": "Wilmington",
+            "region": "DE",
+            "postal_code": "19801",
+            "country": "US",
+            "source": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002096657&owner=include"
+          }
+        ],
+        "phone": {
+          "value": "+1 (646) 751-4444",
+          "source": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002096657&owner=include"
+        },
+        "email": null,
+        "contact_form_url": null,
+        "notes": "The firm website lists no address, phone, email or contact form; it links only to LinkedIn and X. The Wilmington, DE address is the business address in the SEC EDGAR company record, and the related Winklevoss Capital Fund, LLC (CIK 0002085726) uses the same suite. It looks like a registered-agent style address, not the working New York office. The phone number is the business phone in that same EDGAR record. Its 646-751-44xx block matches Gemini's number in EDGAR (646-751-4401), so it may ring at the shared Gemini/Winklevoss offices. Gemini Space Station, Inc. is at 600 Third Avenue, 2nd Floor, New York, NY 10016, and the twins' own Form 4 filings use that address. It is the issuer's address, not WCM's, so it is not listed as a WCM office. Wikipedia places WCM in the Flatiron District. A 2015 Commercial Observer report names 30 West 24th Street (4th floor, leased 2012), but no current firm or regulator source confirms it, so it is not listed."
+      },
+      "website": "https://www.winklevosscapital.com/"
     },
     {
       "id": "aglae_ventures",
@@ -465,7 +1237,48 @@
       "wealth_source": "LVMH chairman and CEO",
       "headquarters": "Paris, France",
       "founded": 2017,
-      "key_people": [],
+      "key_people": [
+        {
+          "name": "Cyril Guenoun",
+          "title": "Team member, Early and Growth, Global (site lists focus areas, not titles; third-party profiles call him Co-Founder and General Partner/Managing Partner)",
+          "source": "https://aglaeventures.com/team/"
+        },
+        {
+          "name": "Antoine Loison",
+          "title": "Team member, Early and Growth, Global (third-party profiles call him co-founder/Founding Partner)",
+          "source": "https://aglaeventures.com/team/"
+        },
+        {
+          "name": "Miyuki Matsumoto",
+          "title": "Team member, Early and Growth, US",
+          "source": "https://aglaeventures.com/team/"
+        },
+        {
+          "name": "Léa Verdillon",
+          "title": "Team member, Early and Growth, France",
+          "source": "https://aglaeventures.com/team/"
+        },
+        {
+          "name": "Brendan Rempel",
+          "title": "Team member, Early, US",
+          "source": "https://aglaeventures.com/team/"
+        },
+        {
+          "name": "Kristina Chvilova",
+          "title": "Team member, Growth, Europe",
+          "source": "https://aglaeventures.com/team/"
+        },
+        {
+          "name": "Clémence Lamarque-Carité",
+          "title": "Team member, AI, Global",
+          "source": "https://aglaeventures.com/team/"
+        },
+        {
+          "name": "Alexis Bonillo",
+          "title": "Team member, Early and Growth, Global",
+          "source": "https://aglaeventures.com/team/"
+        }
+      ],
       "focus": [
         "technology",
         "artificial intelligence",
@@ -477,8 +1290,35 @@
       "sources": [
         "https://fortune.com/europe/2024/08/21/bernard-arnault-has-quietly-invested-in-five-ai-startups-this-year-via-his-family-office",
         "https://sifted.eu/articles/bernard-arnault-startups-aglae-news",
-        "https://www.cnbc.com/2025/12/04/billionaire-investments-family-office.html"
-      ]
+        "https://www.cnbc.com/2025/12/04/billionaire-investments-family-office.html",
+        "https://aglaeventures.com/",
+        "https://aglaeventures.com/terms-legal-information/",
+        "https://aglaeventures.com/team/",
+        "https://crunchbase.com/person/cyril-guenoun",
+        "https://venturecapitalarchive.com/venture-funds/aglae-ventures-aglaeventures-com"
+      ],
+      "contact": {
+        "website": "https://aglaeventures.com/",
+        "addresses": [
+          {
+            "label": "Headquarters (Aglaé Management SAS)",
+            "street": "24-32 rue Jean Goujon",
+            "city": "Paris",
+            "region": "Île-de-France",
+            "postal_code": "75008",
+            "country": "France",
+            "source": "https://aglaeventures.com/terms-legal-information/"
+          }
+        ],
+        "phone": null,
+        "email": {
+          "value": "investors@aglaeventures.com",
+          "source": "https://aglaeventures.com/terms-legal-information/"
+        },
+        "contact_form_url": null,
+        "notes": "The operating entity is Aglaé Management SAS (capital EUR 6,000,000; RCS Paris 844 845 255; AMF-regulated portfolio manager GP-21000023), according to the site's Terms and Legal page. The site gives investors@aglaeventures.com only as the address for complaints, so it is not a general inbox. Directory sites list contact@aglaeventures.com and 22 Avenue Montaigne, 75008 Paris, but the firm's own pages do not confirm either, so neither is used. Some directories mention New York and San Francisco offices, but the firm site does not confirm them. Bernard Arnault/Agache is not named on the site. The team page gives each person's focus area, not a formal title. Titles from third-party profiles, such as Crunchbase calling Guenoun Co-Founder and General Partner, are given in brackets only as context."
+      },
+      "website": "https://aglaeventures.com/"
     },
     {
       "id": "twg_global",
@@ -494,13 +1334,23 @@
       "key_people": [
         {
           "name": "Mark Walter",
-          "title": "Principal",
+          "title": "Chief Executive Officer and Co-Chairman",
           "source": "https://en.wikipedia.org/wiki/TWG_Global"
         },
         {
           "name": "Thomas Tull",
-          "title": "Co-chairman",
+          "title": "Co-Chairman",
           "source": "https://en.wikipedia.org/wiki/TWG_Global"
+        },
+        {
+          "name": "Amos Hochstein",
+          "title": "Managing Partner",
+          "source": "https://www.silicon.co.uk/press-release/amos-hochstein-named-managing-partner-at-twg-global"
+        },
+        {
+          "name": "David A. Markowitz",
+          "title": "Chief Legal Officer (appointed Aug 2026, New York)",
+          "source": "https://www.globallegalpost.com/news/la-dodgers-backer-twg-global-hires-goldman-sachs-litigation-lawyer-as-legal-chief-1267882157"
         }
       ],
       "focus": [
@@ -515,8 +1365,37 @@
       "sources": [
         "https://en.wikipedia.org/wiki/TWG_Global",
         "https://ny1.com/nyc/all-boroughs/ap-top-news/2025/06/20/billionaire-mark-walter-set-to-own-controlling-stake-in-lakers-built-fortune-in-investing",
-        "https://www.fintrx.com/blog/5-largest-family-office-direct-deals-of-november-2025"
-      ]
+        "https://www.fintrx.com/blog/5-largest-family-office-direct-deals-of-november-2025",
+        "https://twgglobal.com/",
+        "https://www.sec.gov/Archives/edgar/data/1690820/000095017025109505/",
+        "https://www.sec.gov/Archives/edgar/data/1690820/000119312524256019/d912339dsc13ga.htm",
+        "https://www.sec.gov/Archives/edgar/data/1334978/000119312526043066/d939743dex991.htm",
+        "https://www.silicon.co.uk/press-release/amos-hochstein-named-managing-partner-at-twg-global",
+        "https://www.globallegalpost.com/news/la-dodgers-backer-twg-global-hires-goldman-sachs-litigation-lawyer-as-legal-chief-1267882157",
+        "https://pulse2.com/twg-global-names-david-markowitz-chief-legal-officer-after-15-years-at-goldman-sachs/"
+      ],
+      "contact": {
+        "website": "https://twgglobal.com/",
+        "addresses": [
+          {
+            "label": "Principal business office (TWG Global, LLC / TWG Global Manager, LLC / Mark Walter), per SEC Schedule 13G/A, Aug 2025",
+            "street": "227 West Monroe, Suite 4800",
+            "city": "Chicago",
+            "region": "IL",
+            "postal_code": "60606",
+            "country": "US",
+            "source": "https://www.sec.gov/Archives/edgar/data/1690820/000095017025109505/"
+          }
+        ],
+        "phone": null,
+        "email": {
+          "value": "twg@prosek.com",
+          "source": "https://www.sec.gov/Archives/edgar/data/1334978/000119312526043066/d939743dex991.htm"
+        },
+        "contact_form_url": null,
+        "notes": "twgglobal.com sits behind a Cloudflare block (HTTP 403), so its contact pages could not be read. The domain is confirmed by Wikipedia and press releases. The Chicago address comes from Carvana Schedule 13G/A filings: Nov 2024, filed by TWG Global Holdings, LLC (formerly Delaware Life Holdings Parent II, LLC), and Aug 2025, filed by TWG Global, LLC. TWG also has a New York headquarters, per Wikipedia, and a 2026 hire is based in New York, but no street address for it was found in an official source. The email is a press contact run by its PR agency, given as 'Prosek Partners for TWG Global, twg@prosek.com' in the Feb 2026 Clear Channel Outdoor merger press release filed with the SEC. It is not a TWG-domain inbox. Coverage from Aug 2026 reports a federal inquiry into TWG's insurance businesses, which TWG denies; this does not affect the contact data."
+      },
+      "website": "https://twgglobal.com/"
     },
     {
       "id": "tulco",
@@ -528,7 +1407,18 @@
       "wealth_source": "Film producer (Legendary Entertainment) and investor",
       "headquarters": null,
       "founded": null,
-      "key_people": [],
+      "key_people": [
+        {
+          "name": "Thomas J. Tull",
+          "title": "Chairman and Chief Executive Officer",
+          "source": "https://www.sec.gov/Archives/edgar/data/1864758/000134100422000066/sc13g.htm"
+        },
+        {
+          "name": "Jeffrey Miller",
+          "title": "Chief Operating Officer and General Counsel",
+          "source": "https://www.sec.gov/Archives/edgar/data/1864758/000134100423000059/sc13ga1.htm"
+        }
+      ],
       "focus": [
         "artificial intelligence",
         "machine learning"
@@ -538,8 +1428,44 @@
       "founder_note": "Described as an AI and machine-learning holding group. Fintrx labels it the Thomas Tull family office. Tull is also co-chairman of TWG Global.",
       "sources": [
         "https://en.wikipedia.org/wiki/TWG_Global",
-        "https://www.fintrx.com/blog/5-largest-family-office-direct-deals-of-november-2025"
-      ]
+        "https://www.fintrx.com/blog/5-largest-family-office-direct-deals-of-november-2025",
+        "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001864758&owner=include",
+        "https://www.sec.gov/Archives/edgar/data/1864758/000134100422000066/sc13g.htm",
+        "https://www.sec.gov/Archives/edgar/data/1864758/000134100423000059/sc13ga1.htm",
+        "https://en.wikipedia.org/wiki/Thomas_Tull",
+        "https://www.cmu.edu/sites/default/files/2025-05/bio-tull-thomas.pdf",
+        "https://tulco.com/"
+      ],
+      "contact": {
+        "website": null,
+        "addresses": [
+          {
+            "label": "Principal business office per SEC Schedule 13G/A (Feb 2023)",
+            "street": "61 E. Colorado Blvd., Unit 200",
+            "city": "Pasadena",
+            "region": "CA",
+            "postal_code": "91105",
+            "country": "US",
+            "source": "https://www.sec.gov/Archives/edgar/data/1864758/000134100423000059/sc13ga1.htm"
+          },
+          {
+            "label": "SEC EDGAR business/mailing address (Tulco, LLC, CIK 0001864758)",
+            "street": "1000 Commerce Drive, 2nd Floor",
+            "city": "Pittsburgh",
+            "region": "PA",
+            "postal_code": "15275",
+            "country": "US",
+            "source": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001864758&owner=include"
+          }
+        ],
+        "phone": {
+          "value": "+1 (626) 495-0703",
+          "source": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001864758&owner=include"
+        },
+        "email": null,
+        "contact_form_url": null,
+        "notes": "No official Tulco website was found. tulco.com belongs to Tulco Oil, an unrelated lubricants company, and must not be used. The two addresses conflict. The EDGAR company header lists Pittsburgh, which matches public descriptions of Tulco as 'Pittsburgh-based'. Tulco's own Schedule 13G (Feb 2022) and 13G/A (Feb 2023) for FIGS give Pasadena, CA as the principal business office. The EDGAR filer phone has a 626 (Pasadena) area code, which fits the Pasadena office. It comes from a 2021-2023 filing record and may be out of date. Tulco has filed nothing on EDGAR since Feb 2023. 'Tulco Quadrant LLC' (Cincinnati) is a separate EDGAR filer and is not confirmed as affiliated."
+      }
     },
     {
       "id": "motier_ventures",
@@ -554,8 +1480,13 @@
       "key_people": [
         {
           "name": "Guillaume Houzé",
-          "title": "Founder",
-          "source": "https://techcrunch.com/2024/10/02/motier-ventures-unveils-la-maison-a-community-space-for-the-french-tech-ecosystem"
+          "title": "Président Fondateur (President and Founder), Motier Invest / Motier Ventures",
+          "source": "https://www.motier.vc/terms-and-conditions"
+        },
+        {
+          "name": "Clément Lamolinerie",
+          "title": "Managing Partner, La Maison by Motier Ventures (since March 2025)",
+          "source": "https://www.escpalumni.org/en/mobilites/3909"
         }
       ],
       "focus": [
@@ -571,8 +1502,35 @@
       "sources": [
         "https://techcrunch.com/2024/10/02/motier-ventures-unveils-la-maison-a-community-space-for-the-french-tech-ecosystem",
         "https://www.maddyness.com/2023/09/04/que-font-les-fonds-motier-ventures/",
-        "https://www.cnbc.com/2026/01/08/family-office-deals-bets-december.html"
-      ]
+        "https://www.cnbc.com/2026/01/08/family-office-deals-bets-december.html",
+        "https://www.motier.vc/",
+        "https://www.motier.vc/terms-and-conditions",
+        "https://www.motier.vc/send-your-deck",
+        "https://www.escpalumni.org/en/mobilites/3909",
+        "https://www.maddyness.com/2025/03/12/motier-ventures-devoile-la-maison-motier/"
+      ],
+      "contact": {
+        "website": "https://www.motier.vc/",
+        "addresses": [
+          {
+            "label": "Registered office / Headquarters (Motier Invest SAS)",
+            "street": "40 Boulevard Haussmann",
+            "city": "Paris",
+            "region": "Île-de-France",
+            "postal_code": "75009",
+            "country": "France",
+            "source": "https://www.motier.vc/terms-and-conditions"
+          }
+        ],
+        "phone": null,
+        "email": {
+          "value": "contact@motier.vc",
+          "source": "https://www.motier.vc/terms-and-conditions"
+        },
+        "contact_form_url": "https://www.motier.vc/send-your-deck",
+        "notes": "The legal entity behind the site is Motier Invest, an SAS with share capital of EUR 100,000, registered with RCS Paris under number 908 532 948, according to the site's legal notice (mentions légales). The address and email appear on that page and in the site footer. The 'Send your deck' page is the founder pitch form. 'La Maison' is a separate founder space on the top floors of the Lafayette Gourmet building, opposite the Opéra Garnier (lamaison.ai). The site does not give a separate street address for it. The Lamolinerie appointment comes from an ESCP alumni notice, not the firm's own site."
+      },
+      "website": "https://www.motier.vc/"
     },
     {
       "id": "lmdv_capital",
@@ -584,7 +1542,28 @@
       "wealth_source": "Luxottica heir",
       "headquarters": "Milan, Italy",
       "founded": 2022,
-      "key_people": [],
+      "key_people": [
+        {
+          "name": "Leonardo Maria Del Vecchio",
+          "title": "Founder and Executive President (Presidente Esecutivo)",
+          "source": "https://bebeez.it/wp-content/uploads/2026/06/CS-LMDV_Rinnovo-CDA-.pdf"
+        },
+        {
+          "name": "Lorenzo Calì",
+          "title": "Chief Executive Officer (Amministratore Delegato)",
+          "source": "https://bebeez.it/wp-content/uploads/2026/06/CS-LMDV_Rinnovo-CDA-.pdf"
+        },
+        {
+          "name": "Gabriele Benedetto",
+          "title": "Vice President (finance and external communications)",
+          "source": "https://bebeez.it/wp-content/uploads/2026/06/CS-LMDV_Rinnovo-CDA-.pdf"
+        },
+        {
+          "name": "Marco Talarico",
+          "title": "Senior Advisor for financial operations (former CEO)",
+          "source": "https://bebeez.it/wp-content/uploads/2026/06/CS-LMDV_Rinnovo-CDA-.pdf"
+        }
+      ],
       "focus": [
         "media",
         "real estate",
@@ -597,8 +1576,36 @@
       "sources": [
         "https://forbes.it/2024/08/02/leonardo-maria-del-vecchio-tutti-i-suoi-investimenti-con-lmdv-capital/",
         "https://www.bloomberg.com/news/articles/2025-08-28/del-vecchio-s-billionaire-heir-gets-350-million-from-indosuez",
-        "https://www.cnbc.com/2026/01/08/family-office-deals-bets-december.html"
-      ]
+        "https://www.cnbc.com/2026/01/08/family-office-deals-bets-december.html",
+        "https://lmdvcapital.it/",
+        "https://lmdvcapital.it/note-legali/",
+        "https://bebeez.it/wp-content/uploads/2026/06/CS-LMDV_Rinnovo-CDA-.pdf",
+        "https://forbes.it/2026/06/24/del-vecchio-ridisegna-lmdv-capital-nuove-nomine-ai-vertici-della-holding",
+        "https://bebeez.it/real-estate-2/lmdv-capital-mette-in-vendita-il-palazzo-in-via-turati-a-milano-per-58-mln-euro/",
+        "https://iusletter.com/oggi-sulla-stampa/lmdv-vende-il-palazzo-in-via-turatie-lex-sede-di-via-monte-napoleone/"
+      ],
+      "contact": {
+        "website": "https://lmdvcapital.it/",
+        "addresses": [
+          {
+            "label": "Head Office",
+            "street": "Via Turati 29/A",
+            "city": "Milano",
+            "region": "MI (Lombardia)",
+            "postal_code": "20121",
+            "country": "Italy",
+            "source": "https://lmdvcapital.it/"
+          }
+        ],
+        "phone": null,
+        "email": {
+          "value": "info@lmdvcapital.it",
+          "source": "https://lmdvcapital.it/note-legali/"
+        },
+        "contact_form_url": "https://lmdvcapital.it/",
+        "notes": "The company site footer gives Via Turati 29/A, 20121 Milano, VAT (P.IVA) 12326310963, info@lmdvcapital.it, and a certified PEC address, lmdvcapital@legalmail.it. The contact form is the 'Contact Us' section of the homepage. People and titles come from LMDV's 24 June 2026 board-renewal press release, hosted by BeBeez. That release names a press contact with a mobile number; it is left out because it is a personal mobile. The press reports (May 2026) that LMDV put the Via Turati building up for sale but will stay as a tenant on an 8+8 year lease. The older registered address in some directories, Via Monte Napoleone 5, appears to be out of date. The website does not publish a phone number."
+      },
+      "website": "https://lmdvcapital.it/"
     },
     {
       "id": "bolt_ventures",
@@ -610,7 +1617,18 @@
       "wealth_source": "Blackstone senior executive",
       "headquarters": null,
       "founded": 2018,
-      "key_people": [],
+      "key_people": [
+        {
+          "name": "David Blitzer",
+          "title": "Founder / principal (family office of Allison and David Blitzer)",
+          "source": "https://www.businesswire.com/news/home/20260408417313/en/Former-Blackstone-Colleagues-Isaac-Harrouche-and-Mike-Berlin-Partner-with-David-Blitzer-and-Announce-Final-Close-of-%24400-Million-Debut-Fund"
+        },
+        {
+          "name": "Scott Krase",
+          "title": "Senior Member, Bolt Ventures",
+          "source": "https://sloansportsconference.com/people/scott-krase"
+        }
+      ],
       "focus": [
         "sports",
         "media",
@@ -623,8 +1641,21 @@
         "https://en.wikipedia.org/wiki/David_Blitzer",
         "https://www.businesswire.com/news/home/20260408417313/en/Former-Blackstone-Colleagues-Isaac-Harrouche-and-Mike-Berlin-Partner-with-David-Blitzer-and-Announce-Final-Close-of-%24400-Million-Debut-Fund",
         "https://www.fintrx.com/blog/5-family-offices-investing-in-sports-companies",
-        "https://www.cnbc.com/2026/02/05/billionaire-investing-family-office.html"
-      ]
+        "https://www.cnbc.com/2026/02/05/billionaire-investing-family-office.html",
+        "https://sloansportsconference.com/people/scott-krase",
+        "https://www.caplight.com/investor/bolt-ventures-1",
+        "https://massinvestordatabase.com/publicfirm.php?name=Bolt+Ventures",
+        "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001271077&owner=include",
+        "https://bolt-ventures.com/"
+      ],
+      "contact": {
+        "website": null,
+        "addresses": [],
+        "phone": null,
+        "email": null,
+        "contact_form_url": null,
+        "notes": "No official website, street address, phone or email was found for David Blitzer's Bolt Ventures. bolt-ventures.com, with its info@ address, +49 phone and Seitzstraße 8e Munich address, belongs to the unrelated Bolt Ventures GmbH and is deliberately left out. Third-party profiles (Caplight, FINTRX) describe the office as New York-based. Massinvestor gives 345 Park Avenue, which is Blackstone's headquarters and the address on Blitzer's SEC filings 'c/o Blackstone'. No firm or regulator source confirms it as Bolt's office, so it is not listed. No EDGAR entity for Bolt Ventures was found. In the April 2026 154 Partners press release, Blitzer credits Isaac Harrouche with helping him 'launch and scale Bolt Ventures since 2018'. No formal Bolt title for Harrouche was published, so he is not listed."
+      }
     },
     {
       "id": "darco_capital",
@@ -634,9 +1665,15 @@
         "David Adelman"
       ],
       "wealth_source": "Campus Apartments CEO, FS Investments co-founder",
-      "headquarters": null,
+      "headquarters": "Philadelphia, PA, US (per 2018 SEC filing)",
       "founded": 2010,
-      "key_people": [],
+      "key_people": [
+        {
+          "name": "David J. Adelman",
+          "title": "Founder (Darco Capital website); Managing Member of Darco Capital GP, LLC, general partner of Darco Capital, LP (SEC filing)",
+          "source": "https://www.darcocapital.com/about-us"
+        }
+      ],
       "focus": [
         "climate tech",
         "fintech",
@@ -649,8 +1686,31 @@
       "sources": [
         "https://en.wikipedia.org/wiki/David_J._Adelman",
         "https://www.cbinsights.com/company/darco-capital",
-        "https://www.cnbc.com/2026/06/05/family-office-sport-investments.html"
-      ]
+        "https://www.cnbc.com/2026/06/05/family-office-sport-investments.html",
+        "https://www.darcocapital.com",
+        "https://www.darcocapital.com/about-us",
+        "https://www.sec.gov/Archives/edgar/data/1685531/000114420418066781/tv510042_sc13da.htm",
+        "https://www.sec.gov/Archives/edgar/data/1438262/000119312514125885/d704929dsc13da.htm"
+      ],
+      "contact": {
+        "website": "https://www.darcocapital.com",
+        "addresses": [
+          {
+            "label": "Principal business address (per Dec 2018 SEC Schedule 13D/A; shared with FS Investments)",
+            "street": "201 Rouse Boulevard",
+            "city": "Philadelphia",
+            "region": "PA",
+            "postal_code": "19112",
+            "country": "US",
+            "source": "https://www.sec.gov/Archives/edgar/data/1685531/000114420418066781/tv510042_sc13da.htm"
+          }
+        ],
+        "phone": null,
+        "email": null,
+        "contact_form_url": null,
+        "notes": "The firm website describes Darco as the Philadelphia-based family office investment vehicle of David Adelman but publishes no street address, phone, email or contact form. The only official address found is from a December 2018 SEC Schedule 13D/A that gives 201 Rouse Boulevard, Philadelphia, PA 19112 as the principal business address of all reporting persons, including Darco Capital, LP and Darco Capital GP, LLC (both Pennsylvania entities); this is the FS Investments (now Future Standard) headquarters and may be outdated or a filing convenience address. A 2014 filing used the FS Cira Centre address (2929 Arch Street, Suite 675, Philadelphia, PA 19104) for Adelman as notice contact, and the 2018 filing gives Campus Apartments' business address as 4043 Walnut Street, Philadelphia, PA 19104; neither is stated to be Darco's office. CB Insights lists a California HQ, which conflicts and was not used. No other named Darco executives were found in first-party or regulatory sources."
+      },
+      "website": "https://www.darcocapital.com"
     },
     {
       "id": "dundon_capital_partners",
@@ -660,9 +1720,15 @@
         "Tom Dundon"
       ],
       "wealth_source": "Financial services businessman",
-      "headquarters": null,
+      "headquarters": "Dallas, TX, US",
       "founded": null,
-      "key_people": [],
+      "key_people": [
+        {
+          "name": "Thomas G. (Tom) Dundon",
+          "title": "Chairman and Managing Partner",
+          "source": "https://canespr.com/executivemanagement/"
+        }
+      ],
       "focus": [
         "sports"
       ],
@@ -672,8 +1738,33 @@
       "sources": [
         "https://www.sportcal.com/news/apollo-leads-225m-investment-in-pickleballs-mlp-and-ppa-tour/",
         "https://qz.com/apollo-sports-capital-pickleball-inc-225-million-investment-050126",
-        "https://www.cnbc.com/2026/06/05/family-office-sport-investments.html"
-      ]
+        "https://www.cnbc.com/2026/06/05/family-office-sport-investments.html",
+        "https://www.sec.gov/Archives/edgar/data/837465/000119312526239488/d56851dex101.htm",
+        "https://www.sec.gov/Archives/edgar/data/1690820/000114420417064155/tv481503_sc13d.htm",
+        "https://canespr.com/executivemanagement/",
+        "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001657815",
+        "https://www.cbinsights.com/investor/dundon-capital-partners",
+        "https://pitchbook.com/profiles/investor/151274-35"
+      ],
+      "contact": {
+        "website": "https://www.dundoncapitalpartners.com",
+        "addresses": [
+          {
+            "label": "Headquarters (notice address in May 2026 SEC 8-K exhibit)",
+            "street": "2100 Ross Avenue, Suite 550",
+            "city": "Dallas",
+            "region": "TX",
+            "postal_code": "75201",
+            "country": "US",
+            "source": "https://www.sec.gov/Archives/edgar/data/837465/000119312526239488/d56851dex101.htm"
+          }
+        ],
+        "phone": null,
+        "email": null,
+        "contact_form_url": null,
+        "notes": "The domain dundoncapitalpartners.com is listed by third-party databases (CB Insights) as the firm site; it returned HTTP 403 to automated requests so its content (and any contact page) could not be verified. The most recent official address is from an indemnification agreement filed as an exhibit to a Callaway Golf 8-K in May 2026: c/o Dundon Capital Partners, 2100 Ross Avenue, Ste. 550, Dallas, TX 75201. Conflicts: a December 2017 Schedule 13D by Dundon's DDFS Partnership LP gave 2100 Ross Avenue, Suite 3300, Dallas, TX 75201 (PitchBook also shows Suite 3300); the 2015 Dundon Capital Acquisition Corp S-1 used Suite 800 with phone 214-329-9939 (a separate SPAC entity, not used); CB Insights shows Suite 550 with ZIP 75214 and phone 214-272-4616 (third-party, not used). Third-party databases name CFOs (Jeff Vanderbilt, Matt Turney) inconsistently; not included because no first-party source confirmed them."
+      },
+      "website": "https://www.dundoncapitalpartners.com"
     },
     {
       "id": "centaurus_capital",
@@ -686,7 +1777,13 @@
       "wealth_source": "Energy trader, former Centaurus Energy hedge fund",
       "headquarters": "Houston, TX, US",
       "founded": null,
-      "key_people": [],
+      "key_people": [
+        {
+          "name": "John D. Arnold",
+          "title": "Founder; Manager of Centaurus Holdings, LLC, the general partner of Centaurus Capital LP",
+          "source": "https://www.sec.gov/Archives/edgar/data/1816233/000181623322000036/sharecare-sx3424b37122.htm"
+        }
+      ],
       "focus": [
         "energy",
         "geothermal",
@@ -699,8 +1796,30 @@
         "https://energypolicy.columbia.edu/?p=1583",
         "https://www.marketscreener.com/insider/JOHN-ARNOLD-A0F1H5/",
         "https://www.epmag.com/exclusives/billionaire-john-arnold-backing-energy-focused-credit-fund-sources-200286",
-        "https://www.cnbc.com/2026/10/01/billionaire-family-offices-back-geothermal-energy-in-september.html"
-      ]
+        "https://www.cnbc.com/2026/10/01/billionaire-family-offices-back-geothermal-energy-in-september.html",
+        "https://www.sec.gov/Archives/edgar/data/1816233/000181623322000036/sharecare-sx3424b37122.htm",
+        "https://www.sec.gov/Archives/edgar/data/10254/000001025423000103/este-bighornxformsx3prosup.htm",
+        "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000019/feb142024exhibit991.htm",
+        "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001297966"
+      ],
+      "contact": {
+        "website": null,
+        "addresses": [
+          {
+            "label": "Business address (per SEC prospectus filings 2022-2023)",
+            "street": "1717 West Loop South, Suite 1800",
+            "city": "Houston",
+            "region": "TX",
+            "postal_code": "77027",
+            "country": "US",
+            "source": "https://www.sec.gov/Archives/edgar/data/1816233/000181623322000036/sharecare-sx3424b37122.htm"
+          }
+        ],
+        "phone": null,
+        "email": null,
+        "contact_form_url": null,
+        "notes": "No official website found; centauruscapital.com is a parked domain redirecting to a lander page. Address confirmed in two SEC prospectus selling-holder tables (Sharecare 424B3, July 2022: c/o Centaurus Capital LP, 1717 West Loop South, Suite 1800, Houston, TX 77027; Earthstone Energy 424B7, May 2023, same address). Do not confuse with the unrelated London hedge fund also named Centaurus Capital LP (SEC CIK 0001297966, 33 Cavendish Square, London), whose 13F filings appear in EDGAR searches. Laura Arnold is co-founder of Arnold Ventures with John Arnold, but no official source found identifies her in a business role at Centaurus Capital LP, so she is not listed. No phone or email published."
+      }
     },
     {
       "id": "builders_vision",
@@ -710,9 +1829,35 @@
         "Lukas Walton"
       ],
       "wealth_source": "Walmart heir",
-      "headquarters": null,
+      "headquarters": "Chicago, IL, US",
       "founded": 2021,
-      "key_people": [],
+      "key_people": [
+        {
+          "name": "Lukas Walton",
+          "title": "Founder",
+          "source": "https://www.buildersvision.com/who-we-are/"
+        },
+        {
+          "name": "Noelle Laing",
+          "title": "Chief Investment Officer",
+          "source": "https://www.buildersvision.com/who-we-are/"
+        },
+        {
+          "name": "Jamey Spencer",
+          "title": "Managing Director, Head of Private Markets",
+          "source": "https://www.buildersvision.com/who-we-are/"
+        },
+        {
+          "name": "Kurt Braitberg",
+          "title": "Managing Director, Head of Public Markets",
+          "source": "https://www.buildersvision.com/who-we-are/"
+        },
+        {
+          "name": "Lisa J. Forbes",
+          "title": "General Counsel",
+          "source": "https://www.sec.gov/Archives/edgar/data/1785504/000117266126003388/primary_doc.xml"
+        }
+      ],
       "focus": [
         "food and agriculture",
         "clean energy",
@@ -724,8 +1869,39 @@
       "sources": [
         "https://www.cnbc.com/2022/09/19/billionaire-lukas-waltons-family-office-fans-impact-investing-push.html",
         "https://globalaginvesting.com/walmart-heir-behind-s2g-ventures-launches-new-platform-builders-vision/",
-        "https://www.cnbc.com/2026/08/06/family-offices-sustainability-startups-july-dealmaking.html"
-      ]
+        "https://www.cnbc.com/2026/08/06/family-offices-sustainability-startups-july-dealmaking.html",
+        "https://www.buildersvision.com",
+        "https://www.buildersvision.com/who-we-are/",
+        "https://www.buildersvision.com/privacy-policy/",
+        "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001785504",
+        "https://www.sec.gov/Archives/edgar/data/1785504/000117266126003388/primary_doc.xml",
+        "https://www.sec.gov/Archives/edgar/data/1830210/000119312524132161/d756880dsc13ga.htm"
+      ],
+      "contact": {
+        "website": "https://www.buildersvision.com",
+        "addresses": [
+          {
+            "label": "Headquarters (SEC EDGAR business address; 13F-HR filed Aug 2026)",
+            "street": "167 N Green Street, Suite 1600",
+            "city": "Chicago",
+            "region": "IL",
+            "postal_code": "60607",
+            "country": "US",
+            "source": "https://www.sec.gov/Archives/edgar/data/1785504/000117266126003388/primary_doc.xml"
+          }
+        ],
+        "phone": {
+          "value": "+1 479-464-1500",
+          "source": "https://www.sec.gov/Archives/edgar/data/1785504/000117266126003388/primary_doc.xml"
+        },
+        "email": {
+          "value": "website@buildersvision.com",
+          "source": "https://www.buildersvision.com/privacy-policy/"
+        },
+        "contact_form_url": "https://www.buildersvision.com",
+        "notes": "Website says the firm is based in Chicago with offices in Chicago and San Francisco; no street address on the site. The Chicago street address comes from SEC EDGAR (Builders Vision, LLC, CIK 1785504) and its 13F-HR. Earlier SEC filings (2022-2024) listed a Bentonville, AR business address. The phone 479-464-1500 is the EDGAR registrant phone and the 13F signatory (General Counsel) contact number; it is an Arkansas area code, so it may route to the Bentonville office rather than Chicago. The email website@buildersvision.com is the 'How to contact us' address in the site privacy policy (legal@buildersvision.com is given for California privacy requests); the general inquiry route is the 'Build the Future With Us' form on the homepage (options: Investment, Philanthropy, Communications, Job Opportunities)."
+      },
+      "website": "https://www.buildersvision.com"
     },
     {
       "id": "gates_frontier",
@@ -735,21 +1911,60 @@
         "Bill Gates"
       ],
       "wealth_source": "Microsoft co-founder",
-      "headquarters": null,
+      "headquarters": "Kirkland, WA, US",
       "founded": null,
-      "key_people": [],
+      "key_people": [
+        {
+          "name": "William H. Gates III (Bill Gates)",
+          "title": "Beneficial owner / principal",
+          "source": "https://www.sec.gov/Archives/edgar/data/1580115/000110465925092229/primary_doc.xml"
+        },
+        {
+          "name": "Michael Larson",
+          "title": "Manager, Gates Frontier, LLC (per Sept 2025 Schedule 13G/A signature block)",
+          "source": "https://www.sec.gov/Archives/edgar/data/1580115/000110465925092229/primary_doc.xml"
+        },
+        {
+          "name": "Alan Heuberger",
+          "title": "Attorney-in-fact signing SEC filings for Gates Frontier, LLC and William H. Gates III",
+          "source": "https://www.sec.gov/Archives/edgar/data/1580115/000110465925092229/primary_doc.xml"
+        }
+      ],
       "focus": [
         "biotech",
         "health care"
       ],
       "q3_2026_deal_count": null,
-      "verification": "partial",
-      "founder_note": "Bill Gates's venture firm. His main family office is Cascade Investment in Kirkland, WA. A Denver family office tied to the Charles C. Gates legacy uses a similar name, so confirm the entity before outreach.",
+      "verification": "verified",
+      "founder_note": "Bill Gates's venture firm, confirmed through SEC filings as the Kirkland entity Gates Frontier, LLC. His main family office is Cascade Investment. Not the Denver office tied to the Charles C. Gates legacy.",
       "sources": [
         "https://www.fiercebiotech.com/biotech/lifemines-frozen-platform-thawed-263m-fundraise-backed-gates-and-bezos",
         "https://www.cbinsights.com/company/gates-frontier",
-        "https://www.cnbc.com/2026/09/03/family-offices-health-care-biotech-startups-august.html"
-      ]
+        "https://www.cnbc.com/2026/09/03/family-offices-health-care-biotech-startups-august.html",
+        "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001580115",
+        "https://www.sec.gov/Archives/edgar/data/1580115/000110465925092229/primary_doc.xml"
+      ],
+      "contact": {
+        "website": null,
+        "addresses": [
+          {
+            "label": "Business address (SEC EDGAR, Gates Frontier, LLC, CIK 1580115)",
+            "street": "5210 Carillon Point",
+            "city": "Kirkland",
+            "region": "WA",
+            "postal_code": "98033",
+            "country": "US",
+            "source": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001580115"
+          }
+        ],
+        "phone": {
+          "value": "+1 425-889-7900",
+          "source": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001580115"
+        },
+        "email": null,
+        "contact_form_url": null,
+        "notes": "No official Gates Frontier website found (gatesfrontier.com did not resolve). Address and phone are from the SEC EDGAR registrant record for Gates Frontier, LLC, and match its 13G/13D filings (Kirkland, WA); 5210 Carillon Point is the Carillon Point complex also used by Cascade Investment. This is Bill Gates's Kirkland, WA entity, not the Denver family office associated with the Charles C. Gates legacy. A third-party profile (Zonebourse) names Mike Boots as a Gates Frontier director; not included because no official source confirmed it. Michael Larson's manager title is as stated in the Sept 2025 filing; it was not checked against later changes."
+      }
     },
     {
       "id": "peugeot_family_office",
@@ -761,43 +1976,181 @@
       "wealth_source": "Peugeot automotive dynasty",
       "headquarters": "France",
       "founded": null,
-      "key_people": [],
+      "key_people": [
+        {
+          "name": "Edouard Peugeot",
+          "title": "Chairman of the Board of Directors",
+          "source": "https://www.peugeot-invest.com/en/identity/governance"
+        },
+        {
+          "name": "Jean-Charles Douin",
+          "title": "CEO",
+          "source": "https://www.peugeot-invest.com/en/identity/teams"
+        },
+        {
+          "name": "Sébastien Coquard",
+          "title": "Deputy CEO",
+          "source": "https://www.peugeot-invest.com/en/identity/teams"
+        },
+        {
+          "name": "François Massut",
+          "title": "Managing Director (in charge of the private equity portfolio)",
+          "source": "https://www.peugeot-invest.com/en/identity/teams"
+        },
+        {
+          "name": "Marie Ahmadzadeh",
+          "title": "Managing Director",
+          "source": "https://www.peugeot-invest.com/en/identity/teams"
+        },
+        {
+          "name": "Guillaume Falguière",
+          "title": "Managing Director",
+          "source": "https://www.peugeot-invest.com/en/identity/teams"
+        },
+        {
+          "name": "Jean-Baptiste Molmy",
+          "title": "General Counsel, Secretary of the Board of Directors",
+          "source": "https://www.peugeot-invest.com/en/identity/teams"
+        },
+        {
+          "name": "Béatrice Pitre",
+          "title": "Head of Communication",
+          "source": "https://www.peugeot-invest.com/en/identity/teams"
+        }
+      ],
       "focus": [
         "industrials",
         "sustainability"
       ],
       "q3_2026_deal_count": null,
       "verification": "partial",
-      "founder_note": "Deal notices say only 'the Peugeot family office'. Peugeot Invest is the family's listed investment company and the most likely entity, but this is not confirmed.",
+      "founder_note": "Deal notices say only 'the Peugeot family office'. Contact details are for Peugeot Invest, the family's listed investment company and most likely entity, majority-owned by the family holding Établissements Peugeot Frères.",
       "sources": [
         "https://www.lemondedudroit.fr/deals/105520-bird-bird-conseille-bpifrance.html",
         "https://pipelineroad.com/directory/peugeot-invest",
         "https://nordic9.com/news/syntetica-raises-30-million-series-a-led-by-t/",
-        "https://www.cnbc.com/2026/08/06/family-offices-sustainability-startups-july-dealmaking.html"
-      ]
+        "https://www.cnbc.com/2026/08/06/family-offices-sustainability-startups-july-dealmaking.html",
+        "https://www.peugeot-invest.com/en",
+        "https://www.peugeot-invest.com/en/legal-notice",
+        "https://www.peugeot-invest.com/en/identity/teams",
+        "https://www.peugeot-invest.com/en/identity/governance",
+        "https://echanges.dila.gouv.fr/OPENDATA/AMF/ECO/2024/04/FCECO074377_20240410.pdf",
+        "https://echanges.dila.gouv.fr/OPENDATA/AMF/ECO/2021/04/FCECO058629_20210421.pdf",
+        "https://peugeot-invest.com/en/download/1595"
+      ],
+      "contact": {
+        "website": "https://www.peugeot-invest.com",
+        "addresses": [
+          {
+            "label": "Registered office (siège social)",
+            "street": "66, avenue Charles de Gaulle",
+            "city": "Neuilly-sur-Seine",
+            "region": "Île-de-France (Hauts-de-Seine)",
+            "postal_code": "92200",
+            "country": "FR",
+            "source": "https://echanges.dila.gouv.fr/OPENDATA/AMF/ECO/2024/04/FCECO074377_20240410.pdf"
+          },
+          {
+            "label": "Postal address (per 2025 AGM notice)",
+            "street": "CS 60049",
+            "city": "Neuilly-sur-Seine Cedex",
+            "region": "Île-de-France (Hauts-de-Seine)",
+            "postal_code": "92522",
+            "country": "FR",
+            "source": "https://peugeot-invest.com/en/download/1595"
+          }
+        ],
+        "phone": {
+          "value": "+33 (0)1 84 138 720",
+          "source": "https://echanges.dila.gouv.fr/OPENDATA/AMF/ECO/2024/04/FCECO074377_20240410.pdf"
+        },
+        "email": {
+          "value": "info@peugeot-invest.com",
+          "source": "https://www.peugeot-invest.com/en"
+        },
+        "contact_form_url": null,
+        "notes": "Mapped to Peugeot Invest SA (SIREN 562075390), the Euronext-listed long-term investment company majority-owned by Établissements Peugeot Frères (the Peugeot family holding), which holds the family's Stellantis and Forvia stakes via Peugeot 1810 and makes minority, private equity and co-investments. Établissements Peugeot Frères is the family holding company itself, but Peugeot Invest is the family's investing arm and the one with published contact details. Address and phone come from Peugeot Invest's own AMF-filed press release (April 2024); the email is on the official website and legal-notice page. The site also says it has a London office, but no London address was found. Yahoo Finance describes the HQ as Paris, which conflicts with the official Neuilly-sur-Seine registered office. The 2024 press release also gives a named press contact email for Sébastien Coquard; it is not listed as the general email. The governance page lists Edouard Peugeot as Chairman; older sources name Robert Peugeot, so the current chair is as shown on the site at time of research. French registry sites (Pappers, annuaire-entreprises) could not be fetched to cross-check."
+      },
+      "website": "https://www.peugeot-invest.com"
     },
     {
       "id": "volta_circle",
       "name": "Volta Circle",
       "type": "single_family_office",
       "principals": [
-        "Leading shareholder family of Indorama Ventures"
+        "Lohia family"
       ],
       "wealth_source": "Indorama Ventures, petrochemicals and textiles",
-      "headquarters": null,
+      "headquarters": "London, UK",
       "founded": null,
-      "key_people": [],
+      "key_people": [
+        {
+          "name": "Suchitra Lohia",
+          "title": "Co-Founder & Co-Chairwoman (Board of Directors)",
+          "source": "https://www.voltacircle.com"
+        },
+        {
+          "name": "Aradhana Lohia Sharma",
+          "title": "Co-Founder & Co-Chairwoman (Board of Directors)",
+          "source": "https://www.voltacircle.com"
+        },
+        {
+          "name": "Saanjali Lohia",
+          "title": "Investment Committee Member",
+          "source": "https://www.voltacircle.com"
+        },
+        {
+          "name": "Catia Cesari",
+          "title": "Managing Partner",
+          "source": "https://www.voltacircle.com"
+        },
+        {
+          "name": "Alex Veale",
+          "title": "Senior Investor",
+          "source": "https://www.voltacircle.com"
+        },
+        {
+          "name": "Ben Ghani",
+          "title": "Senior Analyst",
+          "source": "https://www.voltacircle.com"
+        }
+      ],
       "focus": [
         "sustainability",
         "textiles"
       ],
       "q3_2026_deal_count": null,
-      "verification": "partial",
-      "founder_note": "Named as the family office of Indorama Ventures' shareholders in Syntetica's 2024 seed round. Indorama is controlled by the Lohia family, but no source here names them as Volta Circle's owner.",
+      "verification": "verified",
+      "founder_note": "Its own website says it is backed by the Lohia family, founders and majority shareholders of Indorama Ventures. Backed Syntetica at seed and Series A.",
       "sources": [
         "https://www.goodwinlaw.com/en/news-and-events/news/2024/07/announcements-technology-ip-syntetica-raises-42-million",
-        "https://www.lemondedudroit.fr/deals/105520-bird-bird-conseille-bpifrance.html"
-      ]
+        "https://www.lemondedudroit.fr/deals/105520-bird-bird-conseille-bpifrance.html",
+        "https://www.voltacircle.com",
+        "https://ctvc.niceboard.co/company/volta-circle",
+        "https://www.preqin.com/data/profile/fund-manager/volta-circle/373634"
+      ],
+      "contact": {
+        "website": "https://www.voltacircle.com",
+        "addresses": [
+          {
+            "label": "Office (London)",
+            "street": "9 Pembridge Road",
+            "city": "London",
+            "region": "England",
+            "postal_code": "W11 3JY",
+            "country": "GB",
+            "source": "https://www.voltacircle.com"
+          }
+        ],
+        "phone": null,
+        "email": {
+          "value": "hello@voltacircle.com",
+          "source": "https://www.voltacircle.com"
+        },
+        "contact_form_url": null,
+        "notes": "Ownership confirmed by the firm's own website: Volta Circle is an evergreen family investment firm backed by the Lohia family, founders and majority shareholders of Indorama Ventures Ltd (IVL). It invests seed to Series A in circular-economy technology, focused on Europe, the US and India. Third-party profiles (Preqin, venturecapitalcareers) also describe it as London-based, established around 2018-2019, with team members in London, Geneva, Milan and Bangkok; these were not used as sources for contact fields. The UK legal entity behind the site was not confirmed on Companies House (an exact-name search returned no 'Volta Circle' company). No phone published."
+      },
+      "website": "https://www.voltacircle.com"
     }
   ]
 }
