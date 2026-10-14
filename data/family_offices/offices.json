@@ -7,7 +7,7 @@
     "verification": "verified = identity and principal confirmed by two or more independent public sources; partial = identity confirmed but some fields thinly sourced; unverified = could not confirm the entity exists under this name",
     "q3_2026_deal_count": "Publicly reported Q3 2026 deals as counted by the seed article. A floor. Null means the article gave no count.",
     "null values": "A null field means no reliable public source was found. It does not mean the answer is no.",
-    "contact": "Business contact details the firm, a regulator, or an official press release published. No home addresses, personal emails, or personal phones, and no emails guessed from name patterns. Some addresses are registered or filing addresses rather than staffed offices; the contact note says so.",
+    "contact": "Business contact details the firm, a regulator, or an official press release published. No home addresses, personal emails, or personal phones, and no emails guessed from name patterns. Some addresses are registered or filing addresses rather than staffed offices; the contact note says so. SEC Form ADV asks advisers for a compliance officer's email, but the SEC's public copies leave that section blank, so it is not a source of emails.",
     "key_people": "People publicly named in a business role at the office, each with a source. Titles follow the source and may lag recent changes."
   },
   "office_count": 28,
@@ -352,6 +352,15 @@
             "postal_code": "WC2H 0EW",
             "country": "United Kingdom",
             "source": "https://find-and-update.company-information.service.gov.uk/company/OC441075"
+          },
+          {
+            "label": "Mailing address (SEC Form ADV)",
+            "street": "P.O. Box 2929",
+            "city": "San Francisco",
+            "region": "CA",
+            "postal_code": "94126-2929",
+            "country": "United States",
+            "source": "https://reports.adviserinfo.sec.gov/reports/ADV/159198/PDF/159198.pdf"
           }
         ],
         "phone": {
